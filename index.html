@@ -227,6 +227,7 @@
         <th data-col="current_month_r2">Current R2 <span class="sort-icon">↕</span></th>
         <th data-col="future_month_r2">Future R2 <span class="sort-icon">↕</span></th>
         <th data-col="sma3_days">SMA 3D <span class="sort-icon">↕</span></th>
+        <th data-col="sma3_proj_days">SMA 3D Proj <span class="sort-icon">↕</span></th>
 
       </tr>
     </thead>
@@ -264,8 +265,10 @@ async function loadData() {
     last_date:               s.last_date,
     day_pct:                 s.day_pct ?? null,
     streak:                  s.streak ?? 0,
-    sma3_direction:          s.sma3_direction ?? null,
-    sma3_days:               s.sma3_days      ?? 0,
+    sma3_direction:          s.sma3_direction      ?? null,
+    sma3_days:               s.sma3_days           ?? 0,
+    sma3_proj_direction:     s.sma3_proj_direction ?? null,
+    sma3_proj_days:          s.sma3_proj_days      ?? 0,
     prev_month_r2:           s.crossed_previous_month?.r2 ?? null,
     current_month_r2:        s.current_month_r2           ?? null,
     future_month_r2:         s.future_month_r2            ?? null,
@@ -334,10 +337,16 @@ function render() {
       <td>${(() => {
         if (!s.sma3_direction) return '<span style="color:#8b949e">—</span>';
         const up = s.sma3_direction === 'up';
-        const arrow = up ? '▲' : '▼';
         const color = up ? '#3fb950' : '#f85149';
         const days = s.sma3_days > 0 ? ` ${s.sma3_days}d` : '';
-        return `<span style="color:${color};font-weight:600">${arrow}${days}</span>`;
+        return `<span style="color:${color};font-weight:600">${up ? '▲' : '▼'}${days}</span>`;
+      })()}</td>
+      <td>${(() => {
+        if (!s.sma3_proj_direction) return '<span style="color:#8b949e;font-size:0.78rem">—</span>';
+        const up = s.sma3_proj_direction === 'up';
+        const color = up ? '#3fb950' : '#f85149';
+        const days = s.sma3_proj_days > 0 ? ` ${s.sma3_proj_days}d` : '';
+        return `<span style="color:${color};font-weight:600;opacity:0.8">${up ? '▲' : '▼'}~${days}</span>`;
       })()}</td>
     </tr>`;
   }).join('');
