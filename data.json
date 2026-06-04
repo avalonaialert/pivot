@@ -1,16 +1,846 @@
 {
-  "generated_at": "2026-06-04T04:28:36.965994+00:00",
-  "count": 78,
+  "generated_at": "2026-06-04T22:52:52.766533+00:00",
+  "count": 74,
   "stocks": [
     {
-      "ticker": "A",
-      "last_close": 137.4,
-      "last_high": 138.99,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "ticker": "DELL",
+      "last_close": 422.05,
+      "last_high": 430.5,
+      "last_date": "2026-06-04",
+      "day_pct": 0.23,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 566.3583,
+      "future_month_r2": 450.6137,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 261.9837,
+        "first_cross_date": "2026-05-08",
+        "days_crossed": 6,
+        "period": "previous_month"
+      },
+      "streak": 4,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 131.4967,
+          "month": "2026-05",
+          "r2": 261.9837,
+          "first_cross_date": "2026-05-08",
+          "days_crossed": 6
+        },
+        {
+          "month": "2026-04",
+          "r2": 214.4417,
+          "first_cross_date": "2026-04-22",
+          "days_crossed": 4
+        },
+        {
+          "month": "2026-03",
+          "r2": 167.3854,
+          "first_cross_date": "2026-03-20",
+          "days_crossed": 7
+        },
+        {
+          "month": "2026-02",
+          "r2": 147.8987,
+          "first_cross_date": "2026-02-27",
+          "days_crossed": 1
+        }
+      ]
+    },
+    {
+      "ticker": "FFIV",
+      "last_close": 408.66,
+      "last_high": 409.035,
+      "last_date": "2026-06-04",
+      "day_pct": 0.74,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "current_month_r2": 456.9852,
+      "future_month_r2": 418.1521,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 360.7353,
+        "first_cross_date": "2026-05-12",
+        "days_crossed": 12,
+        "period": "previous_month"
+      },
+      "streak": 3,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 360.7353,
+          "first_cross_date": "2026-05-12",
+          "days_crossed": 12
+        },
+        {
+          "month": "2026-04",
+          "r2": 320.1515,
+          "first_cross_date": "2026-04-29",
+          "days_crossed": 2
+        },
+        {
+          "month": "2026-03",
+          "r2": 301.3033,
+          "first_cross_date": "2026-03-26",
+          "days_crossed": 1
+        }
+      ]
+    },
+    {
+      "ticker": "HPE",
+      "last_close": 53.69,
+      "last_high": 54.47,
+      "last_date": "2026-06-04",
+      "day_pct": -2.65,
+      "sma3_direction": "up",
+      "sma3_days": 11,
+      "current_month_r2": 55.1719,
+      "future_month_r2": 55.5308,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 55.1719,
+        "first_cross_date": "2026-06-02",
+        "days_crossed": 2
+      },
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 33.3672,
+        "first_cross_date": "2026-05-14",
+        "days_crossed": 10,
+        "period": "previous_month"
+      },
+      "streak": 3,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 33.3672,
+          "first_cross_date": "2026-05-14",
+          "days_crossed": 10
+        },
+        {
+          "month": "2026-04",
+          "r2": 28.9819,
+          "first_cross_date": "2026-04-21",
+          "days_crossed": 2
+        },
+        {
+          "month": "2026-03",
+          "r2": 26.3683,
+          "first_cross_date": "2026-03-25",
+          "days_crossed": 1
+        }
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "last_close": 523.2,
+      "last_high": 532.19,
+      "last_date": "2026-06-04",
+      "day_pct": -3.56,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 683.9578,
+      "future_month_r2": 548.8708,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 432.6717,
+        "first_cross_date": "2026-05-08",
+        "days_crossed": 14,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 432.6717,
+          "first_cross_date": "2026-05-08",
+          "days_crossed": 14
+        },
+        {
+          "month": "2026-04",
+          "r2": 236.8625,
+          "first_cross_date": "2026-04-09",
+          "days_crossed": 16
+        }
+      ]
+    },
+    {
+      "ticker": "CDNS",
+      "last_close": 411.68,
+      "last_high": 415.83,
+      "last_date": "2026-06-04",
+      "day_pct": 0.9,
+      "sma3_direction": "up",
+      "sma3_days": 4,
+      "current_month_r2": 430.701,
+      "future_month_r2": 422.925,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 376.7891,
+        "first_cross_date": "2026-05-22",
+        "days_crossed": 5,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 376.7891,
+          "first_cross_date": "2026-05-22",
+          "days_crossed": 5
+        },
+        {
+          "month": "2026-04",
+          "r2": 332.0942,
+          "first_cross_date": "2026-04-22",
+          "days_crossed": 4
+        }
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "last_close": 130.0,
+      "last_high": 130.3656,
+      "last_date": "2026-06-04",
+      "day_pct": 2.77,
+      "sma3_direction": "up",
+      "sma3_days": 4,
+      "current_month_r2": 143.3969,
+      "future_month_r2": 133.6269,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 98.8071,
+        "first_cross_date": "2026-05-11",
+        "days_crossed": 14,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 98.8071,
+          "first_cross_date": "2026-05-11",
+          "days_crossed": 14
+        },
+        {
+          "month": "2026-04",
+          "r2": 86.4325,
+          "first_cross_date": "2026-04-20",
+          "days_crossed": 9
+        }
+      ]
+    },
+    {
+      "ticker": "EBAY",
+      "last_close": 109.15,
+      "last_high": 110.64,
+      "last_date": "2026-06-04",
+      "day_pct": 0.3,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 132.3309,
+      "future_month_r2": 111.6692,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 116.2591,
+        "first_cross_date": "2026-05-15",
+        "days_crossed": 5,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 116.2591,
+          "first_cross_date": "2026-05-15",
+          "days_crossed": 5
+        },
+        {
+          "month": "2026-04",
+          "r2": 99.3797,
+          "first_cross_date": "2026-04-14",
+          "days_crossed": 13
+        }
+      ]
+    },
+    {
+      "ticker": "GS",
+      "last_close": 1092.61,
+      "last_high": 1095.9,
+      "last_date": "2026-06-04",
+      "day_pct": 4.96,
+      "sma3_direction": "up",
+      "sma3_days": 5,
+      "current_month_r2": 1104.4062,
+      "future_month_r2": 1123.1169,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 1008.1312,
+        "first_cross_date": "2026-05-26",
+        "days_crossed": 2,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 1008.1312,
+          "first_cross_date": "2026-05-26",
+          "days_crossed": 2
+        },
+        {
+          "month": "2026-04",
+          "r2": 930.1387,
+          "first_cross_date": "2026-04-20",
+          "days_crossed": 6
+        }
+      ]
+    },
+    {
+      "ticker": "HST",
+      "last_close": 24.45,
+      "last_high": 24.48,
+      "last_date": "2026-06-04",
+      "day_pct": 2.52,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "current_month_r2": 25.7957,
+      "future_month_r2": 25.0815,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 23.0056,
+        "first_cross_date": "2026-05-26",
+        "days_crossed": 4,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 23.0056,
+          "first_cross_date": "2026-05-26",
+          "days_crossed": 4
+        },
+        {
+          "month": "2026-04",
+          "r2": 20.8527,
+          "first_cross_date": "2026-04-14",
+          "days_crossed": 12
+        }
+      ]
+    },
+    {
+      "ticker": "HUM",
+      "last_close": 349.8,
+      "last_high": 351.88,
+      "last_date": "2026-06-04",
+      "day_pct": 6.8,
+      "sma3_direction": "up",
+      "sma3_days": 7,
+      "current_month_r2": 377.2538,
+      "future_month_r2": 367.5469,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 283.4692,
+        "first_cross_date": "2026-05-11",
+        "days_crossed": 14,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 283.4692,
+          "first_cross_date": "2026-05-11",
+          "days_crossed": 14
+        },
+        {
+          "month": "2026-04",
+          "r2": 237.2004,
+          "first_cross_date": "2026-04-29",
+          "days_crossed": 2
+        }
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "last_close": 111.78,
+      "last_high": 113.14,
+      "last_date": "2026-06-04",
+      "day_pct": -0.83,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 175.0884,
+      "future_month_r2": 115.9324,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 121.5943,
+        "first_cross_date": "2026-05-08",
+        "days_crossed": 10,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 121.5943,
+          "first_cross_date": "2026-05-08",
+          "days_crossed": 10
+        },
+        {
+          "month": "2026-04",
+          "r2": 53.3175,
+          "first_cross_date": "2026-04-08",
+          "days_crossed": 17
+        }
+      ]
+    },
+    {
+      "ticker": "LRCX",
+      "last_close": 336.41,
+      "last_high": 342.369,
+      "last_date": "2026-06-04",
+      "day_pct": -2.12,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "current_month_r2": 390.0565,
+      "future_month_r2": 351.0827,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 308.4158,
+        "first_cross_date": "2026-05-22",
+        "days_crossed": 5,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 308.4158,
+          "first_cross_date": "2026-05-22",
+          "days_crossed": 5
+        },
+        {
+          "month": "2026-04",
+          "r2": 265.3213,
+          "first_cross_date": "2026-04-10",
+          "days_crossed": 12
+        }
+      ]
+    },
+    {
+      "ticker": "MGM",
+      "last_close": 47.94,
+      "last_high": 48.7,
+      "last_date": "2026-06-04",
+      "day_pct": -0.75,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 48.9925,
+      "future_month_r2": 49.2808,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 48.9925,
+        "first_cross_date": "2026-06-01",
+        "days_crossed": 2
+      },
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 43.7608,
+        "first_cross_date": "2026-05-29",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 43.7608,
+          "first_cross_date": "2026-05-29",
+          "days_crossed": 1
+        },
+        {
+          "month": "2026-04",
+          "r2": 40.3442,
+          "first_cross_date": "2026-04-21",
+          "days_crossed": 4
+        }
+      ]
+    },
+    {
+      "ticker": "NTAP",
+      "last_close": 178.87,
+      "last_high": 180.0,
+      "last_date": "2026-06-04",
+      "day_pct": -1.22,
+      "sma3_direction": "up",
+      "sma3_days": 11,
+      "current_month_r2": 237.4169,
+      "future_month_r2": 182.9392,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 122.9693,
+        "first_cross_date": "2026-05-14",
+        "days_crossed": 7,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 122.9693,
+          "first_cross_date": "2026-05-14",
+          "days_crossed": 7
+        },
+        {
+          "month": "2026-04",
+          "r2": 112.2558,
+          "first_cross_date": "2026-04-21",
+          "days_crossed": 2
+        }
+      ]
+    },
+    {
+      "ticker": "ON",
+      "last_close": 131.82,
+      "last_high": 134.485,
+      "last_date": "2026-06-04",
+      "day_pct": -1.58,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "current_month_r2": 161.9946,
+      "future_month_r2": 139.2779,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 122.8567,
+        "first_cross_date": "2026-05-26",
+        "days_crossed": 4,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 122.8567,
+          "first_cross_date": "2026-05-26",
+          "days_crossed": 4
+        },
+        {
+          "month": "2026-04",
+          "r2": 72.6892,
+          "first_cross_date": "2026-04-16",
+          "days_crossed": 11
+        }
+      ]
+    },
+    {
+      "ticker": "Q",
+      "last_close": 154.8,
+      "last_high": 156.87,
+      "last_date": "2026-06-04",
+      "day_pct": -0.13,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 186.8214,
+      "future_month_r2": 160.1933,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 163.4143,
+        "first_cross_date": "2026-05-12",
+        "days_crossed": 5,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 163.4143,
+          "first_cross_date": "2026-05-12",
+          "days_crossed": 5
+        },
+        {
+          "month": "2026-04",
+          "r2": 137.0252,
+          "first_cross_date": "2026-04-17",
+          "days_crossed": 10
+        }
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "last_close": 242.57,
+      "last_high": 246.7,
+      "last_date": "2026-06-04",
+      "day_pct": -2.98,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 318.4442,
+      "future_month_r2": 252.3842,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 219.2317,
+        "first_cross_date": "2026-05-07",
+        "days_crossed": 10,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 219.2317,
+          "first_cross_date": "2026-05-07",
+          "days_crossed": 10
+        },
+        {
+          "month": "2026-04",
+          "r2": 167.7937,
+          "first_cross_date": "2026-04-30",
+          "days_crossed": 1
+        }
+      ]
+    },
+    {
+      "ticker": "SNDK",
+      "last_close": 1759.6801,
+      "last_high": 1825.9,
+      "last_date": "2026-06-04",
+      "day_pct": -3.92,
+      "sma3_direction": "up",
+      "sma3_days": 11,
+      "current_month_r2": 2261.2259,
+      "future_month_r2": 1872.0871,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 1409.9812,
+        "first_cross_date": "2026-05-05",
+        "days_crossed": 16,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 1409.9812,
+          "first_cross_date": "2026-05-05",
+          "days_crossed": 16
+        },
+        {
+          "month": "2026-04",
+          "r2": 936.4419,
+          "first_cross_date": "2026-04-13",
+          "days_crossed": 12
+        }
+      ]
+    },
+    {
+      "ticker": "STLD",
+      "last_close": 276.85,
+      "last_high": 280.4899,
+      "last_date": "2026-06-04",
+      "day_pct": 0.63,
+      "sma3_direction": "up",
+      "sma3_days": 10,
+      "current_month_r2": 303.5131,
+      "future_month_r2": 287.2519,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 258.1125,
+        "first_cross_date": "2026-05-27",
+        "days_crossed": 3,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 258.1125,
+          "first_cross_date": "2026-05-27",
+          "days_crossed": 3
+        },
+        {
+          "month": "2026-04",
+          "r2": 221.6424,
+          "first_cross_date": "2026-04-21",
+          "days_crossed": 8
+        }
+      ]
+    },
+    {
+      "ticker": "STX",
+      "last_close": 925.99,
+      "last_high": 941.49,
+      "last_date": "2026-06-04",
+      "day_pct": -1.56,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 1161.3188,
+      "future_month_r2": 968.9887,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 859.2075,
+        "first_cross_date": "2026-05-26",
+        "days_crossed": 4,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 859.2075,
+          "first_cross_date": "2026-05-26",
+          "days_crossed": 4
+        },
+        {
+          "month": "2026-04",
+          "r2": 488.0453,
+          "first_cross_date": "2026-04-08",
+          "days_crossed": 17
+        }
+      ]
+    },
+    {
+      "ticker": "SWKS",
+      "last_close": 79.93,
+      "last_high": 81.87,
+      "last_date": "2026-06-04",
+      "day_pct": -0.91,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 97.2609,
+      "future_month_r2": 83.3079,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 78.9118,
+        "first_cross_date": "2026-05-22",
+        "days_crossed": 5,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 78.9118,
+          "first_cross_date": "2026-05-22",
+          "days_crossed": 5
+        },
+        {
+          "month": "2026-04",
+          "r2": 64.5322,
+          "first_cross_date": "2026-04-30",
+          "days_crossed": 1
+        }
+      ]
+    },
+    {
+      "ticker": "VRSN",
+      "last_close": 293.79,
+      "last_high": 300.1875,
+      "last_date": "2026-06-04",
+      "day_pct": -1.11,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "current_month_r2": 343.8032,
+      "future_month_r2": 303.469,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 303.4899,
+        "first_cross_date": "2026-05-18",
+        "days_crossed": 7,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 303.4899,
+          "first_cross_date": "2026-05-18",
+          "days_crossed": 7
+        },
+        {
+          "month": "2026-04",
+          "r2": 268.6337,
+          "first_cross_date": "2026-04-06",
+          "days_crossed": 19
+        }
+      ]
+    },
+    {
+      "ticker": "WDC",
+      "last_close": 575.5,
+      "last_high": 594.0,
+      "last_date": "2026-06-04",
+      "day_pct": -3.13,
+      "sma3_direction": "up",
+      "sma3_days": 10,
+      "current_month_r2": 692.6636,
+      "future_month_r2": 607.3183,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 541.5779,
+        "first_cross_date": "2026-05-27",
+        "days_crossed": 3,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 541.5779,
+          "first_cross_date": "2026-05-27",
+          "days_crossed": 3
+        },
+        {
+          "month": "2026-04",
+          "r2": 365.8248,
+          "first_cross_date": "2026-04-14",
+          "days_crossed": 12
+        }
+      ]
+    },
+    {
+      "ticker": "A",
+      "last_close": 138.37,
+      "last_high": 141.09,
+      "last_date": "2026-06-04",
+      "day_pct": 0.71,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "current_month_r2": 155.18,
+      "future_month_r2": 144.4112,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 131.71,
+        "first_cross_date": "2026-05-28",
+        "days_crossed": 2,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 131.71,
           "first_cross_date": "2026-05-28",
           "days_crossed": 2
         }
@@ -18,41 +848,83 @@
     },
     {
       "ticker": "AAPL",
-      "last_close": 310.26,
-      "last_high": 316.94,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 311.23,
+      "last_high": 313.54,
+      "last_date": "2026-06-04",
+      "day_pct": 0.31,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "current_month_r2": 343.8034,
+      "future_month_r2": 315.5971,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 291.1926,
+        "first_cross_date": "2026-05-07",
+        "days_crossed": 16,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 294.3788,
-          "first_cross_date": "2026-05-08",
-          "days_crossed": 14
+          "month": "2026-05",
+          "r2": 291.1926,
+          "first_cross_date": "2026-05-07",
+          "days_crossed": 16
         }
       ]
     },
     {
       "ticker": "ADM",
-      "last_close": 84.11,
-      "last_high": 85.37,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 83.37,
+      "last_high": 84.74,
+      "last_date": "2026-06-04",
+      "day_pct": -0.88,
+      "sma3_direction": "up",
+      "sma3_days": 7,
+      "current_month_r2": 89.7022,
+      "future_month_r2": 85.7633,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 80.6102,
+        "first_cross_date": "2026-05-05",
+        "days_crossed": 8,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 81.3106,
-          "first_cross_date": "2026-05-12",
-          "days_crossed": 4
+          "month": "2026-05",
+          "r2": 80.6102,
+          "first_cross_date": "2026-05-05",
+          "days_crossed": 8
         }
       ]
     },
     {
       "ticker": "AES",
-      "last_close": 14.71,
-      "last_high": 14.72,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 14.73,
+      "last_high": 14.74,
+      "last_date": "2026-06-04",
+      "day_pct": 0.14,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "current_month_r2": 14.8082,
+      "future_month_r2": 14.7606,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 14.6733,
+        "first_cross_date": "2026-05-20",
+        "days_crossed": 7,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 14.6164,
+          "month": "2026-05",
+          "r2": 14.6733,
           "first_cross_date": "2026-05-20",
           "days_crossed": 7
         }
@@ -60,83 +932,139 @@
     },
     {
       "ticker": "AKAM",
-      "last_close": 160.36,
-      "last_high": 164.8,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 158.98,
+      "last_high": 160.87,
+      "last_date": "2026-06-04",
+      "day_pct": -0.86,
+      "sma3_direction": "up",
+      "sma3_days": 4,
+      "current_month_r2": 196.1467,
+      "future_month_r2": 163.9946,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 134.03,
+        "first_cross_date": "2026-05-08",
+        "days_crossed": 15,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 132.8867,
+          "month": "2026-05",
+          "r2": 134.03,
           "first_cross_date": "2026-05-08",
           "days_crossed": 15
         }
       ]
     },
     {
-      "ticker": "AMD",
-      "last_close": 542.52,
-      "last_high": 546.44,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "ticker": "ALL",
+      "last_close": 210.84,
+      "last_high": 214.61,
+      "last_date": "2026-06-04",
+      "day_pct": 0.72,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "current_month_r2": 237.1474,
+      "future_month_r2": 217.659,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 226.3517,
+        "first_cross_date": "2026-05-19",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 457.6967,
-          "first_cross_date": "2026-05-11",
-          "days_crossed": 8
+          "month": "2026-05",
+          "r2": 226.3517,
+          "first_cross_date": "2026-05-19",
+          "days_crossed": 1
+        }
+      ]
+    },
+    {
+      "ticker": "AMT",
+      "last_close": 193.91,
+      "last_high": 194.95,
+      "last_date": "2026-06-04",
+      "day_pct": 6.4,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 200.4308,
+      "future_month_r2": 200.105,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 188.5461,
+        "first_cross_date": "2026-05-27",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 188.5461,
+          "first_cross_date": "2026-05-27",
+          "days_crossed": 1
         }
       ]
     },
     {
       "ticker": "APP",
-      "last_close": 570.83,
-      "last_high": 599.642,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 558.87,
+      "last_high": 587.0,
+      "last_date": "2026-06-04",
+      "day_pct": -2.1,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 704.5446,
+      "future_month_r2": 614.6378,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 554.9754,
+        "first_cross_date": "2026-05-27",
+        "days_crossed": 3,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 561.6766,
+          "month": "2026-05",
+          "r2": 554.9754,
           "first_cross_date": "2026-05-27",
           "days_crossed": 3
         }
       ]
     },
     {
-      "ticker": "APTV",
-      "last_close": 76.82,
-      "last_high": 78.49,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 65.8333,
-          "first_cross_date": "2026-05-29",
-          "days_crossed": 1
-        }
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "last_close": 479.23,
-      "last_high": 495.0,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "current_month",
-          "r2": 477.59,
-          "first_cross_date": "2026-06-02",
-          "days_crossed": 2
-        }
-      ]
-    },
-    {
       "ticker": "BBY",
-      "last_close": 71.73,
-      "last_high": 72.78,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 70.99,
+      "last_high": 72.91,
+      "last_date": "2026-06-04",
+      "day_pct": -1.03,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 90.2083,
+      "future_month_r2": 74.8392,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 73.135,
+        "first_cross_date": "2026-05-28",
+        "days_crossed": 2,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 72.3233,
+          "month": "2026-05",
+          "r2": 73.135,
           "first_cross_date": "2026-05-28",
           "days_crossed": 2
         }
@@ -144,139 +1072,167 @@
     },
     {
       "ticker": "CBOE",
-      "last_close": 285.1,
-      "last_high": 290.82,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 286.03,
+      "last_high": 288.73,
+      "last_date": "2026-06-04",
+      "day_pct": 0.33,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 414.7208,
+      "future_month_r2": 296.3221,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 324.0259,
+        "first_cross_date": "2026-05-01",
+        "days_crossed": 20,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 326.652,
+          "month": "2026-05",
+          "r2": 324.0259,
           "first_cross_date": "2026-05-01",
           "days_crossed": 20
         }
       ]
     },
     {
-      "ticker": "CDNS",
-      "last_close": 408.0,
-      "last_high": 411.04,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "current_month",
-          "r2": 415.67,
-          "first_cross_date": "2026-06-02",
-          "days_crossed": 1
-        }
-      ]
-    },
-    {
-      "ticker": "CL",
-      "last_close": 84.87,
-      "last_high": 87.96,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 88.5762,
-          "first_cross_date": "2026-05-01",
-          "days_crossed": 14
-        }
-      ]
-    },
-    {
       "ticker": "COST",
-      "last_close": 961.83,
-      "last_high": 969.18,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 972.35,
+      "last_high": 990.01,
+      "last_date": "2026-06-04",
+      "day_pct": 1.09,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 1164.4812,
+      "future_month_r2": 1009.9648,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 1069.8226,
+        "first_cross_date": "2026-05-18",
+        "days_crossed": 3,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 1073.712,
+          "month": "2026-05",
+          "r2": 1069.8226,
           "first_cross_date": "2026-05-18",
           "days_crossed": 3
         }
       ]
     },
     {
-      "ticker": "CPRT",
-      "last_close": 30.35,
-      "last_high": 30.78,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 35.4433,
-          "first_cross_date": "2026-05-22",
-          "days_crossed": 1
-        }
-      ]
-    },
-    {
       "ticker": "CRWD",
-      "last_close": 747.61,
-      "last_high": 767.0,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 719.09,
+      "last_high": 720.92,
+      "last_date": "2026-06-04",
+      "day_pct": -3.81,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 893.5377,
+      "future_month_r2": 792.3991,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 520.53,
+        "first_cross_date": "2026-05-08",
+        "days_crossed": 15,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 529.5367,
-          "first_cross_date": "2026-05-11",
-          "days_crossed": 14
-        }
-      ]
-    },
-    {
-      "ticker": "CSCO",
-      "last_close": 126.5,
-      "last_high": 129.42,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 101.1519,
-          "first_cross_date": "2026-05-13",
-          "days_crossed": 12
+          "month": "2026-05",
+          "r2": 520.53,
+          "first_cross_date": "2026-05-08",
+          "days_crossed": 15
         }
       ]
     },
     {
       "ticker": "CVS",
-      "last_close": 91.37,
-      "last_high": 93.32,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 94.82,
+      "last_high": 94.87,
+      "last_date": "2026-06-04",
+      "day_pct": 3.78,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 109.7909,
+      "future_month_r2": 97.2531,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 89.169,
+        "first_cross_date": "2026-05-08",
+        "days_crossed": 15,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 90.9914,
-          "first_cross_date": "2026-05-11",
-          "days_crossed": 14
+          "month": "2026-05",
+          "r2": 89.169,
+          "first_cross_date": "2026-05-08",
+          "days_crossed": 15
         }
       ]
     },
     {
       "ticker": "D",
-      "last_close": 65.46,
-      "last_high": 67.1,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 66.5,
+      "last_high": 66.955,
+      "last_date": "2026-06-04",
+      "day_pct": 1.59,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 72.3299,
+      "future_month_r2": 67.6742,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 66.8506,
+        "first_cross_date": "2026-05-18",
+        "days_crossed": 9,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 67.3721,
+          "month": "2026-05",
+          "r2": 66.8506,
           "first_cross_date": "2026-05-18",
-          "days_crossed": 7
+          "days_crossed": 9
         }
       ]
     },
     {
       "ticker": "DAL",
-      "last_close": 78.78,
-      "last_high": 79.94,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 79.51,
+      "last_high": 80.44,
+      "last_date": "2026-06-04",
+      "day_pct": 0.93,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 92.1607,
+      "future_month_r2": 81.2767,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 79.8839,
+        "first_cross_date": "2026-05-27",
+        "days_crossed": 3,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 79.6986,
+          "month": "2026-05",
+          "r2": 79.8839,
           "first_cross_date": "2026-05-27",
           "days_crossed": 3
         }
@@ -284,55 +1240,83 @@
     },
     {
       "ticker": "DD",
-      "last_close": 47.97,
-      "last_high": 48.78,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 47.65,
+      "last_high": 48.06,
+      "last_date": "2026-06-04",
+      "day_pct": -0.67,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 54.6357,
+      "future_month_r2": 48.7304,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 49.8198,
+        "first_cross_date": "2026-05-05",
+        "days_crossed": 8,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 49.6496,
+          "month": "2026-05",
+          "r2": 49.8198,
           "first_cross_date": "2026-05-05",
-          "days_crossed": 10
+          "days_crossed": 8
         }
       ]
     },
     {
       "ticker": "DDOG",
-      "last_close": 250.33,
-      "last_high": 262.2,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 243.6,
+      "last_high": 251.02,
+      "last_date": "2026-06-04",
+      "day_pct": -2.69,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 315.3142,
+      "future_month_r2": 266.7096,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 156.3463,
+        "first_cross_date": "2026-05-07",
+        "days_crossed": 16,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 159.5333,
+          "month": "2026-05",
+          "r2": 156.3463,
           "first_cross_date": "2026-05-07",
           "days_crossed": 16
         }
       ]
     },
     {
-      "ticker": "DELL",
-      "last_close": 421.08,
-      "last_high": 436.0,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 254.3563,
-          "first_cross_date": "2026-05-08",
-          "days_crossed": 9
-        }
-      ]
-    },
-    {
       "ticker": "DOC",
-      "last_close": 19.07,
-      "last_high": 19.49,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 19.6,
+      "last_high": 19.64,
+      "last_date": "2026-06-04",
+      "day_pct": 2.78,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 22.1684,
+      "future_month_r2": 19.8817,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 18.0444,
+        "first_cross_date": "2026-05-06",
+        "days_crossed": 17,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 17.9604,
+          "month": "2026-05",
+          "r2": 18.0444,
           "first_cross_date": "2026-05-06",
           "days_crossed": 17
         }
@@ -340,125 +1324,111 @@
     },
     {
       "ticker": "DVA",
-      "last_close": 195.03,
-      "last_high": 196.45,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 192.17,
+      "last_high": 199.15,
+      "last_date": "2026-06-04",
+      "day_pct": -1.47,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 231.6721,
+      "future_month_r2": 203.1941,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 166.1842,
+        "first_cross_date": "2026-05-06",
+        "days_crossed": 17,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 164.5333,
+          "month": "2026-05",
+          "r2": 166.1842,
           "first_cross_date": "2026-05-06",
           "days_crossed": 17
         }
       ]
     },
     {
-      "ticker": "DXCM",
-      "last_close": 72.77,
-      "last_high": 73.25,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 70.6233,
-          "first_cross_date": "2026-05-20",
-          "days_crossed": 7
-        }
-      ]
-    },
-    {
-      "ticker": "EBAY",
-      "last_close": 108.82,
-      "last_high": 110.0,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 116.9292,
-          "first_cross_date": "2026-05-20",
-          "days_crossed": 3
-        }
-      ]
-    },
-    {
-      "ticker": "EL",
-      "last_close": 82.05,
-      "last_high": 83.5,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 86.2631,
-          "first_cross_date": "2026-05-06",
-          "days_crossed": 7
-        }
-      ]
-    },
-    {
       "ticker": "F",
-      "last_close": 15.71,
-      "last_high": 16.2,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 15.34,
+      "last_high": 15.89,
+      "last_date": "2026-06-04",
+      "day_pct": -2.36,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 20.7007,
+      "future_month_r2": 16.8167,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 13.6943,
+        "first_cross_date": "2026-05-13",
+        "days_crossed": 10,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 13.6743,
+          "month": "2026-05",
+          "r2": 13.6943,
           "first_cross_date": "2026-05-13",
           "days_crossed": 10
         }
       ]
     },
     {
-      "ticker": "FFIV",
-      "last_close": 405.66,
-      "last_high": 411.52,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 361.2467,
-          "first_cross_date": "2026-05-12",
-          "days_crossed": 12
-        }
-      ]
-    },
-    {
-      "ticker": "FICO",
-      "last_close": 1174.66,
-      "last_high": 1230.0,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 1269.0067,
-          "first_cross_date": "2026-05-22",
-          "days_crossed": 5
-        }
-      ]
-    },
-    {
       "ticker": "FRT",
-      "last_close": 119.42,
-      "last_high": 120.23,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 120.81,
+      "last_high": 121.38,
+      "last_date": "2026-06-04",
+      "day_pct": 1.16,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 131.2141,
+      "future_month_r2": 122.3752,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 116.1475,
+        "first_cross_date": "2026-05-06",
+        "days_crossed": 11,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 116.9556,
+          "month": "2026-05",
+          "r2": 116.1475,
           "first_cross_date": "2026-05-06",
-          "days_crossed": 7
+          "days_crossed": 11
         }
       ]
     },
     {
       "ticker": "FSLR",
-      "last_close": 318.25,
-      "last_high": 320.95,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 314.95,
+      "last_high": 320.64,
+      "last_date": "2026-06-04",
+      "day_pct": -1.04,
+      "sma3_direction": "up",
+      "sma3_days": 11,
+      "current_month_r2": 370.11,
+      "future_month_r2": 329.4275,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 227.9096,
+        "first_cross_date": "2026-05-11",
+        "days_crossed": 14,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 225.21,
+          "month": "2026-05",
+          "r2": 227.9096,
           "first_cross_date": "2026-05-11",
           "days_crossed": 14
         }
@@ -466,13 +1436,27 @@
     },
     {
       "ticker": "FTNT",
-      "last_close": 146.48,
-      "last_high": 148.47,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 149.67,
+      "last_high": 150.065,
+      "last_date": "2026-06-04",
+      "day_pct": 2.18,
+      "sma3_direction": "up",
+      "sma3_days": 5,
+      "current_month_r2": 166.9719,
+      "future_month_r2": 153.0604,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 93.6575,
+        "first_cross_date": "2026-05-07",
+        "days_crossed": 16,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 94.2833,
+          "month": "2026-05",
+          "r2": 93.6575,
           "first_cross_date": "2026-05-07",
           "days_crossed": 16
         }
@@ -480,145 +1464,139 @@
     },
     {
       "ticker": "GEN",
-      "last_close": 26.5,
-      "last_high": 27.21,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 26.52,
+      "last_high": 27.2299,
+      "last_date": "2026-06-04",
+      "day_pct": 0.08,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 29.1811,
+      "future_month_r2": 27.5657,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 24.5204,
+        "first_cross_date": "2026-05-19",
+        "days_crossed": 8,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 22.0982,
-          "first_cross_date": "2026-05-08",
-          "days_crossed": 15
+          "month": "2026-05",
+          "r2": 24.5204,
+          "first_cross_date": "2026-05-19",
+          "days_crossed": 8
         }
       ]
     },
     {
       "ticker": "GLW",
-      "last_close": 200.76,
-      "last_high": 208.57,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 197.7,
+      "last_high": 199.8,
+      "last_date": "2026-06-04",
+      "day_pct": -1.52,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 247.8434,
+      "future_month_r2": 208.3717,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 205.7702,
+        "first_cross_date": "2026-05-11",
+        "days_crossed": 3,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 202.3099,
+          "month": "2026-05",
+          "r2": 205.7702,
           "first_cross_date": "2026-05-11",
-          "days_crossed": 4
-        }
-      ]
-    },
-    {
-      "ticker": "GS",
-      "last_close": 1041.02,
-      "last_high": 1055.97,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 1018.7801,
-          "first_cross_date": "2026-05-29",
-          "days_crossed": 1
+          "days_crossed": 3
         }
       ]
     },
     {
       "ticker": "GWW",
-      "last_close": 1284.22,
-      "last_high": 1296.03,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 1289.37,
+      "last_high": 1300.0,
+      "last_date": "2026-06-04",
+      "day_pct": 0.4,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "current_month_r2": 1375.4835,
+      "future_month_r2": 1321.1039,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 1236.97,
+        "first_cross_date": "2026-05-07",
+        "days_crossed": 16,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 1248.3253,
+          "month": "2026-05",
+          "r2": 1236.97,
           "first_cross_date": "2026-05-07",
-          "days_crossed": 13
-        }
-      ]
-    },
-    {
-      "ticker": "HPE",
-      "last_close": 55.15,
-      "last_high": 55.99,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "current_month",
-          "r2": 54.88,
-          "first_cross_date": "2026-06-02",
-          "days_crossed": 2
-        },
-        {
-          "period": "previous_month",
-          "r2": 33.4033,
-          "first_cross_date": "2026-05-14",
-          "days_crossed": 10
+          "days_crossed": 16
         }
       ]
     },
     {
       "ticker": "HPQ",
-      "last_close": 26.04,
-      "last_high": 26.88,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 26.3,
+      "last_high": 26.71,
+      "last_date": "2026-06-04",
+      "day_pct": 1.0,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 32.4152,
+      "future_month_r2": 27.9133,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 23.1075,
+        "first_cross_date": "2026-05-22",
+        "days_crossed": 5,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 23.4267,
+          "month": "2026-05",
+          "r2": 23.1075,
           "first_cross_date": "2026-05-22",
           "days_crossed": 5
         }
       ]
     },
     {
-      "ticker": "HRL",
-      "last_close": 23.13,
-      "last_high": 23.55,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 23.5546,
-          "first_cross_date": "2026-05-28",
-          "days_crossed": 2
-        }
-      ]
-    },
-    {
-      "ticker": "HST",
-      "last_close": 23.85,
-      "last_high": 24.07,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 23.27,
-          "first_cross_date": "2026-05-27",
-          "days_crossed": 3
-        }
-      ]
-    },
-    {
-      "ticker": "HUM",
-      "last_close": 327.54,
-      "last_high": 332.26,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 293.2133,
-          "first_cross_date": "2026-05-12",
-          "days_crossed": 13
-        }
-      ]
-    },
-    {
       "ticker": "HWM",
-      "last_close": 248.63,
-      "last_high": 252.08,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 249.33,
+      "last_high": 251.055,
+      "last_date": "2026-06-04",
+      "day_pct": 0.28,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 301.0822,
+      "future_month_r2": 254.54,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 272.9806,
+        "first_cross_date": "2026-05-07",
+        "days_crossed": 6,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 273.3396,
+          "month": "2026-05",
+          "r2": 272.9806,
           "first_cross_date": "2026-05-07",
           "days_crossed": 6
         }
@@ -626,13 +1604,27 @@
     },
     {
       "ticker": "IBM",
-      "last_close": 305.63,
-      "last_high": 318.3,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 301.77,
+      "last_high": 310.44,
+      "last_date": "2026-06-04",
+      "day_pct": -1.26,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 344.3795,
+      "future_month_r2": 323.1683,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 280.9327,
+        "first_cross_date": "2026-05-29",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 271.8393,
+          "month": "2026-05",
+          "r2": 280.9327,
           "first_cross_date": "2026-05-29",
           "days_crossed": 1
         }
@@ -640,41 +1632,55 @@
     },
     {
       "ticker": "IFF",
-      "last_close": 73.56,
-      "last_high": 75.65,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 73.23,
+      "last_high": 75.27,
+      "last_date": "2026-06-04",
+      "day_pct": -0.45,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 90.26,
+      "future_month_r2": 76.5092,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 79.935,
+        "first_cross_date": "2026-05-06",
+        "days_crossed": 5,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 79.4267,
+          "month": "2026-05",
+          "r2": 79.935,
           "first_cross_date": "2026-05-06",
           "days_crossed": 5
         }
       ]
     },
     {
-      "ticker": "INTC",
-      "last_close": 112.71,
-      "last_high": 118.29,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 129.0933,
-          "first_cross_date": "2026-05-08",
-          "days_crossed": 2
-        }
-      ]
-    },
-    {
       "ticker": "KHC",
-      "last_close": 22.76,
-      "last_high": 23.39,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 22.47,
+      "last_high": 23.2188,
+      "last_date": "2026-06-04",
+      "day_pct": -1.27,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 26.0642,
+      "future_month_r2": 23.747,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 24.5233,
+        "first_cross_date": "2026-05-27",
+        "days_crossed": 2,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 24.5467,
+          "month": "2026-05",
+          "r2": 24.5233,
           "first_cross_date": "2026-05-27",
           "days_crossed": 2
         }
@@ -682,61 +1688,55 @@
     },
     {
       "ticker": "LLY",
-      "last_close": 1078.78,
-      "last_high": 1093.28,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 1125.27,
+      "last_high": 1140.46,
+      "last_date": "2026-06-04",
+      "day_pct": 4.31,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 1246.6731,
+      "future_month_r2": 1176.9626,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 1074.9372,
+        "first_cross_date": "2026-05-26",
+        "days_crossed": 4,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 1044.9678,
-          "first_cross_date": "2026-05-21",
-          "days_crossed": 6
-        }
-      ]
-    },
-    {
-      "ticker": "LRCX",
-      "last_close": 343.71,
-      "last_high": 346.19,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 314.54,
+          "month": "2026-05",
+          "r2": 1074.9372,
           "first_cross_date": "2026-05-26",
           "days_crossed": 4
         }
       ]
     },
     {
-      "ticker": "MGM",
-      "last_close": 48.3,
-      "last_high": 48.75,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "current_month",
-          "r2": 50.05,
-          "first_cross_date": "2026-06-01",
-          "days_crossed": 2
-        },
-        {
-          "period": "previous_month",
-          "r2": 44.02,
-          "first_cross_date": "2026-05-29",
-          "days_crossed": 1
-        }
-      ]
-    },
-    {
       "ticker": "MNST",
-      "last_close": 89.04,
-      "last_high": 89.7,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 88.54,
+      "last_high": 90.4449,
+      "last_date": "2026-06-04",
+      "day_pct": -0.56,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "current_month_r2": 97.5542,
+      "future_month_r2": 91.5003,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 82.2265,
+        "first_cross_date": "2026-05-08",
+        "days_crossed": 15,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 82.3567,
+          "month": "2026-05",
+          "r2": 82.2265,
           "first_cross_date": "2026-05-08",
           "days_crossed": 15
         }
@@ -744,55 +1744,55 @@
     },
     {
       "ticker": "MU",
-      "last_close": 1079.5699,
-      "last_high": 1089.29,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 996.0,
+      "last_high": 1036.3699,
+      "last_date": "2026-06-04",
+      "day_pct": -7.74,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 1288.6353,
+      "future_month_r2": 1090.7162,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 632.3475,
+        "first_cross_date": "2026-05-05",
+        "days_crossed": 18,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 659.5866,
-          "first_cross_date": "2026-05-06",
-          "days_crossed": 17
-        }
-      ]
-    },
-    {
-      "ticker": "NOW",
-      "last_close": 117.9,
-      "last_high": 128.08,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 116.4767,
-          "first_cross_date": "2026-05-29",
-          "days_crossed": 1
-        }
-      ]
-    },
-    {
-      "ticker": "NTAP",
-      "last_close": 181.08,
-      "last_high": 182.86,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 124.7311,
-          "first_cross_date": "2026-05-22",
-          "days_crossed": 5
+          "month": "2026-05",
+          "r2": 632.3475,
+          "first_cross_date": "2026-05-05",
+          "days_crossed": 18
         }
       ]
     },
     {
       "ticker": "ORCL",
-      "last_close": 230.33,
-      "last_high": 240.51,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 236.34,
+      "last_high": 238.95,
+      "last_date": "2026-06-04",
+      "day_pct": 2.61,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 259.9136,
+      "future_month_r2": 246.2781,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 214.6295,
+        "first_cross_date": "2026-05-29",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 215.5704,
+          "month": "2026-05",
+          "r2": 214.6295,
           "first_cross_date": "2026-05-29",
           "days_crossed": 1
         }
@@ -800,13 +1800,27 @@
     },
     {
       "ticker": "PANW",
-      "last_close": 280.43,
-      "last_high": 288.0,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 279.25,
+      "last_high": 280.72,
+      "last_date": "2026-06-04",
+      "day_pct": -0.42,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 343.6953,
+      "future_month_r2": 294.4792,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 203.6508,
+        "first_cross_date": "2026-05-08",
+        "days_crossed": 15,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 206.92,
+          "month": "2026-05",
+          "r2": 203.6508,
           "first_cross_date": "2026-05-08",
           "days_crossed": 15
         }
@@ -814,195 +1828,167 @@
     },
     {
       "ticker": "PM",
-      "last_close": 175.94,
-      "last_high": 178.92,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 174.99,
+      "last_high": 179.28,
+      "last_date": "2026-06-04",
+      "day_pct": -0.54,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 205.5533,
+      "future_month_r2": 181.5625,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 182.9616,
+        "first_cross_date": "2026-05-12",
+        "days_crossed": 12,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 181.7767,
-          "first_cross_date": "2026-05-11",
-          "days_crossed": 13
-        }
-      ]
-    },
-    {
-      "ticker": "Q",
-      "last_close": 155.0,
-      "last_high": 159.33,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 167.3138,
+          "month": "2026-05",
+          "r2": 182.9616,
           "first_cross_date": "2026-05-12",
-          "days_crossed": 2
-        }
-      ]
-    },
-    {
-      "ticker": "QCOM",
-      "last_close": 250.01,
-      "last_high": 255.09,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 227.72,
-          "first_cross_date": "2026-05-08",
-          "days_crossed": 8
+          "days_crossed": 12
         }
       ]
     },
     {
       "ticker": "ROK",
-      "last_close": 461.73,
-      "last_high": 468.11,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 462.24,
+      "last_high": 464.27,
+      "last_date": "2026-06-04",
+      "day_pct": 0.11,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "current_month_r2": 500.9798,
+      "future_month_r2": 467.5996,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 451.2929,
+        "first_cross_date": "2026-05-05",
+        "days_crossed": 13,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 458.4026,
-          "first_cross_date": "2026-05-06",
-          "days_crossed": 5
-        }
-      ]
-    },
-    {
-      "ticker": "SATS",
-      "last_close": 120.92,
-      "last_high": 125.03,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 146.7533,
-          "first_cross_date": "2026-05-18",
-          "days_crossed": 1
-        }
-      ]
-    },
-    {
-      "ticker": "SJM",
-      "last_close": 101.27,
-      "last_high": 102.94,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 104.6286,
-          "first_cross_date": "2026-05-19",
-          "days_crossed": 3
-        }
-      ]
-    },
-    {
-      "ticker": "SMCI",
-      "last_close": 47.42,
-      "last_high": 50.02,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 34.5267,
-          "first_cross_date": "2026-05-06",
-          "days_crossed": 9
-        }
-      ]
-    },
-    {
-      "ticker": "SNDK",
-      "last_close": 1831.5,
-      "last_high": 1861.0,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 1424.8367,
-          "first_cross_date": "2026-05-06",
-          "days_crossed": 15
-        }
-      ]
-    },
-    {
-      "ticker": "SOLV",
-      "last_close": 78.36,
-      "last_high": 78.79,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 76.0933,
-          "first_cross_date": "2026-05-18",
-          "days_crossed": 9
-        }
-      ]
-    },
-    {
-      "ticker": "STX",
-      "last_close": 940.69,
-      "last_high": 966.8,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 889.6733,
-          "first_cross_date": "2026-05-28",
-          "days_crossed": 2
-        }
-      ]
-    },
-    {
-      "ticker": "SWKS",
-      "last_close": 80.66,
-      "last_high": 82.41,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 81.7331,
-          "first_cross_date": "2026-05-22",
-          "days_crossed": 5
-        }
-      ]
-    },
-    {
-      "ticker": "TSLA",
-      "last_close": 423.7,
-      "last_high": 433.6,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 448.09,
-          "first_cross_date": "2026-05-11",
-          "days_crossed": 3
-        }
-      ]
-    },
-    {
-      "ticker": "TSN",
-      "last_close": 57.09,
-      "last_high": 60.2,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 66.3309,
-          "first_cross_date": "2026-05-04",
+          "month": "2026-05",
+          "r2": 451.2929,
+          "first_cross_date": "2026-05-05",
           "days_crossed": 13
         }
       ]
     },
     {
-      "ticker": "TTWO",
-      "last_close": 215.8,
-      "last_high": 220.79,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "ticker": "SMCI",
+      "last_close": 46.9,
+      "last_high": 47.84,
+      "last_date": "2026-06-04",
+      "day_pct": -1.1,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 58.9458,
+      "future_month_r2": 49.3642,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 33.8933,
+        "first_cross_date": "2026-05-06",
+        "days_crossed": 10,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 237.02,
+          "month": "2026-05",
+          "r2": 33.8933,
+          "first_cross_date": "2026-05-06",
+          "days_crossed": 10
+        }
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "last_close": 418.45,
+      "last_high": 426.3499,
+      "last_date": "2026-06-04",
+      "day_pct": -1.24,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 489.54,
+      "future_month_r2": 430.5057,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 446.445,
+        "first_cross_date": "2026-05-11",
+        "days_crossed": 4,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 446.445,
+          "first_cross_date": "2026-05-11",
+          "days_crossed": 4
+        }
+      ]
+    },
+    {
+      "ticker": "TSN",
+      "last_close": 56.88,
+      "last_high": 58.09,
+      "last_date": "2026-06-04",
+      "day_pct": -0.37,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 72.7584,
+      "future_month_r2": 60.4071,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 67.0716,
+        "first_cross_date": "2026-05-04",
+        "days_crossed": 9,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 67.0716,
+          "first_cross_date": "2026-05-04",
+          "days_crossed": 9
+        }
+      ]
+    },
+    {
+      "ticker": "TTWO",
+      "last_close": 216.65,
+      "last_high": 220.75,
+      "last_date": "2026-06-04",
+      "day_pct": 0.39,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 263.2689,
+      "future_month_r2": 223.2246,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 234.6642,
+        "first_cross_date": "2026-05-14",
+        "days_crossed": 7,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 234.6642,
           "first_cross_date": "2026-05-14",
           "days_crossed": 7
         }
@@ -1010,101 +1996,207 @@
     },
     {
       "ticker": "UAL",
-      "last_close": 105.14,
-      "last_high": 108.15,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 104.94,
+      "last_high": 107.3002,
+      "last_date": "2026-06-04",
+      "day_pct": -0.19,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 132.6608,
+      "future_month_r2": 110.6034,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 114.8933,
+        "first_cross_date": "2026-05-28",
+        "days_crossed": 2,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 113.54,
-          "first_cross_date": "2026-05-27",
-          "days_crossed": 3
-        }
-      ]
-    },
-    {
-      "ticker": "URI",
-      "last_close": 1056.58,
-      "last_high": 1067.88,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "current_month",
-          "r2": 1062.1163,
-          "first_cross_date": "2026-06-03",
-          "days_crossed": 1
-        }
-      ]
-    },
-    {
-      "ticker": "VRSN",
-      "last_close": 297.08,
-      "last_high": 299.08,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 301.8038,
-          "first_cross_date": "2026-05-18",
-          "days_crossed": 7
+          "month": "2026-05",
+          "r2": 114.8933,
+          "first_cross_date": "2026-05-28",
+          "days_crossed": 2
         }
       ]
     },
     {
       "ticker": "VTRS",
-      "last_close": 15.56,
-      "last_high": 15.72,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 15.9,
+      "last_high": 15.99,
+      "last_date": "2026-06-04",
+      "day_pct": 2.19,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 19.2629,
+      "future_month_r2": 16.1625,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 16.1679,
+        "first_cross_date": "2026-05-07",
+        "days_crossed": 16,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 16.4062,
+          "month": "2026-05",
+          "r2": 16.1679,
           "first_cross_date": "2026-05-07",
-          "days_crossed": 13
+          "days_crossed": 16
         }
       ]
     },
     {
       "ticker": "WAT",
-      "last_close": 379.77,
-      "last_high": 380.0,
-      "last_date": "2026-06-03",
-      "crossed": [
+      "last_close": 376.47,
+      "last_high": 384.95,
+      "last_date": "2026-06-04",
+      "day_pct": -0.87,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 429.3275,
+      "future_month_r2": 389.6065,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 374.6742,
+        "first_cross_date": "2026-05-29",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
         {
-          "period": "previous_month",
-          "r2": 373.99,
+          "month": "2026-05",
+          "r2": 374.6742,
           "first_cross_date": "2026-05-29",
           "days_crossed": 1
         }
       ]
     },
     {
-      "ticker": "WDAY",
-      "last_close": 146.9,
-      "last_high": 147.56,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 144.6267,
-          "first_cross_date": "2026-05-29",
-          "days_crossed": 1
-        }
-      ]
+      "ticker": "APTV",
+      "last_close": 72.92,
+      "last_high": 76.5,
+      "last_date": "2026-06-04",
+      "day_pct": -5.08,
+      "sma3_direction": "up",
+      "sma3_days": 10,
+      "current_month_r2": 77.1275,
+      "future_month_r2": 78.7146,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 77.1275,
+        "first_cross_date": "2026-06-03",
+        "days_crossed": 1
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
     },
     {
-      "ticker": "WDC",
-      "last_close": 594.11,
-      "last_high": 602.54,
-      "last_date": "2026-06-03",
-      "crossed": [
-        {
-          "period": "previous_month",
-          "r2": 548.8266,
-          "first_cross_date": "2026-05-28",
-          "days_crossed": 1
-        }
-      ]
+      "ticker": "AXON",
+      "last_close": 513.2,
+      "last_high": 515.79,
+      "last_date": "2026-06-04",
+      "day_pct": 6.59,
+      "sma3_direction": "up",
+      "sma3_days": 6,
+      "current_month_r2": 508.3955,
+      "future_month_r2": 538.1218,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 508.3955,
+        "first_cross_date": "2026-06-04",
+        "days_crossed": 1
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "CRM",
+      "last_close": 188.75,
+      "last_high": 198.09,
+      "last_date": "2026-06-04",
+      "day_pct": -0.98,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "current_month_r2": 210.28,
+      "future_month_r2": 203.6525,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 210.28,
+        "first_cross_date": "2026-06-01",
+        "days_crossed": 1
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "FAST",
+      "last_close": 47.16,
+      "last_high": 47.74,
+      "last_date": "2026-06-04",
+      "day_pct": 1.51,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "current_month_r2": 47.0592,
+      "future_month_r2": 49.5148,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 47.0592,
+        "first_cross_date": "2026-06-04",
+        "days_crossed": 1
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "MAA",
+      "last_close": 136.87,
+      "last_high": 137.05,
+      "last_date": "2026-06-04",
+      "day_pct": 3.27,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "current_month_r2": 136.4558,
+      "future_month_r2": 141.4598,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 136.4558,
+        "first_cross_date": "2026-06-04",
+        "days_crossed": 1
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "PAYX",
+      "last_close": 99.48,
+      "last_high": 102.03,
+      "last_date": "2026-06-04",
+      "day_pct": 1.05,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "current_month_r2": 102.4218,
+      "future_month_r2": 103.3558,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 102.4218,
+        "first_cross_date": "2026-06-01",
+        "days_crossed": 1
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
     }
   ]
 }
