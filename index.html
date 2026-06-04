@@ -222,14 +222,11 @@
         <th data-col="streak">Streak (mo) <span class="sort-icon">↓</span></th>
         <th data-col="ticker">Ticker <span class="sort-icon">↕</span></th>
         <th data-col="last_close">Last Close <span class="sort-icon">↕</span></th>
-        <th data-col="last_high">Last High <span class="sort-icon">↕</span></th>
-        <th data-col="last_date">Last Date <span class="sort-icon">↕</span></th>
         <th data-col="prev_month_r2">Prev R2 <span class="sort-icon">↕</span></th>
         <th data-col="current_month_r2">Current R2 <span class="sort-icon">↕</span></th>
         <th data-col="future_month_r2">Future R2 <span class="sort-icon">↕</span></th>
-        <th>Prev Crossed</th>
-        <th>Prev First Cross</th>
-        <th>Cur Crossed</th>
+        <th data-col="sma3_days">SMA 3D <span class="sort-icon">↕</span></th>
+
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -265,6 +262,8 @@ async function loadData() {
     last_high:               s.last_high,
     last_date:               s.last_date,
     streak:                  s.streak ?? 0,
+    sma3_direction:          s.sma3_direction ?? null,
+    sma3_days:               s.sma3_days      ?? 0,
     prev_month_r2:           s.crossed_previous_month?.r2 ?? null,
     current_month_r2:        s.current_month_r2           ?? null,
     future_month_r2:         s.future_month_r2            ?? null,
@@ -326,14 +325,17 @@ function render() {
       </td>
       <td class="ticker">${s.ticker}</td>
       <td class="price">$${s.last_close.toFixed(2)}</td>
-      <td class="price">$${s.last_high.toFixed(2)}</td>
-      <td class="cross-date">${s.last_date}</td>
       <td class="r2">${s.prev_month_r2    != null ? '$' + s.prev_month_r2.toFixed(2)    : '—'}</td>
       <td class="r2">${s.current_month_r2 != null ? '$' + s.current_month_r2.toFixed(2) : '—'}</td>
       <td class="r2">${s.future_month_r2  != null ? '$' + s.future_month_r2.toFixed(2)  : '—'}</td>
-      <td>${prev ? '<span class="pill pill-prev">✓ ' + prev.days_crossed + 'd</span>' : '<span style="color:#8b949e;font-size:0.78rem">—</span>'}</td>
-      <td class="cross-date">${prev ? prev.first_cross_date : '—'}</td>
-      <td>${currentMonthBadge(s)}</td>
+      <td>${(() => {
+        if (!s.sma3_direction) return '<span style="color:#8b949e">—</span>';
+        const up = s.sma3_direction === 'up';
+        const arrow = up ? '▲' : '▼';
+        const color = up ? '#3fb950' : '#f85149';
+        const days = s.sma3_days > 0 ? ` ${s.sma3_days}d` : '';
+        return `<span style="color:${color};font-weight:600">${arrow}${days}</span>`;
+      })()}</td>
     </tr>`;
   }).join('');
 }
