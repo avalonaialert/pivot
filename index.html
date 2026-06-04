@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Think Alerts Dashboard</title>
+  <title>S&P 500 — Monthly R2 Pivot Watchlist</title>
+  <script src="data.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -12,2334 +13,369 @@
       background: #0d1117;
       color: #e6edf3;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      padding: 24px 16px;
     }
 
-    /* ── Header ── */
     header {
+      max-width: 1100px;
+      margin: 0 auto 24px;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f0f6fc;
+    }
+
+    header p {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: #8b949e;
+    }
+
+    .meta-bar {
+      max-width: 1100px;
+      margin: 0 auto 16px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 18px 24px;
-      border-bottom: 1px solid #21262d;
-      flex-shrink: 0;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    h1 { font-size: 1.2rem; font-weight: 600; letter-spacing: 0.5px; }
-    #last-updated { font-size: 0.75rem; color: #8b949e; }
-    #stale-warning {
-      display: none;
-      font-size: 0.72rem; font-weight: 600;
-      padding: 2px 10px; border-radius: 12px;
-      background: #2d1600; border: 1px solid #b45309; color: #fb923c;
-      white-space: nowrap;
+    .badge {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      color: #8b949e;
     }
-    #sound-toggle {
-      font-size: 0.78rem; cursor: pointer; user-select: none;
-      padding: 2px 9px; border-radius: 12px; border: 1px solid #30363d;
-      background: #161b22; color: #8b949e; white-space: nowrap;
+
+    .badge span { color: #58a6ff; font-weight: 600; }
+
+    .filter-bar {
+      max-width: 1100px;
+      margin: 0 auto 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      color: #8b949e;
+      padding: 5px 14px;
+      font-size: 0.82rem;
+      cursor: pointer;
       transition: border-color 0.15s, color 0.15s;
     }
-    #sound-toggle.on  { border-color: #238636; color: #3fb950; background: #0d2118; }
-    #sound-toggle.off { border-color: #30363d; color: #484f58; }
 
-    .header-right { display: flex; align-items: center; gap: 12px; }
-
-    .market-chip {
-      display: inline-flex; align-items: center; gap: 5px;
-      font-size: 0.72rem; font-weight: 600;
-      padding: 3px 10px; border-radius: 20px; white-space: nowrap;
-    }
-    .market-open   { background:#0d2118; border:1px solid #238636; color:#3fb950; }
-    .market-pre    { background:#0d1b2e; border:1px solid #1f6feb; color:#58a6ff; }
-    .market-after  { background:#1c1400; border:1px solid #f59e0b; color:#fbbf24; }
-    .market-closed { background:#161b22; border:1px solid #30363d; color:#8b949e; }
-
-    #sym-search {
-      display: block; width: 100%; max-width: 280px;
-      margin-bottom: 16px; padding: 7px 12px;
-      background: #161b22; border: 1px solid #30363d;
-      border-radius: 8px; color: #e6edf3; font-size: 0.85rem; outline: none;
-    }
-    #sym-search:focus { border-color: #58a6ff; }
-    #sym-search::placeholder { color: #484f58; }
-
-    @keyframes newAlertPulse {
-      0%   { box-shadow: 0 0 0 0 rgba(251,191,36,0.8); }
-      60%  { box-shadow: 0 0 0 10px rgba(251,191,36,0.12); }
-      100% { box-shadow: 0 0 0 0 rgba(251,191,36,0); }
-    }
-    .tile.new-alert { animation: newAlertPulse 2.4s ease-in-out infinite; }
-
-    /* ── Top movers bar ── */
-    #movers-bar {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 24px;
-      border-bottom: 1px solid #21262d;
-      background: #0d1117;
-      flex-wrap: wrap;
-      flex-shrink: 0;
-      min-height: 36px;
+    .filter-btn.active, .filter-btn:hover {
+      border-color: #58a6ff;
+      color: #58a6ff;
     }
 
-    .movers-label {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.7px;
-      color: #8b949e;
-      margin-right: 4px;
-      white-space: nowrap;
-    }
-
-    .mover-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #0d2118;
-      border: 1px solid #238636;
-      border-radius: 20px;
-      padding: 3px 10px;
-      font-size: 0.78rem;
-      white-space: nowrap;
-    }
-
-    .mover-sym { font-weight: 700; color: #3fb950; }
-    .mover-pct { color: #57d97b; font-weight: 600; }
-
-    .mover-chip.rsi70 {
-      background: #061820;
-      border-color: #06b6d4;
-      box-shadow: 0 0 0 2px #06b6d4, 0 0 12px 3px rgba(6,182,212,0.45);
-    }
-    .mover-chip.rsi70 .mover-sym { color: #06b6d4; }
-    .mover-chip.rsi70 .mover-pct { color: #22d3ee; }
-
-    .sym-link { color: inherit; text-decoration: none; }
-    .sym-link:hover { text-decoration: underline; opacity: 0.85; }
-
-    .earnings-badge {
-      font-size: 0.68rem; font-weight: 600;
-      padding: 2px 8px; border-radius: 12px;
-      background: #111d2e; border: 1px solid #2d5a8e; color: #7eb3e0;
-      white-space: nowrap;
-    }
-
-    .streak-badge {
-      font-size: 0.68rem; font-weight: 700;
-      padding: 2px 8px; border-radius: 12px; white-space: nowrap;
-    }
-    .streak-2 { background: #1a0d00; border: 1px solid #7c2d12; color: #f97316; }
-    .streak-3 { background: #1c0a00; border: 1px solid #b45309; color: #fb923c; }
-    .streak-4 { background: #2d0f0f; border: 1px solid #dc2626; color: #f87171; }
-
-    .tile-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 6px 18px 12px; gap: 8px;
-    }
-    .tile-gap { font-size: 0.72rem; font-weight: 600; white-space: nowrap; }
-    .tile-gap.pos { color: #3fb950; }
-    .tile-gap.neg { color: #f85149; }
-    .tile-gap.flat { color: #8b949e; }
-    .tile-gap-loading { font-size: 0.7rem; color: #484f58; }
-    .sparkline { display: block; flex-shrink: 0; }
-
-
-    /* ── Economic calendar bar ── */
-    #econ-bar {
-      display: flex; align-items: center; gap: 8px;
-      padding: 6px 24px; border-bottom: 1px solid #21262d;
-      background: #0d1117; flex-wrap: wrap; flex-shrink: 0; min-height: 34px;
-    }
-
-    .econ-chip {
-      display: inline-flex; align-items: center; gap: 6px;
-      border-radius: 16px; padding: 3px 10px;
-      font-size: 0.75rem; white-space: nowrap;
-    }
-    .econ-high   { background: #2d0f0f; border: 1px solid #da3633; color: #f85149; }
-    .econ-medium { background: #1c1400; border: 1px solid #9a6e00; color: #d4a017; }
-    .econ-low    { background: #161b22; border: 1px solid #30363d; color: #8b949e; }
-    .econ-time   { font-weight: 700; flex-shrink: 0; }
-    .econ-name   { font-weight: 600; }
-    .econ-data   { opacity: 0.75; font-size: 0.7rem; }
-    .econ-actual-pos { color: #3fb950; font-weight: 700; }
-    .econ-actual-neg { color: #f85149; font-weight: 700; }
-
-    .spy-chip {
-      display: inline-flex; align-items: center; gap: 6px;
-      border-radius: 20px; padding: 3px 12px;
-      font-size: 0.78rem; font-weight: 700; white-space: nowrap;
-      margin-right: 6px;
-    }
-    .spy-chip.up   { background: #0d2118; border: 1px solid #238636; color: #3fb950; }
-    .spy-chip.down { background: #2d0f0f; border: 1px solid #da3633; color: #f85149; }
-    .spy-chip.flat { background: #161b22; border: 1px solid #30363d; color: #8b949e; }
-    .spy-label { font-weight: 900; letter-spacing: 0.5px; }
-    .spy-pct   { font-weight: 700; }
-
-    .contender-label { color: #f59e0b; margin-left: 16px; }
-    .mover-chip.contender {
-      background: #1c1400;
-      border-color: #f59e0b;
-      box-shadow: 0 0 0 2px #f59e0b, 0 0 12px 3px rgba(245,158,11,0.4);
-    }
-    .contender-sym { font-weight: 700; color: #fbbf24; font-size: 0.82rem; }
-
-    /* ── App shell ── */
-    .app {
-      display: flex;
-      flex: 1;
-      min-height: 0;
-    }
-
-    /* ── Sidebar ── */
-    .sidebar {
-      width: 148px;
-      flex-shrink: 0;
-      border-right: 1px solid #21262d;
-      padding: 12px 0;
-      overflow-y: auto;
-      overflow-x: hidden;
-      transition: width 0.22s ease;
-    }
-
-    .sidebar.collapsed {
-      width: 36px;
-      overflow-y: hidden;
-    }
-
-    .sidebar.collapsed .sidebar-label,
-    .sidebar.collapsed .day-tab { display: none; }
-
-    .sidebar-toggle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      margin: 2px 4px 8px;
-      background: none;
+    .search-input {
+      background: #161b22;
       border: 1px solid #30363d;
       border-radius: 6px;
-      color: #8b949e;
-      cursor: pointer;
-      font-size: 0.8rem;
-      flex-shrink: 0;
-      transition: background 0.12s, color 0.12s;
-    }
-
-    .sidebar-toggle:hover { background: #161b22; color: #e6edf3; }
-
-    .sidebar-label {
-      font-size: 0.62rem;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: #8b949e;
-      padding: 6px 16px 4px;
-    }
-
-    .day-tab {
-      display: block;
-      width: 100%;
-      text-align: left;
-      padding: 9px 16px;
+      color: #e6edf3;
+      padding: 5px 12px;
       font-size: 0.82rem;
-      color: #8b949e;
-      background: none;
-      border: none;
-      cursor: pointer;
-      border-radius: 6px;
-      margin: 1px 6px;
-      width: calc(100% - 12px);
-      transition: background 0.12s, color 0.12s;
+      outline: none;
+      width: 180px;
     }
 
-    .day-tab:hover { background: #161b22; color: #e6edf3; }
+    .search-input:focus { border-color: #58a6ff; }
 
-    .day-tab.active {
-      background: #1f2d3d;
-      color: #58a6ff;
-      font-weight: 600;
-    }
-
-    .day-tab.tab-15min {
-      color: #c2560a;
-    }
-    .day-tab.tab-15min:hover { color: #f97316; }
-    .day-tab.tab-15min.active {
-      background: #2d1400;
-      color: #f97316;
-    }
-
-    /* ── Main content ── */
-    .content {
-      flex: 1;
-      padding: 24px;
-      overflow-y: auto;
-      min-width: 0;
-    }
-
-    #status { font-size: 0.82rem; color: #8b949e; margin-bottom: 20px; }
-
-    /* ── Tile grid ── */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 16px;
-    }
-
-    .tile {
-      border-radius: 12px;
-      border: 1px solid transparent;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      overflow-x: hidden;
-    }
-
-    .tile-header {
-      padding: 18px 18px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .tile-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
-
-    .tile-symbol { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.5px; }
-
-    .tile-close-wrap { text-align: right; }
-    .tile-close-label { font-size: 0.65rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
-    .tile-close { font-size: 1.05rem; font-weight: 600; }
-
-    .tile-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 20px;
-      width: fit-content;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .tile-time-latest { font-size: 0.72rem; color: #8b949e; }
-
-    .tile-gain {
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 10px;
-      width: fit-content;
-    }
-    .tile-gain.pos { background: #1a4a2e; color: #3fb950; }
-    .tile-gain.neg { background: #4a1a1a; color: #f85149; }
-
-    .tile-history {
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 0 18px 14px;
-      margin-top: 4px;
-    }
-
-    .history-label {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      color: #8b949e;
-      padding: 10px 0 6px;
-    }
-
-    .history-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 5px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-      gap: 8px;
-    }
-
-    .history-row:last-child { border-bottom: none; }
-
-    .hist-badge {
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 12px;
-      white-space: nowrap;
-      flex-shrink: 1;
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .hist-close { font-size: 0.78rem; color: #e6edf3; white-space: nowrap; flex-shrink: 0; }
-    .hist-time  { font-size: 0.68rem; color: #8b949e; white-space: nowrap; flex-shrink: 0; }
-
-    /* ── Tile colour themes ── */
-    .tile-call { background: #0d2118; border-color: #238636; }
-    .tile-sma  { background: #0d1b2e; border-color: #1f6feb; }
-    .tile-bear { background: #2d0f0f; border-color: #da3633; }
-
-    .tile-5min { background: #1a0d00; border-color: #f97316; }
-    .tile-5min-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #f97316;
-      letter-spacing: 0.4px;
-    }
-    .five-sym  { font-weight: 700; font-size: 0.82rem; color: #f97316; white-space: nowrap; flex-shrink: 0; }
-
-    .tile.recent {
-      border-color: #3b82f6 !important;
-      box-shadow: 0 0 0 2px #3b82f6, 0 0 24px 6px rgba(59,130,246,0.35);
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 0 2px #3b82f6, 0 0 24px 6px rgba(59,130,246,0.35); }
-      50%       { box-shadow: 0 0 0 2px #3b82f6, 0 0 36px 10px rgba(59,130,246,0.55); }
-    }
-
-    .tile-call .tile-symbol, .tile-call .tile-close { color: #3fb950; }
-    .tile-sma  .tile-symbol, .tile-sma  .tile-close { color: #58a6ff; }
-    .tile-bear .tile-symbol, .tile-bear .tile-close { color: #f85149; }
-
-    .tile-call .tile-badge { background: #1a4a2e; color: #3fb950; }
-    .tile-sma  .tile-badge { background: #0f2d4e; color: #58a6ff; }
-    .tile-bear .tile-badge { background: #4a1a1a; color: #f85149; }
-
-    .badge-call  { background: #1a4a2e; color: #3fb950; }
-    .badge-sma   { background: #0f2d4e; color: #58a6ff; }
-    .badge-bear  { background: #4a1a1a; color: #f85149; }
-    .tile-sar { background: #1e1b4b; border-color: #6d28d9; }
-    .tile-sar .tile-symbol, .tile-sar .tile-close { color: #c084fc; }
-    .tile-sar .tile-badge { background: #2d1b4e; color: #c084fc; }
-    .badge-sar   { background: #2d1b4e; color: #c084fc; }
-    .badge-break { background: #4a1a1a; color: #f85149; }
-
-    /* ── Model recommendation strip ── */
-    .tile-rec {
-      margin: 0 18px 12px;
-      padding: 7px 10px;
-      border-radius: 8px;
-      font-size: 0.78rem;
-      border: 1px solid;
-      line-height: 1.5;
-    }
-    .rec-action   { font-weight: 700; display: block; margin-bottom: 1px; }
-    .rec-detail   { font-size: 0.7rem; opacity: 0.8; }
-    .rec-watch    { background: #161b22; border-color: #30363d; color: #8b949e; }
-    .rec-enter    { background: #071f14; border-color: #238636; color: #3fb950; }
-    .rec-hold     { background: #0d1b2e; border-color: #1f6feb; color: #58a6ff; }
-    .rec-strong   { background: #071428; border-color: #1f6feb; color: #7eb3e0; }
-    .rec-building { background: #161b22; border-color: #30363d; color: #8b949e; }
-    .rec-sell     { background: #2d0f0f; border-color: #da3633; color: #f85149; }
-
-    /* ── BackTest Results section ── */
-    .bt-section-title {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #a78bfa;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin: 32px 0 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .bt-section-title::after { content: ""; flex: 1; height: 1px; background: #2a1f4a; }
-
-    .bt-table-wrap { border-radius: 8px; border: 1px solid #2a1f4a; overflow-x: auto; }
-
-    .bt-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-
-    .bt-table thead th {
-      background: #16102a;
-      padding: 10px 14px;
-      text-align: left;
-      font-weight: 600;
-      color: #7c6aaa;
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      letter-spacing: 0.6px;
-      border-bottom: 1px solid #2a1f4a;
-      white-space: nowrap;
-    }
-
-    .bt-table tbody tr { border-bottom: 1px solid #1a1228; transition: background 0.15s; }
-    .bt-table tbody tr:last-child { border-bottom: none; }
-    .bt-table tbody tr:hover { background: #16102a; }
-    .bt-table td { padding: 9px 14px; white-space: nowrap; }
-
-    .bt-symbol  { font-weight: 700; font-size: 0.95rem; color: #a78bfa; }
-    .bt-option  { font-size: 0.78rem; color: #8b949e; }
-    .bt-price   { color: #e6edf3; font-weight: 600; }
-    .bt-gain    { font-weight: 700; }
-    .bt-gain.pos { color: #3fb950; }
-    .bt-gain.neg { color: #f85149; }
-    .bt-time    { color: #8b949e; font-size: 0.75rem; }
-
-    /* ── Positions section ── */
-    .pos-section-title {
-      font-size: 0.85rem; font-weight: 600; color: #34d399;
-      text-transform: uppercase; letter-spacing: 0.8px;
-      margin: 32px 0 12px; display: flex; align-items: center; gap: 8px;
-    }
-    .pos-section-title::after { content: ""; flex: 1; height: 1px; background: #0d3a26; }
-
-    .pos-table-wrap { border-radius: 8px; border: 1px solid #0d3a26; overflow-x: auto; }
-    .pos-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-    .pos-table thead th {
-      background: #071f14; padding: 10px 14px; text-align: left;
-      font-weight: 600; color: #2d9362; text-transform: uppercase;
-      font-size: 0.7rem; letter-spacing: 0.6px;
-      border-bottom: 1px solid #0d3a26; white-space: nowrap;
-    }
-    .pos-table tbody tr { border-bottom: 1px solid #0a1f14; transition: background 0.15s; }
-    .pos-table tbody tr:last-child { border-bottom: none; }
-    .pos-table tbody tr:hover { background: #071f14; }
-    .pos-table td { padding: 9px 14px; white-space: nowrap; }
-
-    .pos-symbol { font-weight: 700; font-size: 0.95rem; color: #34d399; }
-    .pos-option { font-size: 0.78rem; color: #8b949e; }
-    .pos-price  { color: #e6edf3; font-weight: 600; }
-    .pos-qty    { color: #e6edf3; text-align: center; }
-    .pos-pnl    { font-weight: 700; }
-    .pos-pnl.pos { color: #3fb950; }
-    .pos-pnl.neg { color: #f85149; }
-    .pos-time   { color: #8b949e; font-size: 0.75rem; }
-    .pos-reason { color: #8b949e; font-size: 0.78rem; }
-    .pos-status { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.72rem; font-weight: 700; }
-    .pos-open   { background: #0d3a26; color: #34d399; border: 1px solid #34d399; }
-    .pos-closed { background: #1a1a2e; color: #8b949e; border: 1px solid #30363d; }
-
-    /* ── 4H Gaining section ── */
-    .section-title {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #e6af0e;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin: 32px 0 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .section-title::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: #30240a;
-    }
-
-    .gain-table-wrap {
-      border-radius: 8px;
-      border: 1px solid #3a2e0a;
+    .table-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
       overflow-x: auto;
+      border-radius: 10px;
+      border: 1px solid #30363d;
     }
 
-    .gain-table {
+    table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.85rem;
+      font-size: 0.875rem;
     }
 
-    .gain-table thead th {
-      background: #1c1800;
-      padding: 10px 14px;
-      text-align: left;
-      font-weight: 600;
-      color: #8b7a3a;
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      letter-spacing: 0.6px;
-      border-bottom: 1px solid #3a2e0a;
-      white-space: nowrap;
-    }
-
-    .gain-table tbody tr { border-bottom: 1px solid #1e1a08; transition: background 0.15s; }
-    .gain-table tbody tr:last-child { border-bottom: none; }
-    .gain-table tbody tr:hover { background: #1c1800; }
-    .gain-table td { padding: 9px 14px; white-space: nowrap; }
-
-    .gain-symbol { font-weight: 700; font-size: 0.95rem; color: #e6af0e; }
-    .gain-close  { color: #e6edf3; }
-    .gain-time   { color: #8b949e; font-size: 0.75rem; }
-
-    .gain-table tbody tr.rsi70 { background: #061820; box-shadow: inset 3px 0 0 #06b6d4; }
-    .gain-table tbody tr.rsi70 .gain-symbol { color: #06b6d4; }
-
-    #empty { text-align: center; padding: 64px; color: #8b949e; }
-
-    /* ── RSI 70 Pre-Market section ── */
-    .rsi70-section-title {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #06b6d4;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin: 32px 0 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .rsi70-section-title::after { content: ""; flex: 1; height: 1px; background: #0a2a30; }
-
-    .rsi70-table-wrap { border-radius: 8px; border: 1px solid #0a3a45; overflow-x: auto; }
-    .rsi70-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-    .rsi70-table thead th {
-      background: #061820;
-      padding: 10px 14px;
-      text-align: left;
-      font-weight: 600;
-      color: #0891b2;
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      letter-spacing: 0.6px;
-      border-bottom: 1px solid #0a3a45;
-      white-space: nowrap;
-    }
-    .rsi70-table tbody tr { border-bottom: 1px solid #061820; transition: background 0.15s; }
-    .rsi70-table tbody tr:last-child { border-bottom: none; }
-    .rsi70-table tbody tr:hover { background: #061820; }
-    .rsi70-table td { padding: 9px 14px; white-space: nowrap; }
-    .rsi70-symbol { font-weight: 700; font-size: 0.95rem; color: #06b6d4; }
-    .rsi70-close  { color: #e6edf3; }
-    .rsi70-time   { color: #8b949e; font-size: 0.75rem; }
-
-    /* Tile highlight for RSI-70 pre-market stocks */
-    .badge-rsi70 { background: #0a3a45; color: #06b6d4; }
-    .tile.has-rsi70 {
-      border-color: #06b6d4 !important;
-      box-shadow: 0 0 0 2px #06b6d4, 0 0 20px 4px rgba(6,182,212,0.45);
-    }
-
-    /* ── Start of Big Moves section ── */
-    .bigmove-section-title {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #e879f9;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin: 32px 0 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .bigmove-section-title::after { content: ""; flex: 1; height: 1px; background: #2d0a3a; }
-
-    .bigmove-table-wrap { border-radius: 8px; border: 1px solid #3a0a4a; overflow-x: auto; }
-    .bigmove-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-    .bigmove-table thead th {
-      background: #1a0820;
-      padding: 10px 14px;
-      text-align: left;
-      font-weight: 600;
-      color: #b94fd4;
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      letter-spacing: 0.6px;
-      border-bottom: 1px solid #3a0a4a;
-      white-space: nowrap;
-    }
-    .bigmove-table tbody tr { border-bottom: 1px solid #1a0820; transition: background 0.15s; }
-    .bigmove-table tbody tr:last-child { border-bottom: none; }
-    .bigmove-table tbody tr:hover { background: #1a0820; }
-    .bigmove-table td { padding: 9px 14px; white-space: nowrap; }
-    .bigmove-symbol { font-weight: 700; font-size: 0.95rem; color: #e879f9; }
-    .bigmove-close  { color: #e6edf3; }
-    .bigmove-time   { color: #8b949e; font-size: 0.75rem; }
-
-    /* ── Login overlay ── */
-    #login-overlay {
-      position: fixed;
-      inset: 0;
-      background: #0d1117;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-
-    #login-overlay.hidden { display: none; }
-
-    .login-box {
+    thead th {
       background: #161b22;
-      border: 1px solid #21262d;
-      border-radius: 14px;
-      padding: 40px 36px;
-      width: 100%;
-      max-width: 360px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .login-box h2 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: 0.4px;
-      color: #e6edf3;
-      text-align: center;
-    }
-
-    .login-field {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .login-field label {
-      font-size: 0.75rem;
       color: #8b949e;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .login-field input {
-      background: #0d1117;
-      border: 1px solid #30363d;
-      border-radius: 8px;
-      padding: 10px 14px;
-      color: #e6edf3;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.15s;
-    }
-
-    .login-field input:focus { border-color: #58a6ff; }
-
-    .login-btn {
-      background: #238636;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 11px;
-      font-size: 0.95rem;
       font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #30363d;
+      white-space: nowrap;
       cursor: pointer;
-      transition: background 0.15s;
+      user-select: none;
     }
 
-    .login-btn:hover { background: #2ea043; }
+    thead th:hover { color: #f0f6fc; }
+    thead th .sort-icon { margin-left: 4px; opacity: 0.4; }
+    thead th.sorted .sort-icon { opacity: 1; color: #58a6ff; }
 
-    #login-error {
-      font-size: 0.8rem;
-      color: #f85149;
+    tbody tr {
+      border-bottom: 1px solid #21262d;
+      transition: background 0.1s;
+    }
+
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #161b22; }
+
+    td {
+      padding: 11px 16px;
+      white-space: nowrap;
+    }
+
+    .ticker {
+      font-weight: 700;
+      color: #58a6ff;
+      font-size: 0.95rem;
+    }
+
+    .price { color: #f0f6fc; font-variant-numeric: tabular-nums; }
+
+    .r2 { color: #e6edf3; font-variant-numeric: tabular-nums; }
+
+    .pill {
+      display: inline-block;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .pill-current { background: #1f4d2b; color: #3fb950; border: 1px solid #2ea043; }
+    .pill-prev    { background: #2d2900; color: #e3b341; border: 1px solid #9e6a03; }
+    .pill-both    { background: #31273a; color: #bc8cff; border: 1px solid #8957e5; }
+
+    .cross-date { color: #8b949e; font-size: 0.8rem; }
+    .days       { color: #8b949e; font-size: 0.8rem; }
+
+    .empty-state {
+      max-width: 1100px;
+      margin: 60px auto;
       text-align: center;
-      min-height: 1.1em;
+      color: #8b949e;
     }
+
+    .empty-state h2 { font-size: 1.1rem; color: #e6edf3; margin-bottom: 8px; }
+
+    #loading {
+      max-width: 1100px;
+      margin: 80px auto;
+      text-align: center;
+      color: #8b949e;
+      font-size: 0.9rem;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border: 3px solid #30363d;
+      border-top-color: #58a6ff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
   </style>
 </head>
 <body>
-  <div id="login-overlay">
-    <div class="login-box">
-      <h2>Avalon Alerts</h2>
-      <div class="login-field">
-        <label for="login-user">Username</label>
-        <input id="login-user" type="text" autocomplete="username" placeholder="username" />
-      </div>
-      <div class="login-field">
-        <label for="login-pass">Password</label>
-        <input id="login-pass" type="password" autocomplete="current-password" placeholder="password" />
-      </div>
-      <div id="login-error"></div>
-      <button class="login-btn" id="login-btn">Sign In</button>
-    </div>
-  </div>
 
-  <header>
-    <h1>Avalon Alerts</h1>
-    <div class="header-right">
-      <span id="market-status"></span>
-      <span id="stale-warning">⚠ Feed may be stale</span>
-      <button id="sound-toggle" title="Toggle alert sound">🔔 Sound</button>
-      <span id="last-updated">—</span>
-    </div>
-  </header>
-
-  <div id="movers-bar">
-    <span class="movers-label">Top Gainers</span>
-  </div>
-
-  <div id="econ-bar" style="display:none">
-    <span class="movers-label">Today's Events</span>
-  </div>
-
-  <div class="app">
-    <nav class="sidebar" id="sidebar">
-      <button class="sidebar-toggle" id="sidebar-toggle" title="Toggle sidebar">◀</button>
-      <div class="sidebar-label">15 Mins</div>
-    </nav>
-
-    <main class="content">
-      <p id="status">Loading…</p>
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px">
-        <input id="sym-search" type="text" placeholder="Filter symbols…" autocomplete="off" style="margin-bottom:0" />
-        <label style="display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#8b949e;cursor:pointer;white-space:nowrap">
-          <input type="checkbox" id="show-all-chk" style="cursor:pointer;accent-color:#58a6ff" />
-          Show all
-        </label>
-      </div>
-      <div class="grid" id="grid"></div>
-      <div id="rsi70-section" style="display:none">
-        <div class="rsi70-section-title">◆ RSI 70 Pre-Market</div>
-        <div class="rsi70-table-wrap">
-          <table class="rsi70-table">
-            <thead><tr><th>Symbol</th><th>Close</th><th>Count</th><th>Latest (EST)</th></tr></thead>
-            <tbody id="rsi70-tbody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div id="bigmove-section" style="display:none">
-        <div class="bigmove-section-title">🚀 Start of Big Moves</div>
-        <div class="bigmove-table-wrap">
-          <table class="bigmove-table">
-            <thead><tr><th>Symbol</th><th>Close</th><th>Time (EST)</th></tr></thead>
-            <tbody id="bigmove-tbody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div id="gain-section" style="display:none">
-        <div class="section-title">⬆ 4H Gaining</div>
-        <div class="gain-table-wrap">
-          <table class="gain-table">
-            <thead><tr><th>Symbol</th><th>Close</th><th>Time (EST)</th></tr></thead>
-            <tbody id="gain-tbody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div id="bt-section" style="display:none">
-        <div class="bt-section-title">⚡ BackTest Results</div>
-        <div class="bt-table-wrap">
-          <table class="bt-table">
-            <thead><tr>
-              <th>Symbol</th>
-              <th>Option</th>
-              <th>Strike</th>
-              <th>Entry Price</th>
-              <th>Current Price</th>
-              <th>% Gain</th>
-              <th>High Price</th>
-              <th>% High</th>
-              <th>Entry Time</th>
-              <th>Updated</th>
-            </tr></thead>
-            <tbody id="bt-tbody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div id="pos-section" style="display:none">
-        <div class="pos-section-title">💼 Today's Positions</div>
-        <div class="pos-table-wrap">
-          <table class="pos-table">
-            <thead><tr>
-              <th>Symbol</th>
-              <th>Option</th>
-              <th>Strike</th>
-              <th>Qty</th>
-              <th>Buy @</th>
-              <th>Total Cost</th>
-              <th>Current</th>
-              <th>Unrealized</th>
-              <th>Sell @</th>
-              <th>Realized P&L</th>
-              <th>Status</th>
-              <th>Close Reason</th>
-              <th>Buy Time</th>
-              <th>Close Time</th>
-            </tr></thead>
-            <tbody id="pos-tbody"></tbody>
-          </table>
-        </div>
-      </div>
-    </main>
-  </div>
-
-  <script>
-    // ── Auth ─────────────────────────────────────────────────────────────
-    (function () {
-      const overlay = document.getElementById("login-overlay");
-      const errorEl = document.getElementById("login-error");
-
-      function unlock() { overlay.classList.add("hidden"); }
-
-      if (window.location.protocol === "file:" || sessionStorage.getItem("ta_auth") === "1") { unlock(); return; }
-
-      const EU = "__ENCODED_USER__";
-      const EP = "__ENCODED_PASS__";
-
-      function encode3(s) { return btoa(btoa(btoa(s))); }
-
-      function attempt() {
-        const u = document.getElementById("login-user").value.trim();
-        const p = document.getElementById("login-pass").value;
-        if (encode3(u) === EU && encode3(p) === EP) {
-          sessionStorage.setItem("ta_auth", "1");
-          errorEl.textContent = "";
-          unlock();
-        } else {
-          errorEl.textContent = "Invalid username or password.";
-          document.getElementById("login-pass").value = "";
-        }
-      }
-
-      document.getElementById("login-btn").addEventListener("click", attempt);
-      document.getElementById("login-pass").addEventListener("keydown", e => {
-        if (e.key === "Enter") attempt();
-      });
-      document.getElementById("login-user").addEventListener("keydown", e => {
-        if (e.key === "Enter") document.getElementById("login-pass").focus();
-      });
-    })();
-
-    // ── Sidebar toggle ───────────────────────────────────────────────────
-    (function () {
-      const sidebar = document.getElementById("sidebar");
-      const btn     = document.getElementById("sidebar-toggle");
-      btn.addEventListener("click", () => {
-        const collapsed = sidebar.classList.toggle("collapsed");
-        btn.textContent = collapsed ? "▶" : "◀";
-        btn.title       = collapsed ? "Expand sidebar" : "Collapse sidebar";
-      });
-    })();
-
-    const REPO          = "avalonaialert/dashboard";
-    const DATA_URL      = `https://api.github.com/repos/${REPO}/contents/data.json`;
-    const MANIFEST_URL  = `https://api.github.com/repos/${REPO}/contents/manifest.json`;
-    const POSITIONS_URL = `https://api.github.com/repos/${REPO}/contents/positions.json`;
-    const MODEL_URL     = `https://api.github.com/repos/${REPO}/contents/model.json`;
-    const DAY_URL       = d => `https://api.github.com/repos/${REPO}/contents/${d}.json`;
-    const GH_READ_TOKEN = "__GH_READ_TOKEN__"; // injected by CI from GitHub Secret
-    const SKIP_ALERTS   = new Set([666, 7777]);
-    const AV_API_KEY      = "AH5RPA872FMOTDD8"; // free key from alphavantage.co
-    const FINNHUB_API_KEY = "d89995pr01qla01mkncgd89995pr01qla01mknd0";  // free key from finnhub.io
-
-    const ALERT_META = {
-       "6":   { label: "Call Alert",    cls: "tile-call", badgeCls: "badge-call",  icon: "▲" },
-       "66":  { label: "Another Bull",  cls: "tile-sma",  badgeCls: "badge-sma",   icon: "~" },
-      "-6":   { label: "Bear Change",   cls: "tile-bear", badgeCls: "badge-bear",  icon: "▼" },
-      "-66":  { label: "SMA Break",     cls: "tile-bear", badgeCls: "badge-bear",  icon: "⚠" },
-       "7":   { label: "RSI 70 Pre-Mkt",cls: "tile-sma",  badgeCls: "badge-rsi70", icon: "◆" },
-       "30":  { label: "Bull SAR",      cls: "tile-sar",  badgeCls: "badge-sar",   icon: "◉" },
-      "-30":  { label: "Break",         cls: "tile-sar",  badgeCls: "badge-break", icon: "✕" },
-    };
-
-    function meta(v) {
-      return ALERT_META[String(v)] ?? { label: String(v), cls: "tile-sma", badgeCls: "badge-sma", icon: "·" };
-    }
-
-    function fmtTime(iso) {
-      if (!iso) return "—";
-      return new Date(iso).toLocaleString("en-US", {
-        timeZone: "America/New_York",
-        month: "short", day: "numeric",
-        hour: "2-digit", minute: "2-digit", hour12: true,
-      });
-    }
-
-    function fmtDate(iso) {
-      return new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", {
-        timeZone: "America/New_York",
-        weekday: "short", month: "short", day: "numeric",
-      });
-    }
-
-    function fmtClose(v) { return v != null ? Number(v).toFixed(2) : "—"; }
-    function symLink(sym) {
-      return `<a href="https://finviz.com/quote?t=${sym}&p=d" target="_blank" rel="noopener" class="sym-link">${sym}</a>`;
-    }
-
-    function fmtGain(first, latest) {
-      if (first == null || latest == null || first === 0) return null;
-      const pct = ((latest - first) / first) * 100;
-      const sign = pct >= 0 ? "+" : "";
-      return { text: `${sign}${pct.toFixed(2)}%`, positive: pct >= 0 };
-    }
-
-    // ── Model recommendation (mirrors update.py _model_recommendation) ─────
-    function modelRec(history) {
-      const calls  = history.filter(a => Number(a.alert) ===  6);
-      const bears  = history.filter(a => Number(a.alert) === -6);
-      if (!calls.length) return null;
-
-      // Read thresholds from live model.json (fallback to known defaults if not yet loaded)
-      const c  = _model?.criteria ?? {};
-      const C1_MIN  = c.C1?.threshold  ?? 8;
-      const C2_MIN  = c.C2?.threshold  ?? 30;
-      const C3_MIN  = c.C3?.threshold  ?? -1.0;
-      const C5_TIME = c.C5?.threshold  ?? "15:30";
-      const C7_MIN  = c.C7?.threshold  ?? 20;
-      const [c5h, c5m] = C5_TIME.split(":").map(Number);
-
-      const accuracy = _model?.overall_stats?.with_C5_C7_applied?.accuracy
-        ? `${Math.round(_model.overall_stats.with_C5_C7_applied.accuracy * 100)}%`
-        : "91%";
-      const accuracyNote = `Model: ${accuracy} accuracy`;
-
-      const latest     = history[0];                          // newest alert
-      const latestCode = Number(latest.alert);
-      const firstCall  = calls[calls.length - 1];             // oldest call = entry
-      const entryPrice = Number(firstCall.close) || 0;
-
-      // ── Bear just occurred ─────────────────────────────────────────────
-      if (latestCode === -6) {
-        const bearTime   = new Date(latest.received_at);
-        const firstTime  = new Date(firstCall.received_at);
-        const elapsed    = (bearTime - firstTime) / 60_000;
-        const bearPrice  = Number(latest.close) || 0;
-
-        const c1Pass = calls.length >= C1_MIN;
-        const c2Pass = elapsed >= C2_MIN;
-        const c3Pct  = entryPrice > 0 ? (bearPrice - entryPrice) / entryPrice * 100 : null;
-        const c3Pass = c3Pct === null || c3Pct >= C3_MIN;
-        const bearEST = new Date(new Date(latest.received_at).toLocaleString("en-US", { timeZone: "America/New_York" }));
-        const c5Pass  = bearEST.getHours() < c5h || (bearEST.getHours() === c5h && bearEST.getMinutes() < c5m);
-
-        const c1s = c1Pass ? `C1✅${calls.length}` : `C1❌${calls.length}<${C1_MIN}`;
-        const c2s = c2Pass ? `C2✅${Math.round(elapsed)}min` : `C2❌${Math.round(elapsed)}<${C2_MIN}min`;
-        const c3s = c3Pct != null ? (c3Pass ? `C3✅${c3Pct.toFixed(1)}%` : `C3❌${c3Pct.toFixed(1)}%`) : "";
-        const c5s = c5Pass ? `C5✅` : `C5❌`;
-
-        // C7: second bear within C7_MIN of first recovery call → EXIT override
-        if (bears.length > 1) {
-          const priorBear = bears[1];  // bears[0]=current, bears[1]=prior (newest first)
-          const callsAfterPrior = calls.filter(c => c.received_at > priorBear.received_at);
-          if (callsAfterPrior.length > 0) {
-            const firstRec   = callsAfterPrior[callsAfterPrior.length - 1];  // oldest recovery call
-            const recElapsed = (bearTime - new Date(firstRec.received_at)) / 60_000;
-            if (recElapsed < C7_MIN) {
-              const c7s = `C7❌ ${Math.round(recElapsed)}<${C7_MIN}min`;
-              return { action: `🔴 Sell Position — C7: 2nd bear ${Math.round(recElapsed)}min after recovery`, detail: `${c1s}  ${c2s}  ${c3s}  ${c5s}  ${c7s}  ·  ${accuracyNote}`, cls: "rec-sell" };
-            }
-          }
-        }
-
-        const fails = [!c1Pass && "C1", !c2Pass && "C2", !c3Pass && "C3", !c5Pass && "C5"].filter(Boolean);
-
-        if (!fails.length)
-          return { action: "🟢 Hold for Recovery", detail: `${c1s}  ${c2s}  ${c3s}  ${c5s}  ·  ${accuracyNote}`, cls: "rec-hold" };
-        return { action: `🔴 Sell Position — ${fails.join(", ")} failed`, detail: `${c1s}  ${c2s}  ${c3s}  ${c5s}  ·  ${accuracyNote}`, cls: "rec-sell" };
-      }
-
-      // ── Recovery call after a bear ─────────────────────────────────────
-      if (latestCode === 6 && bears.length > 0) {
-        const latestBear = bears[0];
-        const callsAfter = calls.filter(c => c.received_at > latestBear.received_at);
-        const recCount   = callsAfter.length;
-        const bearPrice  = Number(latestBear.close) || 0;
-        const nowPrice   = Number(calls[0].close) || 0;
-        const recPct     = bearPrice > 0 ? (nowPrice - bearPrice) / bearPrice * 100 : 0;
-        const recSign    = recPct >= 0 ? "+" : "";
-        const action     = recCount <= 1 ? "🔄 Re-enter Position" : "🔒 Hold Recovery Position";
-        return { action, detail: `Recovery #${recCount}  ·  Bear→Now: ${recSign}${recPct.toFixed(2)}%`, cls: recCount <= 1 ? "rec-enter" : "rec-hold" };
-      }
-
-      // ── Pure call run (no bears) ───────────────────────────────────────
-      const callCount  = calls.length;
-      const latestCall = calls[0];
-      const elapsed    = (new Date(latestCall.received_at) - new Date(firstCall.received_at)) / 60_000;
-      const nowPrice   = Number(latestCall.close) || 0;
-      const chgPct     = entryPrice > 0 ? (nowPrice - entryPrice) / entryPrice * 100 : 0;
-      const chgStr     = `${chgPct >= 0 ? "+" : ""}${chgPct.toFixed(2)}%`;
-      const c1s        = callCount >= 8 ? `C1✅${callCount}` : `C1⏳${callCount}/8`;
-      const c2s        = elapsed >= 30  ? `C2✅${Math.round(elapsed)}min` : `C2⏳${Math.round(elapsed)}/30min`;
-
-      if (callCount === 1) return { action: "🔍 Watch — Wait for 3rd signal", detail: `1/3  ·  ${c2s}`, cls: "rec-watch" };
-      if (callCount === 2) return { action: "🔍 Watch — Building",             detail: `2/3  ·  ${c2s}  ·  ${chgStr}`, cls: "rec-watch" };
-      if (callCount === 3) return { action: "🆕 Open Position — 3rd signal",   detail: `${c2s}  ·  Entry → ${chgStr}`, cls: "rec-enter" };
-
-      if (callCount >= 8 && elapsed >= 30)
-        return { action: "✅ Hold — Criteria Met", detail: `${c1s}  ·  ${c2s}  ·  ${chgStr}`, cls: "rec-strong" };
-      return   { action: "⏳ Hold Position",       detail: `${c1s}  ·  ${c2s}  ·  ${chgStr}`, cls: "rec-building" };
-    }
-
-    // ── Render a day's alerts dict into the main content area ─────────────
-    // dateKey: "today" or "YYYY-MM-DD" — used to filter alerts to that date only
-    function renderDay(alertsRaw, dateKey, backtestRaw) {
-      const statusEl = document.getElementById("status");
-      const grid     = document.getElementById("grid");
-      const gainSec  = document.getElementById("gain-section");
-      const gainTbody= document.getElementById("gain-tbody");
-      const btSec    = document.getElementById("bt-section");
-      const btTbody  = document.getElementById("bt-tbody");
-
-      grid.innerHTML = "";
-      gainSec.style.display  = "none";
-      btSec.style.display    = "none";
-      document.getElementById("rsi70-section").style.display  = "none";
-      document.getElementById("bigmove-section").style.display = "none";
-
-      if (!alertsRaw || Object.keys(alertsRaw).length === 0) {
-        statusEl.textContent = "No alerts for this day.";
-        return;
-      }
-
-      // Determine which calendar date (EST) to keep
-      // For "today", use the stored date from data.json rather than current system time
-      // so that alerts whose received_at timestamp falls on a prior UTC date still show.
-      const filterDateEST = dateKey === "today"
-        ? new Date(((_data?.today?.date) ?? new Date().toISOString().slice(0, 10)) + "T12:00:00Z")
-            .toLocaleDateString("en-US", { timeZone: "America/New_York" })
-        : new Date(dateKey + "T12:00:00Z").toLocaleDateString("en-US", { timeZone: "America/New_York" });
-
-      function isTargetDay(iso) {
-        if (dateKey === "today") return true; // data.json only holds today's alerts
-        return new Date(iso).toLocaleDateString("en-US", { timeZone: "America/New_York" }) === filterDateEST;
-      }
-
-      const symbolMap  = {};
-      const gainMap    = {};
-      const rsi70Map   = {};   // sym -> [all alert-7 records]
-      const bigMoveMap = {};   // sym -> latest alert-66666 record
-      const alert5List = [];   // flat list of {sym, a} for alert code 5
-      const seen5      = new Set();
-      const symsCode4  = new Set(); // symbols with 15-min-simple alert (code 4)
-      const symsCode30 = new Set(); // symbols with Bull SAR alert (code 30 or -30)
-
-      for (const [sym, val] of Object.entries(alertsRaw)) {
-        const arr = Array.isArray(val) ? val : [val];
-        const seenMain = new Set(), seenGain = new Set();
-
-        for (const a of arr) {
-          const code = Number(a.alert);
-          if (SKIP_ALERTS.has(code)) continue;
-          if (!isTargetDay(a.received_at)) continue;
-          const key = `${a.received_at}|${a.alert}|${a.close}`;
-
-          if (code === 6666) {
-            if (!seenGain.has(key)) { seenGain.add(key); (gainMap[sym] = gainMap[sym] || []).push(a); }
-          } else if (code === 66666) {
-            if (!bigMoveMap[sym] || new Date(a.received_at) > new Date(bigMoveMap[sym].received_at)) {
-              bigMoveMap[sym] = a;
-            }
-          } else if (code === 5) {
-            const k5 = `${sym}|${key}`;
-            if (!seen5.has(k5)) { seen5.add(k5); alert5List.push({ sym, a }); }
-          } else if (code === 4) {
-            symsCode4.add(sym);
-          } else if (code === 30 || code === -30) {
-            symsCode30.add(sym);
-          } else {
-            if (!seenMain.has(key)) { seenMain.add(key); (symbolMap[sym] = symbolMap[sym] || []).push(a); }
-            if (code === 7) {
-              (rsi70Map[sym] = rsi70Map[sym] || []).push(a);
-            }
-          }
-        }
-      }
-
-      // Drop symbols with only SMA Gaining — keep only if they have a Call Alert too
-      for (const sym of Object.keys(symbolMap)) {
-        if (!symbolMap[sym].some(a => Number(a.alert) === 6)) delete symbolMap[sym];
-      }
-
-      const symbols = Object.entries(symbolMap);
-
-      if (symbols.length === 0 && Object.keys(gainMap).length === 0 && Object.keys(rsi70Map).length === 0 && Object.keys(bigMoveMap).length === 0) {
-        statusEl.textContent = "No alerts for this day.";
-        return;
-      }
-
-      const rsi70Symbols = new Set(Object.keys(rsi70Map));
-
-      // Sort each symbol's history newest → oldest
-      for (const [, history] of symbols) {
-        history.sort((a, b) => new Date(b.received_at) - new Date(a.received_at));
-      }
-      // Sort: (RSI + Call) > (Call only) > (RSI only) > (neither), then by latest call/alert time
-      symbols.sort((a, b) => {
-        const latestCall = h => {
-          const c = h.filter(x => Number(x.alert) === 6);
-          return c.length ? new Date(c[0].received_at) : null;
-        };
-        const ac = latestCall(a[1]), bc = latestCall(b[1]);
-        const scoreA = (ac ? 2 : 0) + (rsi70Symbols.has(a[0]) ? 1 : 0);
-        const scoreB = (bc ? 2 : 0) + (rsi70Symbols.has(b[0]) ? 1 : 0);
-        if (scoreB !== scoreA) return scoreB - scoreA;
-        if (ac && bc) return bc - ac;  // same score, both have calls — most recent first
-        return new Date(b[1][0].received_at) - new Date(a[1][0].received_at); // fallback: latest alert
-      });
-
-      // Filter to past 15 min unless "Show all" is checked
-      const _showAll15 = document.getElementById("show-all-chk")?.checked;
-      const _cutoff15  = Date.now() - 15 * 60 * 1000;
-      const visibleSymbols = _showAll15
-        ? symbols
-        : symbols.filter(([, h]) => new Date(h[0].received_at).getTime() >= _cutoff15);
-
-      const hiddenCount = symbols.length - visibleSymbols.length;
-      statusEl.textContent = `${visibleSymbols.length} symbol${visibleSymbols.length !== 1 ? "s" : ""}${hiddenCount > 0 ? ` · ${hiddenCount} older hidden` : ""}`;
-
-      // ── 5 Min Alerts tile — rendered first ────────────────────────────
-      if (alert5List.length > 0) {
-        alert5List.sort((x, y) => new Date(y.a.received_at) - new Date(x.a.received_at));
-        const tile5 = document.createElement("div");
-        tile5.className = "tile tile-5min";
-        const rows5 = alert5List.map(({ sym, a }) =>
-          `<div class="history-row">
-            <span class="five-sym">${symLink(sym)}</span>
-            <span class="hist-close">${fmtClose(a.close)}</span>
-            <span class="hist-time">${fmtTime(a.received_at)}</span>
-          </div>`
-        ).join("");
-        tile5.innerHTML = `
-          <div class="tile-header">
-            <div class="tile-top">
-              <div class="tile-5min-title">⚡ 5 Min Alerts</div>
-              <span class="tile-badge" style="background:#3a1800;color:#f97316">${alert5List.length}</span>
-            </div>
-          </div>
-          <div class="tile-history">
-            <div class="history-label">Stocks (${alert5List.length})</div>
-            ${rows5}
-          </div>`;
-        grid.appendChild(tile5);
-      }
-
-      visibleSymbols.forEach(([symbol, history]) => {
-        const latest = history[0];
-        const first  = history[history.length - 1];
-        const m = meta(latest.alert);
-        const age       = Date.now() - new Date(latest.received_at).getTime();
-        const isRecent  = age <= 5 * 60 * 1000;
-        const isNew     = age <= 10 * 60 * 1000;
-        const hasRsi70  = rsi70Symbols.has(symbol);
-        const tile = document.createElement("div");
-        tile.className = `tile ${m.cls}${isRecent ? " recent" : ""}${hasRsi70 ? " has-rsi70" : ""}${isNew ? " new-alert" : ""}`;
-        // Auto-remove pulse once the 10-min window expires
-        if (isNew) setTimeout(() => tile.classList.remove("new-alert"), 10 * 60 * 1000 - age);
-        tile.dataset.symbol = symbol;
-        tile.dataset.latest = new Date(latest.received_at).getTime();
-
-        const gain = fmtGain(first.close, latest.close);
-        const gainHtml = gain
-          ? `<span class="tile-gain ${gain.positive ? "pos" : "neg"}">${gain.text}</span>`
-          : "";
-
-        const histRows = history.map(h => {
-          const hm = meta(h.alert);
-          return `<div class="history-row">
-            <span class="hist-badge ${hm.badgeCls}">${hm.icon} ${hm.label}</span>
-            <span class="hist-close">${fmtClose(h.close)}</span>
-            <span class="hist-time">${fmtTime(h.received_at)}</span>
-          </div>`;
-        }).join("");
-
-        const histSection = `<div class="tile-history"><div class="history-label">History (${history.length})</div>${histRows}</div>`;
-
-        const earningsDate = _earningsSyms.get(symbol);
-        const hasEarnings  = earningsDate !== undefined;
-        const streak       = getStreak(symbol);
-        const streakHtml   = streak >= 2
-          ? `<span class="streak-badge streak-${Math.min(streak, 4)}">🔥 ${streak}d</span>`
-          : "";
-        const rec     = modelRec(history);
-        const recHtml = rec
-          ? `<div class="tile-rec ${rec.cls}">
-               <span class="rec-action">${rec.action}</span>
-               <span class="rec-detail">${rec.detail}</span>
-             </div>`
-          : "";
-        tile.innerHTML = `
-          <div class="tile-header">
-            <div class="tile-top">
-              <div class="tile-symbol">${symLink(symbol)}</div>
-              <div class="tile-close-wrap">
-                <div class="tile-close-label">Close</div>
-                <div class="tile-close">${fmtClose(latest.close)}</div>
-              </div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-              <span class="tile-badge">${m.icon} ${m.label}</span>
-              ${gainHtml}
-              ${hasRsi70 ? '<span class="hist-badge badge-rsi70">◆ RSI 70 Pre-Mkt</span>' : ""}
-              ${hasEarnings ? `<span class="earnings-badge">Earnings: ${earningsDate}</span>` : ""}
-              ${streakHtml}
-            </div>
-            <div class="tile-time-latest">${fmtTime(latest.received_at)}</div>
-          </div>${recHtml}${histSection}
-          <div class="tile-footer">
-            <div id="gap-${symbol}" class="tile-gap-wrap"><span class="tile-gap-loading">loading gap…</span></div>
-            ${buildSparkline(symbol)}
-          </div>
-          `;
-        grid.appendChild(tile);
-      });
-
-      // ── BackTest Results table ──────────────────────────────────────────
-      const btEntries = Object.entries(backtestRaw || {});
-      if (btEntries.length > 0) {
-        btEntries.sort((a, b) => {
-          const ga = a[1].entry_price ? ((a[1].current_price - a[1].entry_price) / a[1].entry_price) : -Infinity;
-          const gb = b[1].entry_price ? ((b[1].current_price - b[1].entry_price) / b[1].entry_price) : -Infinity;
-          return gb - ga;
-        });
-        btTbody.innerHTML = btEntries.map(([sym, bt]) => {
-          const pct = bt.entry_price
-            ? ((bt.current_price - bt.entry_price) / bt.entry_price * 100)
-            : null;
-          const gainStr  = pct != null ? `${pct >= 0 ? "+" : ""}${pct.toFixed(2)}%` : "—";
-          const gainCls  = pct == null ? "" : pct >= 0 ? "pos" : "neg";
-          const highPct = bt.entry_price && bt.highest_price
-            ? ((bt.highest_price - bt.entry_price) / bt.entry_price * 100)
-            : null;
-          const highStr = highPct != null ? `${highPct >= 0 ? "+" : ""}${highPct.toFixed(2)}%` : "—";
-          const highCls = highPct == null ? "" : highPct >= 0 ? "pos" : "neg";
-          return `<tr>
-            <td class="bt-symbol">${symLink(sym)}</td>
-            <td class="bt-option">${bt.option_symbol ?? "—"}</td>
-            <td class="bt-price">$${bt.strike?.toFixed(2) ?? "—"}</td>
-            <td class="bt-price">$${bt.entry_price?.toFixed(2) ?? "—"}</td>
-            <td class="bt-price">$${bt.current_price?.toFixed(2) ?? "—"}</td>
-            <td class="bt-gain ${gainCls}">${gainStr}</td>
-            <td class="bt-price">${bt.highest_price != null ? "$" + bt.highest_price.toFixed(2) : "—"}</td>
-            <td class="bt-gain ${highCls}">${highStr}</td>
-            <td class="bt-time">${fmtTime(bt.entry_time)}</td>
-            <td class="bt-time">${fmtTime(bt.current_time)}</td>
-          </tr>`;
-        }).join("");
-        btSec.style.display = "block";
-      }
-
-      // RSI 70 Pre-Market table
-      const rsi70Sec    = document.getElementById("rsi70-section");
-      const rsi70Tbody  = document.getElementById("rsi70-tbody");
-      const rsi70Entries = Object.entries(rsi70Map);
-      if (rsi70Entries.length > 0) {
-        rsi70Entries.forEach(([, records]) => records.sort((a, b) => new Date(b.received_at) - new Date(a.received_at)));
-        rsi70Entries.sort((a, b) => new Date(b[1][0].received_at) - new Date(a[1][0].received_at));
-        rsi70Tbody.innerHTML = rsi70Entries.map(([sym, records]) =>
-          `<tr>
-            <td class="rsi70-symbol">${symLink(sym)}</td>
-            <td class="rsi70-close">${fmtClose(records[0].close)}</td>
-            <td class="rsi70-time" style="font-weight:700;color:#06b6d4">${records.length}×</td>
-            <td class="rsi70-time">${fmtTime(records[0].received_at)}</td>
-          </tr>`
-        ).join("");
-        rsi70Sec.style.display = "block";
-      } else {
-        rsi70Sec.style.display = "none";
-      }
-
-      // Start of Big Moves table
-      const bigMoveSec   = document.getElementById("bigmove-section");
-      const bigMoveTbody = document.getElementById("bigmove-tbody");
-      const bigMoveEntries = Object.entries(bigMoveMap);
-      if (bigMoveEntries.length > 0) {
-        bigMoveEntries.sort((a, b) => new Date(b[1].received_at) - new Date(a[1].received_at));
-        bigMoveTbody.innerHTML = bigMoveEntries.map(([sym, a]) =>
-          `<tr>
-            <td class="bigmove-symbol">${symLink(sym)}</td>
-            <td class="bigmove-close">${fmtClose(a.close)}</td>
-            <td class="bigmove-time">${fmtTime(a.received_at)}</td>
-          </tr>`
-        ).join("");
-        bigMoveSec.style.display = "block";
-      }
-
-      // 4H Gaining table
-      const gainEntries = Object.entries(gainMap);
-      if (gainEntries.length > 0) {
-        const gainRows = gainEntries.map(([sym, alerts]) => ({
-          sym,
-          latest: alerts.reduce((a, b) => new Date(a.received_at) > new Date(b.received_at) ? a : b),
-        }));
-        gainRows.sort((a, b) => new Date(b.latest.received_at) - new Date(a.latest.received_at));
-        gainTbody.innerHTML = gainRows.map(({ sym, latest }) =>
-          `<tr${rsi70Symbols.has(sym) ? ' class="rsi70"' : ""}>
-            <td class="gain-symbol">${symLink(sym)}</td>
-            <td class="gain-close">${fmtClose(latest.close)}</td>
-            <td class="gain-time">${fmtTime(latest.received_at)}</td>
-          </tr>`
-        ).join("");
-        gainSec.style.display = "block";
-      }
-
-      // Sync RSI-70 set, compute top contenders, refresh movers bar
-      _rsi70Syms = rsi70Symbols;
-      const symsCall = new Set(Object.keys(symbolMap));
-      const allSyms  = new Set([...symsCall, ...Object.keys(rsi70Map), ...symsCode4, ...symsCode30]);
-      _contenderSyms = new Set([...allSyms].filter(s => {
-        const score = (symsCall.has(s) ? 1 : 0) + (rsi70Map[s]?.length > 0 ? 1 : 0)
-                    + (symsCode4.has(s) ? 1 : 0) + (symsCode30.has(s) ? 1 : 0);
-        return score >= 3;
-      }));
-      renderMoversBar();
-      loadQuotes([...new Set([...Object.keys(symbolMap), ...Object.keys(rsi70Map)])]);
-    }
-
-    // ── State ────────────────────────────────────────────────────────────
-    let _data         = null;
-    let _manifest     = [];
-    let _model        = null;  // loaded from model.json; used by modelRec for live thresholds
-    let _modelDate    = null;  // date string (YYYY-MM-DD) when _model was last fetched
-    let _dayCache     = {};
-    let _activeTab    = "today";
-    let _active15Tab  = null;       // active 15 Mins - Simple tab key
-    let _activeSarTab = null;       // active Bull SAR tab key
-    let _rsi70Syms       = new Set();
-    let _contenderSyms   = new Set();
-    let _topGainers      = [];
-    let _renderCache     = {};   // key -> saved DOM snapshot
-    let _showAllHistory  = false;
-    let _earningsSyms    = new Map();  // sym -> label string
-    let _quoteCache      = {};         // sym -> Finnhub quote {c, pc, dp}
-    let _spyQuote        = null;       // {c, pc, dp} for SPY
-    let _positions       = [];         // today's positions from positions.json
-    const MAX_DAY_CACHE  = 7;
-    const SIDEBAR_CAP    = 30;
-
-    async function _ghFetch(url) {
-      const headers = { "Accept": "application/vnd.github.v3+json" };
-      if (GH_READ_TOKEN && !GH_READ_TOKEN.startsWith("__")) {
-        headers["Authorization"] = `token ${GH_READ_TOKEN}`;
-      }
-      const resp = await fetch(url, { cache: "no-store", headers });
-      if (!resp.ok) throw new Error(`HTTP ${resp.status} ${url}`);
-      const env = await resp.json();
-      return JSON.parse(atob(env.content.replace(/\n/g, "")));
-    }
-
-    function hasAlert5(alertsObj) {
-      if (!alertsObj) return false;
-      return Object.values(alertsObj).some(records => {
-        const arr = Array.isArray(records) ? records : [records];
-        return arr.some(a => Number(a.alert) === 4);
-      });
-    }
-
-    function hasAlertSar(alertsObj) {
-      if (!alertsObj) return false;
-      return Object.values(alertsObj).some(records => {
-        const arr = Array.isArray(records) ? records : [records];
-        return arr.some(a => Number(a.alert) === 30 || Number(a.alert) === -30);
-      });
-    }
-
-    // Render alert-4 records as one tile per symbol
-    function render15minDay(alertsRaw, dateKey) {
-      const statusEl = document.getElementById("status");
-      const grid     = document.getElementById("grid");
-      grid.innerHTML = "";
-      ["gain-section","bt-section","rsi70-section","bigmove-section"].forEach(id => {
-        document.getElementById(id).style.display = "none";
-      });
-
-      const filterDateEST = dateKey === "today"
-        ? new Date(((_data?.today?.date) ?? new Date().toISOString().slice(0, 10)) + "T12:00:00Z")
-            .toLocaleDateString("en-US", { timeZone: "America/New_York" })
-        : new Date(dateKey + "T12:00:00Z").toLocaleDateString("en-US", { timeZone: "America/New_York" });
-
-      // Group by symbol, keep only alert-4 on the target day
-      const symMap = {};
-      for (const [sym, val] of Object.entries(alertsRaw || {})) {
-        const arr = Array.isArray(val) ? val : [val];
-        for (const a of arr) {
-          if (Number(a.alert) !== 4) continue;
-          if (dateKey !== "today") {
-            const d = new Date(a.received_at).toLocaleDateString("en-US", { timeZone: "America/New_York" });
-            if (d !== filterDateEST) continue;
-          }
-          (symMap[sym] = symMap[sym] || []).push(a);
-        }
-      }
-
-      const symbols = Object.entries(symMap);
-      if (symbols.length === 0) {
-        statusEl.textContent = "No 15 Min alerts for this day.";
-        return;
-      }
-
-      // Sort each symbol's occurrences newest → oldest, then sort symbols by latest hit
-      symbols.forEach(([, hits]) => hits.sort((a, b) => new Date(b.received_at) - new Date(a.received_at)));
-      symbols.sort((a, b) => new Date(b[1][0].received_at) - new Date(a[1][0].received_at));
-
-      statusEl.textContent = `${symbols.length} symbol${symbols.length !== 1 ? "s" : ""}`;
-
-      symbols.forEach(([sym, hits]) => {
-        const latest = hits[0];
-        const tile   = document.createElement("div");
-        tile.className = "tile tile-call";
-        tile.dataset.symbol = sym;
-
-        const occRows = hits.map(h => `
-          <div class="history-row">
-            <span class="hist-badge badge-call">⚡ 15 Min</span>
-            <span class="hist-close">${fmtClose(h.close)}</span>
-            <span class="hist-time">${fmtTime(h.received_at)}</span>
-          </div>`).join("");
-
-        tile.innerHTML = `
-          <div class="tile-header">
-            <div class="tile-top">
-              <div class="tile-symbol">${symLink(sym)}</div>
-              <div class="tile-close-wrap">
-                <div class="tile-close-label">Close</div>
-                <div class="tile-close">${fmtClose(latest.close)}</div>
-              </div>
-            </div>
-            <div class="tile-time-latest">${fmtTime(latest.received_at)}</div>
-          </div>
-          <div class="tile-history">
-            <div class="history-label">Occurrences (${hits.length})</div>
-            ${occRows}
-          </div>`;
-        grid.appendChild(tile);
-      });
-    }
-
-    // ── Render Bull SAR / Break alerts (codes 30 / -30) ──────────────────
-    function renderSarDay(alertsRaw, dateKey) {
-      const statusEl = document.getElementById("status");
-      const grid     = document.getElementById("grid");
-      grid.innerHTML = "";
-      ["gain-section","bt-section","rsi70-section","bigmove-section"].forEach(id => {
-        document.getElementById(id).style.display = "none";
-      });
-
-      const filterDateEST = dateKey === "today"
-        ? new Date(((_data?.today?.date) ?? new Date().toISOString().slice(0, 10)) + "T12:00:00Z")
-            .toLocaleDateString("en-US", { timeZone: "America/New_York" })
-        : new Date(dateKey + "T12:00:00Z").toLocaleDateString("en-US", { timeZone: "America/New_York" });
-
-      const symMap = {};
-      for (const [sym, val] of Object.entries(alertsRaw || {})) {
-        const arr = Array.isArray(val) ? val : [val];
-        for (const a of arr) {
-          const code = Number(a.alert);
-          if (code !== 30 && code !== -30) continue;
-          if (dateKey !== "today") {
-            const d = new Date(a.received_at).toLocaleDateString("en-US", { timeZone: "America/New_York" });
-            if (d !== filterDateEST) continue;
-          }
-          (symMap[sym] = symMap[sym] || []).push(a);
-        }
-      }
-
-      const symbols = Object.entries(symMap);
-      if (symbols.length === 0) {
-        statusEl.textContent = "No Bull SAR alerts for this day.";
-        return;
-      }
-
-      symbols.forEach(([, hits]) => hits.sort((a, b) => new Date(b.received_at) - new Date(a.received_at)));
-      symbols.sort((a, b) => new Date(b[1][0].received_at) - new Date(a[1][0].received_at));
-      statusEl.textContent = `${symbols.length} symbol${symbols.length !== 1 ? "s" : ""}`;
-
-      symbols.forEach(([sym, hits]) => {
-        const latest   = hits[0];
-        const hasBull  = hits.some(h => Number(h.alert) === 30);
-        const hasBreak = hits.some(h => Number(h.alert) === -30);
-        const tile     = document.createElement("div");
-        tile.className = "tile tile-sar";
-        tile.dataset.symbol = sym;
-
-        const occRows = hits.map(h => {
-          const isBull = Number(h.alert) === 30;
-          return `<div class="history-row">
-            <span class="hist-badge ${isBull ? "badge-sar" : "badge-break"}">${isBull ? "◉ Bull SAR" : "✕ Break"}</span>
-            <span class="hist-close">${fmtClose(h.close)}</span>
-            <span class="hist-time">${fmtTime(h.received_at)}</span>
-          </div>`;
-        }).join("");
-
-        tile.innerHTML = `
-          <div class="tile-header">
-            <div class="tile-top">
-              <div class="tile-symbol">${symLink(sym)}</div>
-              <div class="tile-close-wrap">
-                <div class="tile-close-label">Close</div>
-                <div class="tile-close">${fmtClose(latest.close)}</div>
-              </div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-              ${hasBull  ? '<span class="tile-badge badge-sar">◉ Bull SAR</span>'  : ""}
-              ${hasBreak ? '<span class="tile-badge badge-break">✕ Break</span>'   : ""}
-            </div>
-            <div class="tile-time-latest">${fmtTime(latest.received_at)}</div>
-          </div>
-          <div class="tile-history">
-            <div class="history-label">Occurrences (${hits.length})</div>
-            ${occRows}
-          </div>`;
-        grid.appendChild(tile);
-      });
-    }
-
-    // ── Day cache helpers ────────────────────────────────────────────────
-    function _cacheDay(key, data) {
-      if (!_dayCache[key]) {
-        const keys = Object.keys(_dayCache);
-        if (keys.length >= MAX_DAY_CACHE) delete _dayCache[keys[0]];
-      }
-      _dayCache[key] = data;
-    }
-
-    function saveRender(cacheKey) {
-      _renderCache[cacheKey] = {
-        statusText: document.getElementById("status").textContent,
-        gridHTML:   document.getElementById("grid").innerHTML,
-        sections:   ["rsi70-section","bigmove-section","gain-section","bt-section"].map(id => {
-          const el = document.getElementById(id);
-          return { id, display: el.style.display, innerHTML: el.innerHTML };
-        }),
-        rsi70Syms:      new Set(_rsi70Syms),
-        contenderSyms:  new Set(_contenderSyms),
-      };
-    }
-
-    function restoreRender(cached) {
-      document.getElementById("status").textContent = cached.statusText;
-      document.getElementById("grid").innerHTML     = cached.gridHTML;
-      cached.sections.forEach(({ id, display, innerHTML }) => {
-        const el = document.getElementById(id);
-        el.style.display = display;
-        el.innerHTML     = innerHTML;
-      });
-      _rsi70Syms     = cached.rsi70Syms;
-      _contenderSyms = cached.contenderSyms;
-      renderMoversBar();
-      // Re-apply filters (search + 15-min window)
-      applyFilters();
-    }
-
-    async function setActiveSarTab(key) {
-      _activeSarTab = key;
-      _activeTab    = null;
-      _active15Tab  = null;
-      history.replaceState(null, "", "#sar-" + key);
-      document.querySelectorAll(".day-tab:not(.tab-sar)").forEach(el => el.classList.remove("active"));
-      document.querySelectorAll(".tab-sar").forEach(el => {
-        el.classList.toggle("active", el.dataset.keySar === key);
-      });
-
-      const cacheKey = "sar-" + key;
-      if (_renderCache[cacheKey]) { restoreRender(_renderCache[cacheKey]); return; }
-
-      if (key === "today") {
-        renderSarDay(_data?.today?.alerts ?? {}, "today");
-        saveRender(cacheKey);
-        return;
-      }
-
-      const statusEl = document.getElementById("status");
-      if (!_dayCache[key]) {
-        statusEl.textContent = `Loading ${key}…`;
-        try {
-          _cacheDay(key, await _ghFetch(DAY_URL(key)));
-        } catch (err) {
-          statusEl.textContent = "Failed to load " + key + ": " + err.message;
-          return;
-        }
-      }
-      if (Object.keys(_dayCache[key]?.alerts ?? {}).length === 0) {
-        buildSidebar();
-        setActiveTab("today");
-        return;
-      }
-      buildSidebar();
-      renderSarDay(_dayCache[key].alerts ?? {}, key);
-      saveRender(cacheKey);
-    }
-
-    async function setActive15Tab(key) {
-      _active15Tab  = key;
-      _activeTab    = null;
-      _activeSarTab = null;
-      history.replaceState(null, "", "#15-" + key);
-      document.querySelectorAll(".day-tab:not(.tab-15min)").forEach(el => el.classList.remove("active"));
-      document.querySelectorAll(".tab-15min").forEach(el => {
-        el.classList.toggle("active", el.dataset.key15 === key);
-      });
-
-      const cacheKey = "15-" + key;
-      if (_renderCache[cacheKey]) { restoreRender(_renderCache[cacheKey]); return; }
-
-      if (key === "today") {
-        render15minDay(_data?.today?.alerts ?? {}, "today");
-        saveRender(cacheKey);
-        return;
-      }
-
-      const statusEl = document.getElementById("status");
-      if (!_dayCache[key]) {
-        statusEl.textContent = `Loading ${key}…`;
-        try {
-          _cacheDay(key, await _ghFetch(DAY_URL(key)));
-        } catch (err) {
-          statusEl.textContent = "Failed to load " + key + ": " + err.message;
-          return;
-        }
-      }
-      if (Object.keys(_dayCache[key]?.alerts ?? {}).length === 0) {
-        buildSidebar();
-        setActiveTab("today");
-        return;
-      }
-      buildSidebar();
-      render15minDay(_dayCache[key].alerts ?? {}, key);
-      saveRender(cacheKey);
-    }
-
-    async function setActiveTab(key) {
-      _activeTab    = key;
-      _active15Tab  = null;
-      _activeSarTab = null;
-      history.replaceState(null, "", "#" + key);
-      document.querySelectorAll(".tab-15min").forEach(el => el.classList.remove("active"));
-      document.querySelectorAll(".day-tab:not(.tab-15min)").forEach(el => {
-        el.classList.toggle("active", el.dataset.key === key);
-      });
-
-      if (_renderCache[key]) { restoreRender(_renderCache[key]); return; }
-
-      if (key === "today") {
-        renderDay(_data?.today?.alerts ?? {}, "today", _data?.today?.backtest ?? {});
-        saveRender(key);
-        return;
-      }
-
-      const statusEl = document.getElementById("status");
-      if (!_dayCache[key]) {
-        statusEl.textContent = `Loading ${key}…`;
-        try {
-          _cacheDay(key, await _ghFetch(DAY_URL(key)));
-        } catch (err) {
-          statusEl.textContent = "Failed to load " + key + ": " + err.message;
-          return;
-        }
-      }
-      // If empty, remove from sidebar and fall back to today
-      if (Object.keys(_dayCache[key]?.alerts ?? {}).length === 0) {
-        buildSidebar();
-        setActiveTab("today");
-        return;
-      }
-      buildSidebar();
-      const day = _dayCache[key];
-      renderDay(day.alerts ?? {}, key, day.backtest ?? {});
-      saveRender(key);
-    }
-
-    function buildSidebar() {
-      const sidebar  = document.getElementById("sidebar");
-      const toggle   = document.getElementById("sidebar-toggle");
-      sidebar.innerHTML = "";
-      sidebar.appendChild(toggle);
-
-      // ── Main days section ───────────────────────────────────────────────
-      const lbl0 = document.createElement("div");
-      lbl0.className = "sidebar-label";
-      lbl0.textContent = "15 Mins";
-      sidebar.appendChild(lbl0);
-
-      const todayBtn = document.createElement("button");
-      todayBtn.className = "day-tab" + (_activeTab === "today" ? " active" : "");
-      todayBtn.dataset.key = "today";
-      todayBtn.textContent = "Today";
-      todayBtn.onclick = () => setActiveTab("today");
-      sidebar.appendChild(todayBtn);
-
-      // ── 15 Mins – Simple section ────────────────────────────────────────
-      // Collect dates that have alert-5 data (from what's already loaded/cached)
-      const dates15 = [];
-      if (hasAlert5(_data?.today?.alerts)) dates15.push("today");
-      for (const [dateStr, dayData] of Object.entries(_dayCache)) {
-        if (hasAlert5(dayData.alerts)) dates15.push(dateStr);
-      }
-      // Sort history dates newest first, today always first
-      const sortedDates15 = [
-        ...dates15.filter(d => d === "today"),
-        ...dates15.filter(d => d !== "today").sort().reverse(),
-      ];
-
-      if (sortedDates15.length > 0) {
-        const lbl15 = document.createElement("div");
-        lbl15.className = "sidebar-label";
-        lbl15.style.marginTop = "16px";
-        lbl15.style.color = "#f97316";
-        lbl15.textContent = "15 Mins – Simple";
-        sidebar.appendChild(lbl15);
-
-        sortedDates15.forEach(key => {
-          const btn = document.createElement("button");
-          btn.className = "day-tab tab-15min" + (_active15Tab === key ? " active" : "");
-          btn.dataset.key15 = key;
-          btn.textContent = key === "today" ? "Today" : fmtDate(key);
-          btn.onclick = () => setActive15Tab(key);
-          sidebar.appendChild(btn);
-        });
-      }
-
-      // ── Bull SAR section ────────────────────────────────────────────────
-      const datesSar = [];
-      if (hasAlertSar(_data?.today?.alerts)) datesSar.push("today");
-      for (const [dateStr, dayData] of Object.entries(_dayCache)) {
-        if (hasAlertSar(dayData.alerts)) datesSar.push(dateStr);
-      }
-      const sortedDatesSar = [
-        ...datesSar.filter(d => d === "today"),
-        ...datesSar.filter(d => d !== "today").sort().reverse(),
-      ];
-
-      if (sortedDatesSar.length > 0) {
-        const lblSar = document.createElement("div");
-        lblSar.className = "sidebar-label";
-        lblSar.style.marginTop = "16px";
-        lblSar.style.color = "#c084fc";
-        lblSar.textContent = "Bull SAR";
-        sidebar.appendChild(lblSar);
-
-        sortedDatesSar.forEach(key => {
-          const btn = document.createElement("button");
-          btn.className = "day-tab tab-sar" + (_activeSarTab === key ? " active" : "");
-          btn.dataset.keySar = key;
-          btn.textContent = key === "today" ? "Today" : fmtDate(key);
-          btn.onclick = () => setActiveSarTab(key);
-          sidebar.appendChild(btn);
-        });
-      }
-
-      // ── History section ─────────────────────────────────────────────────
-      // Newest first; skip dates already loaded and known empty
-      const allDates = [..._manifest].reverse().filter(d => {
-        if (_dayCache[d]) return Object.keys(_dayCache[d]?.alerts ?? {}).length > 0;
-        return true; // not yet loaded — show optimistically
-      });
-
-      if (allDates.length > 0) {
-        const lbl = document.createElement("div");
-        lbl.className = "sidebar-label";
-        lbl.style.marginTop = "16px";
-        lbl.textContent = "History";
-        sidebar.appendChild(lbl);
-
-        const visible = _showAllHistory ? allDates : allDates.slice(0, SIDEBAR_CAP);
-        visible.forEach(dateStr => {
-          const btn = document.createElement("button");
-          btn.className = "day-tab" + (_activeTab === dateStr ? " active" : "");
-          btn.dataset.key = dateStr;
-          btn.textContent = fmtDate(dateStr);
-          btn.onclick = () => setActiveTab(dateStr);
-          sidebar.appendChild(btn);
-        });
-
-        if (!_showAllHistory && allDates.length > SIDEBAR_CAP) {
-          const more = document.createElement("button");
-          more.className = "day-tab";
-          more.style.color = "#58a6ff";
-          more.style.fontSize = "0.75rem";
-          more.textContent = `Show ${allDates.length - SIDEBAR_CAP} older…`;
-          more.onclick = () => { _showAllHistory = true; buildSidebar(); };
-          sidebar.appendChild(more);
-        }
-      }
-    }
-
-    // ── Sparkline: alert frequency over last 7 calendar days ────────────
-    function buildSparkline(sym) {
-      const today = new Date();
-      const days  = Array.from({ length: 7 }, (_, i) => {
-        const d = new Date(today);
-        d.setDate(d.getDate() - (6 - i));
-        return d.toISOString().slice(0, 10);
-      });
-      const todayDate = _data?.today?.date;
-
-      const counts = days.map(date => {
-        if (date === todayDate) return (_data?.today?.alerts?.[sym]?.length ?? 0);
-        if (_dayCache[date])   return (_dayCache[date]?.alerts?.[sym]?.length ?? 0);
-        return -1; // unknown
-      });
-
-      const max = Math.max(...counts.filter(c => c >= 0), 1);
-      const W = 8, H = 20, GAP = 2, TOTAL = 7 * W + 6 * GAP;
-
-      const bars = counts.map((c, i) => {
-        const x = i * (W + GAP);
-        if (c < 0)  return `<rect x="${x}" y="0" width="${W}" height="${H}" fill="#21262d" rx="2"/>`;
-        if (c === 0) return `<rect x="${x}" y="${H - 2}" width="${W}" height="2" fill="#2d333b" rx="2"/>`;
-        const h = Math.max(3, Math.round((c / max) * H));
-        return `<rect x="${x}" y="${H - h}" width="${W}" height="${h}" fill="#3fb950" rx="2"/>`;
-      }).join("");
-
-      return `<svg width="${TOTAL}" height="${H}" class="sparkline" title="Alert frequency – last 7 days">${bars}</svg>`;
-    }
-
-    // ── Multi-day streak: consecutive days this symbol appeared ─────────
-    function getStreak(sym) {
-      const todayDate = _data?.today?.date;
-      if (!todayDate || !_data?.today?.alerts?.[sym]) return 0;
-      let streak = 1;
-      const base = new Date(todayDate + "T12:00:00Z");
-      for (let i = 1; i <= 6; i++) {
-        const d = new Date(base);
-        d.setUTCDate(d.getUTCDate() - i);
-        const dateStr = d.toISOString().slice(0, 10);
-        if (_dayCache[dateStr]?.alerts?.[sym]) streak++;
-        else break;
-      }
-      return streak;
-    }
-
-    // ── Pre-market / intraday gap vs prev close (Finnhub) ───────────────
-    async function loadQuotes(symbols) {
-      if (!FINNHUB_API_KEY || FINNHUB_API_KEY === "YOUR_FINNHUB_KEY" || !symbols.length) return;
-      const toFetch = symbols.filter(s => !_quoteCache[s]);
-      await Promise.all(toFetch.map(async sym => {
-        try {
-          const resp = await fetch(
-            `https://finnhub.io/api/v1/quote?symbol=${sym}&token=${FINNHUB_API_KEY}`,
-            { cache: "no-store" }
-          );
-          _quoteCache[sym] = await resp.json();
-        } catch (_) {}
-      }));
-
-      // Update gap elements in current DOM
-      symbols.forEach(sym => {
-        const el = document.getElementById(`gap-${sym}`);
-        if (!el) return;
-        const q = _quoteCache[sym];
-        if (!q?.pc || !q?.c) { el.innerHTML = ""; return; }
-        const gap  = ((q.c - q.pc) / q.pc) * 100;
-        const cls  = Math.abs(gap) < 0.1 ? "flat" : gap > 0 ? "pos" : "neg";
-        const sign = gap > 0 ? "+" : "";
-        el.innerHTML = `<span class="tile-gap ${cls}">${sign}${gap.toFixed(2)}% vs prev close</span>`;
-      });
-    }
-
-    // ── Economic calendar (Finnhub) ─────────────────────────────────────
-    async function loadEconCalendar() {
-      if (!FINNHUB_API_KEY || FINNHUB_API_KEY === "YOUR_FINNHUB_KEY") return;
-      try {
-        const today = new Date().toISOString().slice(0, 10);
-        const url   = `https://finnhub.io/api/v1/calendar/economic?from=${today}&to=${today}&token=${FINNHUB_API_KEY}`;
-        const resp  = await fetch(url, { cache: "no-store" });
-        const json  = await resp.json();
-
-        const events = (json.economicCalendar || [])
-          .filter(e => e.country === "US" && e.impact !== "low")
-          .sort((a, b) => new Date(a.time) - new Date(b.time));
-
-        const bar = document.getElementById("econ-bar");
-        if (!events.length) { bar.style.display = "none"; return; }
-
-        bar.style.display = "flex";
-        bar.innerHTML = '<span class="movers-label">Today\'s Events</span>' +
-          events.map(e => {
-            const time = new Date(e.time).toLocaleTimeString("en-US", {
-              timeZone: "America/New_York", hour: "numeric", minute: "2-digit"
-            });
-            const unit    = e.unit || "";
-            const estStr  = e.estimate != null ? `Est: ${e.estimate}${unit}` : "";
-            const prevStr = e.prev     != null ? `Prev: ${e.prev}${unit}`    : "";
-            let   actStr  = "";
-            let   actCls  = "";
-            if (e.actual != null) {
-              const beat = e.estimate != null && e.actual > e.estimate;
-              const miss = e.estimate != null && e.actual < e.estimate;
-              actCls  = beat ? "econ-actual-pos" : miss ? "econ-actual-neg" : "";
-              actStr  = `<span class="${actCls}">Actual: ${e.actual}${unit}</span>`;
-            }
-            const dataParts = [estStr, prevStr].filter(Boolean).join(" · ");
-            return `<span class="econ-chip econ-${e.impact}" title="${e.event}">
-              <span class="econ-time">${time}</span>
-              <span class="econ-name">${e.event}</span>
-              ${dataParts ? `<span class="econ-data">${dataParts}</span>` : ""}
-              ${actStr}
-            </span>`;
-          }).join("");
-      } catch (_) { /* non-critical */ }
-    }
-
-    // ── Earnings calendar (Alpha Vantage) ───────────────────────────────
-    async function loadEarnings() {
-      if (!AV_API_KEY || AV_API_KEY === "YOUR_ALPHAVANTAGE_KEY") return;
-      try {
-        const url  = `https://www.alphavantage.co/query?function=EARNINGS_CALENDAR&horizon=3month&apikey=${AV_API_KEY}`;
-        const resp = await fetch(url, { cache: "no-store" });
-        const csv  = await resp.text();
-        const now  = Date.now();
-        const ms3d = 10 * 24 * 60 * 60 * 1000;
-        _earningsSyms.clear();
-        csv.trim().split("\n").slice(1).forEach(line => {
-          const [sym,, reportDate] = line.split(",");
-          if (!sym || !reportDate) return;
-          const t = new Date(reportDate.trim()).getTime();
-          if (t >= now && t <= now + ms3d) {
-            const days     = Math.round((t - now) / (24 * 60 * 60 * 1000));
-            const rDate    = new Date(t);
-            let   label;
-            const dateLabel = rDate.toLocaleDateString("en-US", { timeZone: "America/New_York", month: "short", day: "numeric" });
-            if (days === 0) {
-              label = `${dateLabel} (Today)`;
-            } else if (days === 1) {
-              label = `${dateLabel} (Tomorrow)`;
-            } else {
-              const dayName  = rDate.toLocaleDateString("en-US", { weekday: "short", timeZone: "America/New_York" });
-              const weekOf   = d => { const j = new Date(d.getFullYear(), 0, 1); return Math.ceil(((d - j) / 86400000 + j.getDay() + 1) / 7); };
-              const thisWeek = weekOf(new Date(now));
-              const thatWeek = weekOf(rDate);
-              const suffix   = thatWeek === thisWeek ? "This Week" : thatWeek === thisWeek + 1 ? "Next Week" : "In 2 Weeks";
-              label = `${dateLabel} (${dayName} - ${suffix})`;
-            }
-            _earningsSyms.set(sym.trim(), label);
-          }
-        });
-      } catch (_) { /* silently skip — earnings are non-critical */ }
-    }
-
-
-    // ── Staleness warning ────────────────────────────────────────────────
-    function checkStaleness() {
-      const el = document.getElementById("stale-warning");
-      if (!_data?.last_updated) { el.style.display = "none"; return; }
-      const status = getMarketStatus();
-      if (status.cls !== "market-open" && status.cls !== "market-pre") {
-        el.style.display = "none"; return;
-      }
-      const ageMin = (Date.now() - new Date(_data.last_updated).getTime()) / 60000;
-      el.style.display = ageMin > 20 ? "inline" : "none";
-    }
-    setInterval(checkStaleness, 60 * 1000);
-
-    // ── Alert sound notification ─────────────────────────────────────────
-    let _soundEnabled = localStorage.getItem("ta_sound") !== "off";
-
-    function _applySoundToggleUI() {
-      const btn = document.getElementById("sound-toggle");
-      if (_soundEnabled) {
-        btn.textContent = "🔔 Sound";
-        btn.className   = "on";
-        btn.title       = "Sound alerts on — click to mute";
-      } else {
-        btn.textContent = "🔕 Muted";
-        btn.className   = "off";
-        btn.title       = "Sound alerts off — click to enable";
-      }
-    }
-
-    document.getElementById("sound-toggle").addEventListener("click", () => {
-      _soundEnabled = !_soundEnabled;
-      localStorage.setItem("ta_sound", _soundEnabled ? "on" : "off");
-      _applySoundToggleUI();
-      if (_soundEnabled) playAlertTone(); // preview the sound when turning on
-    });
-    _applySoundToggleUI();
-
-    function playAlertTone() {
-      if (!_soundEnabled) return;
-      try {
-        const ctx  = new (window.AudioContext || window.webkitAudioContext)();
-        const osc  = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.type = "sine";
-        osc.frequency.setValueAtTime(1400, ctx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.06);
-        gain.gain.setValueAtTime(0.35, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
-        osc.start(ctx.currentTime);
-        osc.stop(ctx.currentTime + 0.25);
-      } catch (_) {}
-    }
-
-    async function load() {
-      const statusEl = document.getElementById("status");
-      statusEl.innerHTML = "Loading…";
-      try {
-        const [data, manifest, posData, modelData] = await Promise.all([
-          _ghFetch(DATA_URL),
-          _ghFetch(MANIFEST_URL).catch(() => []),
-          _ghFetch(POSITIONS_URL).catch(() => null),
-          _ghFetch(MODEL_URL).catch(() => null),
-        ]);
-        if (data.alerts && !data.today) {
-          data.today = { date: "", alerts: data.alerts };
-        }
-        _data        = data;
-        _manifest    = Array.isArray(manifest) ? manifest : [];
-        _positions   = posData?.positions ?? [];
-        if (modelData?.criteria) { _model = modelData; _modelDate = new Date().toISOString().slice(0, 10); }
-        _dayCache    = {};
-        _renderCache = {};
-        _quoteCache  = {};
-
-        document.getElementById("last-updated").textContent =
-          _data.last_updated ? "Updated " + fmtTime(_data.last_updated) : "";
-        checkStaleness();
-
-        // Restore tab from URL hash
-        const hash = window.location.hash.slice(1); // strip #
-        if (hash.startsWith("15-")) {
-          _active15Tab  = hash.slice(3);
-          _activeTab    = null;
-          _activeSarTab = null;
-        } else if (hash.startsWith("sar-")) {
-          _activeSarTab = hash.slice(4);
-          _activeTab    = null;
-          _active15Tab  = null;
-        } else if (hash) {
-          _activeTab    = hash;
-          _active15Tab  = null;
-          _activeSarTab = null;
-        }
-
-        buildSidebar();
-        if (_activeSarTab)   setActiveSarTab(_activeSarTab);
-        else if (_active15Tab) setActive15Tab(_active15Tab);
-        else setActiveTab(_activeTab);
-
-        renderPositions();
-
-        // Load econ calendar + earnings in background
-        loadEconCalendar();
-        loadEarnings().then(() => {
-          if (_earningsSyms.size > 0) { // Map.size works the same
-            _renderCache = {};
-            if (_activeSarTab)       setActiveSarTab(_activeSarTab);
-            else if (_active15Tab)   setActive15Tab(_active15Tab);
-            else if (_activeTab)     setActiveTab(_activeTab);
-          }
-        });
-      } catch (err) {
-        statusEl.innerHTML =
-          `Failed to load: ${err.message} ` +
-          `<button onclick="load()" style="margin-left:10px;padding:4px 12px;background:#1f2d3d;` +
-          `border:1px solid #58a6ff;border-radius:6px;color:#58a6ff;cursor:pointer;font-size:0.8rem;">` +
-          `↺ Retry</button>`;
-      }
-    }
-
-    // ── Market hours indicator ───────────────────────────────────────────
-    function getMarketStatus() {
-      const est  = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
-      const day  = est.getDay();
-      const mins = est.getHours() * 60 + est.getMinutes();
-      if (day === 0 || day === 6 || mins < 240 || mins >= 1200)
-        return { label: "Closed",      cls: "market-closed", dot: "●" };
-      if (mins < 570)  return { label: "Pre-Market",  cls: "market-pre",    dot: "●" };
-      if (mins < 960)  return { label: "Market Open", cls: "market-open",   dot: "●" };
-      return             { label: "After Hours",  cls: "market-after",  dot: "●" };
-    }
-    function updateMarketClock() {
-      const { label, cls, dot } = getMarketStatus();
-      const el = document.getElementById("market-status");
-      el.className = `market-chip ${cls}`;
-      el.textContent = `${dot} ${label}`;
-    }
-    updateMarketClock();
-    setInterval(updateMarketClock, 60 * 1000);
-
-    // ── Symbol search filter ─────────────────────────────────────────────
-    function applyFilters() {
-      const q = document.getElementById("sym-search").value.trim().toUpperCase();
-      document.querySelectorAll("#grid .tile[data-symbol]").forEach(t => {
-        t.style.display = !q || t.dataset.symbol.toUpperCase().includes(q) ? "" : "none";
-      });
-      ["rsi70-symbol","gain-symbol","bigmove-symbol","bt-symbol","pos-symbol"].forEach(cls => {
-        document.querySelectorAll(`.${cls}`).forEach(td => {
-          const sym = td.querySelector(".sym-link")?.textContent.trim().toUpperCase() ?? "";
-          td.closest("tr").style.display = !q || sym.includes(q) ? "" : "none";
-        });
-      });
-    }
-    document.getElementById("sym-search").addEventListener("input", applyFilters);
-    // "Show all" checkbox re-renders the current tab so the 15-min filter is re-applied at source
-    document.getElementById("show-all-chk").addEventListener("change", () => {
-      _renderCache = {};
-      if (_activeSarTab)        setActiveSarTab(_activeSarTab);
-      else if (_active15Tab)    setActive15Tab(_active15Tab);
-      else                      setActiveTab(_activeTab);
-    });
-
-    // ── Silent 5-min refresh (preserves active tab + scroll) ────────────
-    async function silentRefresh() {
-      try {
-        const today = new Date().toISOString().slice(0, 10);
-        const [data, posData, modelData] = await Promise.all([
-          _ghFetch(DATA_URL),
-          _ghFetch(POSITIONS_URL).catch(() => null),
-          _modelDate !== today ? _ghFetch(MODEL_URL).catch(() => null) : Promise.resolve(null),
-        ]);
-        if (modelData?.criteria) { _model = modelData; _modelDate = today; }
-        if (data.alerts && !data.today) data.today = { date: "", alerts: data.alerts };
-
-        // Always refresh positions on each tick
-        _positions = posData?.positions ?? [];
-        renderPositions();
-
-        if (data.last_updated === _data?.last_updated) return; // no new alerts
-
-        // Sound alert: play tone if any alert arrived in the last 3 min
-        const now = Date.now();
-        const hasFreshAlert = Object.values(data.today?.alerts ?? {}).some(records =>
-          records.some(r => now - new Date(r.received_at).getTime() < 3 * 60 * 1000)
-        );
-        if (hasFreshAlert) playAlertTone();
-
-        const manifest = await _ghFetch(MANIFEST_URL).catch(() => []);
-        _data        = data;
-        _manifest    = Array.isArray(manifest) ? manifest : [];
-        _dayCache    = {};
-        _renderCache = {};
-        _quoteCache  = {};
-
-        document.getElementById("last-updated").textContent =
-          _data.last_updated ? "Updated " + fmtTime(_data.last_updated) : "";
-        checkStaleness();
-
-        buildSidebar();
-        if (_activeSarTab)       await setActiveSarTab(_activeSarTab);
-        else if (_active15Tab)   await setActive15Tab(_active15Tab);
-        else                     await setActiveTab(_activeTab);
-
-      } catch (_) { /* silent — don't disrupt the UI */ }
-    }
-
-    function scheduleRefresh() {
-      const { cls } = getMarketStatus();
-      const interval = (cls === "market-open" || cls === "market-pre" || cls === "market-after")
-        ? 60_000        // 1 min during market / extended hours
-        : 5 * 60_000;  // 5 min when closed
-      setTimeout(async () => { await silentRefresh(); scheduleRefresh(); }, interval);
-    }
-    load().then(() => scheduleRefresh());
-
-    // ── Top Gainers bar ──────────────────────────────────────────────────
-    function renderPositions() {
-      const sec   = document.getElementById("pos-section");
-      const tbody = document.getElementById("pos-tbody");
-      if (!_positions.length) { sec.style.display = "none"; return; }
-
-      const reasonLabel = { bear_change: "Bear Change", eod: "EOD Close" };
-
-      tbody.innerHTML = _positions.map(pos => {
-        const isOpen = pos.status === "open";
-
-        const unreal = isOpen && pos.unrealized_pnl != null
-          ? `<span class="${pos.unrealized_pnl >= 0 ? "pos" : "neg"}">${pos.unrealized_pnl >= 0 ? "+" : ""}$${pos.unrealized_pnl.toFixed(2)}</span>`
-          : "—";
-
-        const pnl    = pos.pnl;
-        const pnlStr = pnl != null
-          ? `${pnl >= 0 ? "+" : ""}$${pnl.toFixed(2)}`
-          : "—";
-        const pnlCls = pnl == null ? "" : pnl >= 0 ? "pos" : "neg";
-
-        const current = isOpen && pos.current_price != null
-          ? `$${Number(pos.current_price).toFixed(2)}`
-          : "—";
-
-        return `<tr>
-          <td class="pos-symbol">${symLink(pos.symbol)}</td>
-          <td class="pos-option">${pos.option_symbol ?? "—"}</td>
-          <td class="pos-price">$${pos.strike != null ? Number(pos.strike).toFixed(2) : "—"}</td>
-          <td class="pos-qty">${pos.qty}</td>
-          <td class="pos-price">$${pos.buy_price != null ? Number(pos.buy_price).toFixed(2) : "—"}</td>
-          <td class="pos-price">${pos.total_cost != null ? "$" + Number(pos.total_cost).toLocaleString("en-US", {minimumFractionDigits:2, maximumFractionDigits:2}) : "—"}</td>
-          <td class="pos-price">${current}</td>
-          <td class="pos-pnl">${unreal}</td>
-          <td class="pos-price">${pos.sell_price != null ? "$" + Number(pos.sell_price).toFixed(2) : "—"}</td>
-          <td class="pos-pnl ${pnlCls}">${pnlStr}</td>
-          <td><span class="pos-status ${isOpen ? "pos-open" : "pos-closed"}">${isOpen ? "OPEN" : "CLOSED"}</span></td>
-          <td class="pos-reason">${reasonLabel[pos.close_reason] ?? pos.close_reason ?? "—"}</td>
-          <td class="pos-time">${fmtTime(pos.buy_time)}</td>
-          <td class="pos-time">${pos.sell_time ? fmtTime(pos.sell_time) : "—"}</td>
-        </tr>`;
-      }).join("");
-
-      sec.style.display = "block";
-    }
-
-    function renderMoversBar() {
-      const bar = document.getElementById("movers-bar");
-      let html = "";
-
-      if (_spyQuote) {
-        const dp  = _spyQuote.dp ?? ((_spyQuote.c - _spyQuote.pc) / _spyQuote.pc * 100);
-        const cls = dp > 0 ? "up" : dp < 0 ? "down" : "flat";
-        const sign = dp > 0 ? "+" : "";
-        html += `<span class="spy-chip ${cls}">
-          <span class="spy-label">SPY</span>
-          <span class="spy-pct">${sign}${dp.toFixed(2)}%</span>
-        </span>`;
-      }
-
-      if (_topGainers.length > 0) {
-        html += '<span class="movers-label">Top Gainers</span>' +
-          _topGainers.map(s => {
-            const pct     = s.symbolData.changePct.toFixed(2);
-            const isRsi70 = _rsi70Syms.has(s.cnbcSymbol);
-            return `<span class="mover-chip${isRsi70 ? " rsi70" : ""}">
-              <span class="mover-sym">${symLink(s.cnbcSymbol)}</span>
-              <span class="mover-pct">+${pct}%</span>
-            </span>`;
-          }).join("");
-      }
-
-      if (_contenderSyms.size > 0) {
-        html += '<span class="movers-label contender-label">Top Contender (Call + RSI + Simple + SAR):</span>' +
-          [..._contenderSyms].map(sym =>
-            `<span class="mover-chip contender">
-              <span class="contender-sym">★ ${symLink(sym)}</span>
-            </span>`
-          ).join("");
-      }
-
-      if (html) bar.innerHTML = html;
-    }
-
-    async function loadSpyQuote() {
-      if (!FINNHUB_API_KEY || FINNHUB_API_KEY === "YOUR_FINNHUB_KEY") return;
-      try {
-        const resp = await fetch(
-          `https://finnhub.io/api/v1/quote?symbol=SPY&token=${FINNHUB_API_KEY}`,
-          { cache: "no-store" }
-        );
-        if (!resp.ok) return;
-        _spyQuote = await resp.json();
-        renderMoversBar();
-      } catch (_) {}
-    }
-
-    async function loadTopMovers() {
-      try {
-        const resp = await fetch(
-          "https://gdsapi.cnbc.com/market-mover/groupMover/MAJOR/CHANGE_PCT/BOTH/5.json?source=SAVED&delayed=false&partnerId=2",
-          { cache: "no-store" }
-        );
-        if (!resp.ok) return;
-        const json = await resp.json();
-        const topList = json.rankedSymbolList?.find(r => r.rankOrder === "TOP");
-        if (!topList) return;
-        _topGainers = topList.rankedSymbols.filter(s => s.symbolData.changePct > 0);
-        renderMoversBar();
-      } catch (_) {
-        // CORS or network failure — bar stays as-is
-      }
-    }
-
-    loadTopMovers();
-    loadSpyQuote();
-    setInterval(loadSpyQuote, 60_000);
-  </script>
+<header>
+  <h1>S&amp;P 500 — Monthly R2 Pivot Watchlist</h1>
+  <p>Stocks whose daily <strong>High ≥ Monthly R2</strong> in the current or previous month.</p>
+</header>
+
+<div class="meta-bar">
+  <div class="badge">Last scan: <span id="scan-time">—</span></div>
+  <div class="badge">Matches: <span id="match-count">—</span></div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="current_month">Current Month</button>
+  <button class="filter-btn" data-filter="previous_month">Previous Month</button>
+  <button class="filter-btn" data-filter="both">Both Months</button>
+  <input class="search-input" id="search" placeholder="Search ticker…" />
+</div>
+
+<div id="loading"><div class="spinner"></div><br>Loading scan data…</div>
+<div class="table-wrap" id="table-wrap" style="display:none">
+  <table>
+    <thead>
+      <tr>
+        <th data-col="streak">Streak (mo) <span class="sort-icon">↓</span></th>
+        <th data-col="ticker">Ticker <span class="sort-icon">↕</span></th>
+        <th data-col="last_close">Last Close <span class="sort-icon">↕</span></th>
+        <th data-col="day_pct">Day % <span class="sort-icon">↕</span></th>
+        <th data-col="prev_month_r2">Prev R2 <span class="sort-icon">↕</span></th>
+        <th data-col="current_month_r2">Current R2 <span class="sort-icon">↕</span></th>
+        <th data-col="future_month_r2">Future R2 <span class="sort-icon">↕</span></th>
+        <th data-col="sma3_days">SMA 3D <span class="sort-icon">↕</span></th>
+
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+<div class="empty-state" id="empty-state" style="display:none">
+  <h2>No matches</h2>
+  <p>No stocks match the current filter.</p>
+</div>
+
+<script>
+let allStocks = [];
+let activeFilter = 'all';
+let sortCol = 'streak';
+let sortAsc = false;
+let searchQuery = '';
+
+async function loadData() {
+  if (typeof WATCHLIST_DATA === 'undefined') {
+    document.getElementById('loading').innerHTML =
+      '<p style="color:#f85149">data.js not found — run scan.py first.</p>';
+    return;
+  }
+  const data = WATCHLIST_DATA;
+
+  document.getElementById('scan-time').textContent =
+    new Date(data.generated_at).toLocaleString();
+  document.getElementById('match-count').textContent = data.count;
+
+  allStocks = data.stocks.map(s => ({
+    ticker:                  s.ticker,
+    last_close:              s.last_close,
+    last_high:               s.last_high,
+    last_date:               s.last_date,
+    day_pct:                 s.day_pct ?? null,
+    streak:                  s.streak ?? 0,
+    sma3_direction:          s.sma3_direction ?? null,
+    sma3_days:               s.sma3_days      ?? 0,
+    prev_month_r2:           s.crossed_previous_month?.r2 ?? null,
+    current_month_r2:        s.current_month_r2           ?? null,
+    future_month_r2:         s.future_month_r2            ?? null,
+    crossed_current_month:   s.crossed_current_month      ?? null,
+    crossed_previous_month:  s.crossed_previous_month     ?? null,
+  }));
+
+  render();
+  document.getElementById('loading').style.display = 'none';
+}
+
+function currentMonthBadge(s) {
+  if (!s.crossed_current_month) return '<span style="color:#8b949e;font-size:0.78rem">—</span>';
+  const c = s.crossed_current_month;
+  return `<span class="pill pill-current" title="First: ${c.first_cross_date} · ${c.days_crossed}d · R2 $${c.r2.toFixed(2)}">✓ ${c.days_crossed}d</span>`;
+}
+
+function filtered() {
+  return allStocks.filter(s => {
+    if (activeFilter === 'current_month'  && !s.crossed_current_month)  return false;
+    if (activeFilter === 'previous_month' && !s.crossed_previous_month) return false;
+    if (activeFilter === 'both'           && !(s.crossed_current_month && s.crossed_previous_month)) return false;
+    if (searchQuery && !s.ticker.toLowerCase().includes(searchQuery)) return false;
+    return true;
+  });
+}
+
+function sorted(list) {
+  return [...list].sort((a, b) => {
+    let av = a[sortCol], bv = b[sortCol];
+    if (typeof av === 'string') av = av.toLowerCase(), bv = (bv||'').toLowerCase();
+    if (av < bv) return sortAsc ? -1 : 1;
+    if (av > bv) return sortAsc ?  1 : -1;
+    return 0;
+  });
+}
+
+function render() {
+  const list = sorted(filtered());
+  const tbody = document.getElementById('tbody');
+  const wrap  = document.getElementById('table-wrap');
+  const empty = document.getElementById('empty-state');
+
+  if (list.length === 0) {
+    wrap.style.display = 'none';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+  wrap.style.display  = 'block';
+
+  tbody.innerHTML = list.map(s => {
+    const prev = s.crossed_previous_month;
+    return `
+    <tr>
+      <td style="text-align:center">
+        <span style="font-weight:700;font-size:1rem;color:#f0f6fc">${s.streak}</span>
+        <span style="color:#8b949e;font-size:0.75rem">mo</span>
+      </td>
+      <td class="ticker">${s.ticker}</td>
+      <td class="price">$${s.last_close.toFixed(2)}</td>
+      <td style="font-weight:600;color:${s.day_pct == null ? '#8b949e' : s.day_pct >= 0 ? '#3fb950' : '#f85149'}">${s.day_pct == null ? '—' : (s.day_pct >= 0 ? '+' : '') + s.day_pct.toFixed(2) + '%'}</td>
+      <td class="r2">${s.prev_month_r2    != null ? '$' + s.prev_month_r2.toFixed(2)    : '—'}</td>
+      <td class="r2">${s.current_month_r2 != null ? '$' + s.current_month_r2.toFixed(2) : '—'}</td>
+      <td class="r2">${s.future_month_r2  != null ? '$' + s.future_month_r2.toFixed(2)  : '—'}</td>
+      <td>${(() => {
+        if (!s.sma3_direction) return '<span style="color:#8b949e">—</span>';
+        const up = s.sma3_direction === 'up';
+        const arrow = up ? '▲' : '▼';
+        const color = up ? '#3fb950' : '#f85149';
+        const days = s.sma3_days > 0 ? ` ${s.sma3_days}d` : '';
+        return `<span style="color:${color};font-weight:600">${arrow}${days}</span>`;
+      })()}</td>
+    </tr>`;
+  }).join('');
+}
+
+// Filters
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+});
+
+// Search
+document.getElementById('search').addEventListener('input', e => {
+  searchQuery = e.target.value.trim().toLowerCase();
+  render();
+});
+
+// Sort
+document.querySelectorAll('thead th[data-col]').forEach(th => {
+  th.addEventListener('click', () => {
+    const col = th.dataset.col;
+    if (sortCol === col) sortAsc = !sortAsc;
+    else { sortCol = col; sortAsc = true; }
+    document.querySelectorAll('thead th').forEach(t => t.classList.remove('sorted'));
+    th.classList.add('sorted');
+    th.querySelector('.sort-icon').textContent = sortAsc ? '↑' : '↓';
+    render();
+  });
+});
+
+loadData().then(() => {
+  const defaultTh = document.querySelector('thead th[data-col="streak"]');
+  if (defaultTh) defaultTh.classList.add('sorted');
+});
+</script>
 </body>
 </html>
