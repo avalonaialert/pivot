@@ -1,1 +1,1 @@
-window.EXCLUDED_TICKERS = ["PM","MNST","IFF","AES","DOC","HST","CNC"];
+window.EXCLUDED_TICKERS = ["PM","MNST","IFF","AES","DOC","HST","CNC","BEN"];
