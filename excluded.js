@@ -1,1 +1,1 @@
-window.EXCLUDED_TICKERS = ["PM","MNST","IFF"];
+window.EXCLUDED_TICKERS = ["PM","MNST","IFF","AES"];
