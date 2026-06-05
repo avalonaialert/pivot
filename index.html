@@ -4,9 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>S&P 500 — Monthly R2 Pivot Watchlist</title>
-  <script src="data.js"></script>
-  <script src="excluded.js"></script>
   <script src="config.js" onerror="void(0)"></script>
+  <script>
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src + '?v=' + Date.now();
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+    }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -333,7 +342,7 @@ let searchQuery = '';
 const GITHUB_OWNER = 'avalonaialert';
 const GITHUB_REPO  = 'pivot';
 const EXCLUDED_FILE = 'excluded.js';
-let excluded = new Set(typeof EXCLUDED_TICKERS !== 'undefined' ? EXCLUDED_TICKERS : []);
+let excluded = new Set();
 
 function getPAT() {
   // config.js (local only, gitignored) injects GITHUB_PAT from .env
@@ -360,7 +369,7 @@ async function saveExcluded() {
   if (!pat) return;
   showToast('Saving…');
 
-  const content = `const EXCLUDED_TICKERS = ${JSON.stringify([...excluded])};\n`;
+  const content = `window.EXCLUDED_TICKERS = ${JSON.stringify([...excluded])};\n`;
   const b64 = btoa(content);
 
   // Get current file SHA
@@ -417,11 +426,18 @@ function renderExcludedPanel() {
 }
 
 async function loadData() {
+  await loadScript('excluded.js').catch(() => {});
+  await loadScript('data.js').catch(() => {});
+
   if (typeof WATCHLIST_DATA === 'undefined') {
     document.getElementById('loading').innerHTML =
       '<p style="color:#f85149">data.js not found — run scan.py first.</p>';
     return;
   }
+
+  // Refresh excluded set from freshly loaded script
+  excluded = new Set(typeof EXCLUDED_TICKERS !== 'undefined' ? EXCLUDED_TICKERS : []);
+
   const data = WATCHLIST_DATA;
 
   document.getElementById('scan-time').textContent =
