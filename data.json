@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-06-04T23:58:55.805807+00:00",
-  "count": 74,
+  "generated_at": "2026-06-05T00:05:11.571860+00:00",
+  "count": 71,
   "stocks": [
     {
       "ticker": "DELL",
+      "name": "Dell Technologies In C",
       "last_close": 422.05,
       "last_high": 430.5,
       "last_date": "2026-06-04",
@@ -52,6 +53,7 @@
     },
     {
       "ticker": "FFIV",
+      "name": "F5 Inc",
       "last_close": 408.66,
       "last_high": 409.035,
       "last_date": "2026-06-04",
@@ -94,6 +96,7 @@
     },
     {
       "ticker": "HPE",
+      "name": "Hewlett Packard Ente",
       "last_close": 53.69,
       "last_high": 54.47,
       "last_date": "2026-06-04",
@@ -141,6 +144,7 @@
     },
     {
       "ticker": "AMD",
+      "name": "Advanced Micro Devic",
       "last_close": 523.2,
       "last_high": 532.19,
       "last_date": "2026-06-04",
@@ -177,6 +181,7 @@
     },
     {
       "ticker": "CDNS",
+      "name": "Cadence Design Sys I",
       "last_close": 411.68,
       "last_high": 415.83,
       "last_date": "2026-06-04",
@@ -213,6 +218,7 @@
     },
     {
       "ticker": "CSCO",
+      "name": "Cisco Sys Inc",
       "last_close": 130.0,
       "last_high": 130.3656,
       "last_date": "2026-06-04",
@@ -249,6 +255,7 @@
     },
     {
       "ticker": "EBAY",
+      "name": "Ebay Inc",
       "last_close": 109.15,
       "last_high": 110.64,
       "last_date": "2026-06-04",
@@ -284,43 +291,8 @@
       ]
     },
     {
-      "ticker": "GS",
-      "last_close": 1092.61,
-      "last_high": 1095.9,
-      "last_date": "2026-06-04",
-      "day_pct": 4.96,
-      "sma3_direction": "up",
-      "sma3_days": 5,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 1104.4062,
-      "future_month_r2": 1123.1169,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 1008.1312,
-        "first_cross_date": "2026-05-26",
-        "days_crossed": 2,
-        "period": "previous_month"
-      },
-      "streak": 2,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 1008.1312,
-          "first_cross_date": "2026-05-26",
-          "days_crossed": 2
-        },
-        {
-          "month": "2026-04",
-          "r2": 930.1386,
-          "first_cross_date": "2026-04-20",
-          "days_crossed": 6
-        }
-      ]
-    },
-    {
       "ticker": "HST",
+      "name": "Host Hotels & Resort",
       "last_close": 24.45,
       "last_high": 24.48,
       "last_date": "2026-06-04",
@@ -357,6 +329,7 @@
     },
     {
       "ticker": "HUM",
+      "name": "Humana Inc",
       "last_close": 349.8,
       "last_high": 351.88,
       "last_date": "2026-06-04",
@@ -393,6 +366,7 @@
     },
     {
       "ticker": "INTC",
+      "name": "Intel Corp",
       "last_close": 111.78,
       "last_high": 113.14,
       "last_date": "2026-06-04",
@@ -429,6 +403,7 @@
     },
     {
       "ticker": "LRCX",
+      "name": "Lam Resh Corp",
       "last_close": 336.41,
       "last_high": 342.369,
       "last_date": "2026-06-04",
@@ -465,6 +440,7 @@
     },
     {
       "ticker": "MGM",
+      "name": "Mgm Resorts Intl",
       "last_close": 47.94,
       "last_high": 48.7,
       "last_date": "2026-06-04",
@@ -506,6 +482,7 @@
     },
     {
       "ticker": "NTAP",
+      "name": "Netapp Inc",
       "last_close": 178.87,
       "last_high": 180.0,
       "last_date": "2026-06-04",
@@ -542,6 +519,7 @@
     },
     {
       "ticker": "ON",
+      "name": "On Semiconductor Cor",
       "last_close": 131.82,
       "last_high": 134.485,
       "last_date": "2026-06-04",
@@ -578,6 +556,7 @@
     },
     {
       "ticker": "Q",
+      "name": "Qnity Electronics In",
       "last_close": 154.8,
       "last_high": 156.87,
       "last_date": "2026-06-04",
@@ -614,6 +593,7 @@
     },
     {
       "ticker": "QCOM",
+      "name": "Qualcomm Inc",
       "last_close": 242.57,
       "last_high": 246.7,
       "last_date": "2026-06-04",
@@ -650,6 +630,7 @@
     },
     {
       "ticker": "SNDK",
+      "name": "Sandisk Corp",
       "last_close": 1759.6801,
       "last_high": 1825.9,
       "last_date": "2026-06-04",
@@ -686,6 +667,7 @@
     },
     {
       "ticker": "STLD",
+      "name": "Steel Dynamics Inc",
       "last_close": 276.85,
       "last_high": 280.4899,
       "last_date": "2026-06-04",
@@ -722,6 +704,7 @@
     },
     {
       "ticker": "STX",
+      "name": "Seagate Technology H",
       "last_close": 925.99,
       "last_high": 941.49,
       "last_date": "2026-06-04",
@@ -758,6 +741,7 @@
     },
     {
       "ticker": "SWKS",
+      "name": "Skyworks Solutions I",
       "last_close": 79.93,
       "last_high": 81.87,
       "last_date": "2026-06-04",
@@ -794,6 +778,7 @@
     },
     {
       "ticker": "VRSN",
+      "name": "Verisign Inc",
       "last_close": 293.79,
       "last_high": 300.1875,
       "last_date": "2026-06-04",
@@ -830,6 +815,7 @@
     },
     {
       "ticker": "WDC",
+      "name": "Western Digital Corp",
       "last_close": 575.5,
       "last_high": 594.0,
       "last_date": "2026-06-04",
@@ -866,6 +852,7 @@
     },
     {
       "ticker": "A",
+      "name": "Agilent Technologies",
       "last_close": 138.37,
       "last_high": 141.09,
       "last_date": "2026-06-04",
@@ -896,6 +883,7 @@
     },
     {
       "ticker": "AAPL",
+      "name": "Apple Inc",
       "last_close": 311.23,
       "last_high": 313.54,
       "last_date": "2026-06-04",
@@ -926,6 +914,7 @@
     },
     {
       "ticker": "ADM",
+      "name": "Archer-Daniels Midla",
       "last_close": 83.37,
       "last_high": 84.74,
       "last_date": "2026-06-04",
@@ -956,6 +945,7 @@
     },
     {
       "ticker": "AES",
+      "name": "Aes Corp",
       "last_close": 14.73,
       "last_high": 14.74,
       "last_date": "2026-06-04",
@@ -986,6 +976,7 @@
     },
     {
       "ticker": "AKAM",
+      "name": "Akamai Technologies",
       "last_close": 158.98,
       "last_high": 160.87,
       "last_date": "2026-06-04",
@@ -1016,6 +1007,7 @@
     },
     {
       "ticker": "ALL",
+      "name": "Allstate Corp",
       "last_close": 210.84,
       "last_high": 214.61,
       "last_date": "2026-06-04",
@@ -1046,6 +1038,7 @@
     },
     {
       "ticker": "AMT",
+      "name": "American Tower Corp Reit",
       "last_close": 193.91,
       "last_high": 194.95,
       "last_date": "2026-06-04",
@@ -1076,6 +1069,7 @@
     },
     {
       "ticker": "APP",
+      "name": "Applovin Corp A",
       "last_close": 558.87,
       "last_high": 587.0,
       "last_date": "2026-06-04",
@@ -1106,6 +1100,7 @@
     },
     {
       "ticker": "BBY",
+      "name": "Best Buy Inc",
       "last_close": 70.99,
       "last_high": 72.91,
       "last_date": "2026-06-04",
@@ -1136,6 +1131,7 @@
     },
     {
       "ticker": "CBOE",
+      "name": "Cboe Global Mkts Inc",
       "last_close": 286.03,
       "last_high": 288.73,
       "last_date": "2026-06-04",
@@ -1166,6 +1162,7 @@
     },
     {
       "ticker": "COST",
+      "name": "Costco Whsl Corp New",
       "last_close": 972.35,
       "last_high": 990.01,
       "last_date": "2026-06-04",
@@ -1196,6 +1193,7 @@
     },
     {
       "ticker": "CRWD",
+      "name": "Crowdstrike Hldgs In A",
       "last_close": 719.09,
       "last_high": 720.92,
       "last_date": "2026-06-04",
@@ -1226,6 +1224,7 @@
     },
     {
       "ticker": "CVS",
+      "name": "Cvs Health Corp",
       "last_close": 94.82,
       "last_high": 94.87,
       "last_date": "2026-06-04",
@@ -1256,6 +1255,7 @@
     },
     {
       "ticker": "D",
+      "name": "Dominion Energy Inc",
       "last_close": 66.5,
       "last_high": 66.955,
       "last_date": "2026-06-04",
@@ -1286,6 +1286,7 @@
     },
     {
       "ticker": "DAL",
+      "name": "Delta Air Lines Inc",
       "last_close": 79.51,
       "last_high": 80.44,
       "last_date": "2026-06-04",
@@ -1316,6 +1317,7 @@
     },
     {
       "ticker": "DD",
+      "name": "Dupont De Nemours In",
       "last_close": 47.65,
       "last_high": 48.06,
       "last_date": "2026-06-04",
@@ -1346,6 +1348,7 @@
     },
     {
       "ticker": "DDOG",
+      "name": "Datadog Inc A",
       "last_close": 243.6,
       "last_high": 251.02,
       "last_date": "2026-06-04",
@@ -1376,6 +1379,7 @@
     },
     {
       "ticker": "DOC",
+      "name": "Healthpeak Pptys Inc Reit",
       "last_close": 19.6,
       "last_high": 19.64,
       "last_date": "2026-06-04",
@@ -1406,6 +1410,7 @@
     },
     {
       "ticker": "DVA",
+      "name": "Davita Inc",
       "last_close": 192.17,
       "last_high": 199.15,
       "last_date": "2026-06-04",
@@ -1436,6 +1441,7 @@
     },
     {
       "ticker": "F",
+      "name": "Ford Mtr Co Del",
       "last_close": 15.34,
       "last_high": 15.89,
       "last_date": "2026-06-04",
@@ -1466,6 +1472,7 @@
     },
     {
       "ticker": "FRT",
+      "name": "Federal Rlty Invt Tr Reit",
       "last_close": 120.81,
       "last_high": 121.38,
       "last_date": "2026-06-04",
@@ -1496,6 +1503,7 @@
     },
     {
       "ticker": "FSLR",
+      "name": "First Solar Inc",
       "last_close": 314.95,
       "last_high": 320.64,
       "last_date": "2026-06-04",
@@ -1526,6 +1534,7 @@
     },
     {
       "ticker": "FTNT",
+      "name": "Fortinet Inc",
       "last_close": 149.67,
       "last_high": 150.065,
       "last_date": "2026-06-04",
@@ -1556,6 +1565,7 @@
     },
     {
       "ticker": "GEN",
+      "name": "Gen Digital Inc",
       "last_close": 26.52,
       "last_high": 27.2299,
       "last_date": "2026-06-04",
@@ -1586,6 +1596,7 @@
     },
     {
       "ticker": "GLW",
+      "name": "Corning Inc",
       "last_close": 197.7,
       "last_high": 199.8,
       "last_date": "2026-06-04",
@@ -1616,6 +1627,7 @@
     },
     {
       "ticker": "GWW",
+      "name": "Grainger W W Inc",
       "last_close": 1289.37,
       "last_high": 1300.0,
       "last_date": "2026-06-04",
@@ -1646,6 +1658,7 @@
     },
     {
       "ticker": "HPQ",
+      "name": "Hp Inc",
       "last_close": 26.3,
       "last_high": 26.71,
       "last_date": "2026-06-04",
@@ -1676,6 +1689,7 @@
     },
     {
       "ticker": "HWM",
+      "name": "Howmet Aerospace Inc",
       "last_close": 249.33,
       "last_high": 251.055,
       "last_date": "2026-06-04",
@@ -1706,6 +1720,7 @@
     },
     {
       "ticker": "IBM",
+      "name": "Ibm Corp",
       "last_close": 301.77,
       "last_high": 310.44,
       "last_date": "2026-06-04",
@@ -1736,6 +1751,7 @@
     },
     {
       "ticker": "IFF",
+      "name": "Interntnl Flavors &",
       "last_close": 73.23,
       "last_high": 75.27,
       "last_date": "2026-06-04",
@@ -1766,6 +1782,7 @@
     },
     {
       "ticker": "KHC",
+      "name": "Kraft Heinz Co",
       "last_close": 22.47,
       "last_high": 23.2188,
       "last_date": "2026-06-04",
@@ -1796,6 +1813,7 @@
     },
     {
       "ticker": "LLY",
+      "name": "Eli Lilly And Co",
       "last_close": 1125.27,
       "last_high": 1140.46,
       "last_date": "2026-06-04",
@@ -1826,6 +1844,7 @@
     },
     {
       "ticker": "MNST",
+      "name": "Monster Beverage Cor",
       "last_close": 88.54,
       "last_high": 90.4449,
       "last_date": "2026-06-04",
@@ -1856,6 +1875,7 @@
     },
     {
       "ticker": "MU",
+      "name": "Micron Technology In",
       "last_close": 996.0,
       "last_high": 1036.3699,
       "last_date": "2026-06-04",
@@ -1886,6 +1906,7 @@
     },
     {
       "ticker": "ORCL",
+      "name": "Oracle Corp",
       "last_close": 236.34,
       "last_high": 238.95,
       "last_date": "2026-06-04",
@@ -1916,6 +1937,7 @@
     },
     {
       "ticker": "PANW",
+      "name": "Palo Alto Networks I",
       "last_close": 279.25,
       "last_high": 280.72,
       "last_date": "2026-06-04",
@@ -1946,6 +1968,7 @@
     },
     {
       "ticker": "PM",
+      "name": "Philip Morris Intl I",
       "last_close": 174.99,
       "last_high": 179.28,
       "last_date": "2026-06-04",
@@ -1976,6 +1999,7 @@
     },
     {
       "ticker": "ROK",
+      "name": "Rockwell Automation",
       "last_close": 462.24,
       "last_high": 464.27,
       "last_date": "2026-06-04",
@@ -2006,6 +2030,7 @@
     },
     {
       "ticker": "SMCI",
+      "name": "Super Micro Computer",
       "last_close": 46.9,
       "last_high": 47.84,
       "last_date": "2026-06-04",
@@ -2036,6 +2061,7 @@
     },
     {
       "ticker": "TSLA",
+      "name": "Tesla Inc",
       "last_close": 418.45,
       "last_high": 426.3499,
       "last_date": "2026-06-04",
@@ -2066,6 +2092,7 @@
     },
     {
       "ticker": "TSN",
+      "name": "Tyson Foods Inc A",
       "last_close": 56.88,
       "last_high": 58.09,
       "last_date": "2026-06-04",
@@ -2096,6 +2123,7 @@
     },
     {
       "ticker": "TTWO",
+      "name": "Take-Two Interactive",
       "last_close": 216.65,
       "last_high": 220.75,
       "last_date": "2026-06-04",
@@ -2126,6 +2154,7 @@
     },
     {
       "ticker": "UAL",
+      "name": "United Airlines Hldg",
       "last_close": 104.94,
       "last_high": 107.3002,
       "last_date": "2026-06-04",
@@ -2156,6 +2185,7 @@
     },
     {
       "ticker": "VTRS",
+      "name": "Viatris Inc",
       "last_close": 15.9,
       "last_high": 15.99,
       "last_date": "2026-06-04",
@@ -2185,37 +2215,8 @@
       ]
     },
     {
-      "ticker": "WAT",
-      "last_close": 376.47,
-      "last_high": 384.95,
-      "last_date": "2026-06-04",
-      "day_pct": -0.87,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 429.3275,
-      "future_month_r2": 389.6065,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 374.6742,
-        "first_cross_date": "2026-05-29",
-        "days_crossed": 1,
-        "period": "previous_month"
-      },
-      "streak": 1,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 374.6742,
-          "first_cross_date": "2026-05-29",
-          "days_crossed": 1
-        }
-      ]
-    },
-    {
       "ticker": "APTV",
+      "name": "Aptiv Plc New",
       "last_close": 72.92,
       "last_high": 76.5,
       "last_date": "2026-06-04",
@@ -2238,6 +2239,7 @@
     },
     {
       "ticker": "AXON",
+      "name": "Axon Enterprise Inc",
       "last_close": 513.2,
       "last_high": 515.79,
       "last_date": "2026-06-04",
@@ -2260,6 +2262,7 @@
     },
     {
       "ticker": "CRM",
+      "name": "Salesforce Inc",
       "last_close": 188.75,
       "last_high": 198.09,
       "last_date": "2026-06-04",
@@ -2281,29 +2284,8 @@
       "history": []
     },
     {
-      "ticker": "FAST",
-      "last_close": 47.16,
-      "last_high": 47.74,
-      "last_date": "2026-06-04",
-      "day_pct": 1.51,
-      "sma3_direction": "up",
-      "sma3_days": 2,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 47.0592,
-      "future_month_r2": 49.5148,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 47.0592,
-        "first_cross_date": "2026-06-04",
-        "days_crossed": 1
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
       "ticker": "MAA",
+      "name": "Mid-Amer Apt Cmntys Reit",
       "last_close": 136.87,
       "last_high": 137.05,
       "last_date": "2026-06-04",
@@ -2326,6 +2308,7 @@
     },
     {
       "ticker": "PAYX",
+      "name": "Paychex Inc",
       "last_close": 99.48,
       "last_high": 102.03,
       "last_date": "2026-06-04",
