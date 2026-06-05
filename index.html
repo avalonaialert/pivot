@@ -293,8 +293,9 @@
 <div class="filter-bar">
   <button class="filter-btn active" data-filter="all">All</button>
   <button class="filter-btn" data-filter="current_month">Current Month</button>
-  <button class="filter-btn" data-filter="previous_month">Previous Month</button>
-  <button class="filter-btn" data-filter="both">Both Months</button>
+  <button class="filter-btn" data-filter="previous_month">Prev Month</button>
+  <button class="filter-btn" data-filter="two_months_ago">2 Months Ago</button>
+  <button class="filter-btn" data-filter="both">Current + Prev</button>
   <input class="search-input" id="search" placeholder="Search ticker…" />
 </div>
 
@@ -308,6 +309,7 @@
         <th data-col="name">Company <span class="sort-icon">↕</span></th>
         <th data-col="last_close">Last Close <span class="sort-icon">↕</span></th>
         <th data-col="day_pct">Day % <span class="sort-icon">↕</span></th>
+        <th data-col="prev2_month_r2">2mo Ago R2 <span class="sort-icon">↕</span></th>
         <th data-col="prev_month_r2">Prev R2 <span class="sort-icon">↕</span></th>
         <th data-col="current_month_r2">Current R2 <span class="sort-icon">↕</span></th>
         <th data-col="future_month_r2">Future R2 <span class="sort-icon">↕</span></th>
@@ -466,11 +468,13 @@ async function loadData() {
     sma3_days:               s.sma3_days           ?? 0,
     sma3_proj_direction:     s.sma3_proj_direction ?? null,
     sma3_proj_days:          s.sma3_proj_days      ?? 0,
-    prev_month_r2:           s.crossed_previous_month?.r2 ?? null,
+    prev2_month_r2:          s.crossed_two_months_ago?.r2  ?? null,
+    prev_month_r2:           s.crossed_previous_month?.r2  ?? null,
     current_month_r2:        s.current_month_r2           ?? null,
     future_month_r2:         s.future_month_r2            ?? null,
     crossed_current_month:   s.crossed_current_month      ?? null,
     crossed_previous_month:  s.crossed_previous_month     ?? null,
+    crossed_two_months_ago:  s.crossed_two_months_ago     ?? null,
   }));
 
   render();
@@ -488,6 +492,7 @@ function filtered() {
     if (excluded.has(s.ticker)) return false;
     if (activeFilter === 'current_month'  && !s.crossed_current_month)  return false;
     if (activeFilter === 'previous_month' && !s.crossed_previous_month) return false;
+    if (activeFilter === 'two_months_ago' && !s.crossed_two_months_ago) return false;
     if (activeFilter === 'both'           && !(s.crossed_current_month && s.crossed_previous_month)) return false;
     if (searchQuery && !s.ticker.toLowerCase().includes(searchQuery)) return false;
     return true;
@@ -530,6 +535,7 @@ function render() {
       <td style="color:#e6edf3;font-size:0.82rem">${s.name || '—'}</td>
       <td class="price">$${s.last_close.toFixed(2)}</td>
       <td style="font-weight:600;color:${s.day_pct == null ? '#8b949e' : s.day_pct >= 0 ? '#3fb950' : '#f85149'}">${s.day_pct == null ? '—' : (s.day_pct >= 0 ? '+' : '') + s.day_pct.toFixed(2) + '%'}</td>
+      <td class="r2">${s.prev2_month_r2   != null ? '$' + s.prev2_month_r2.toFixed(2)   : '—'}</td>
       <td class="r2">${s.prev_month_r2    != null ? '$' + s.prev_month_r2.toFixed(2)    : '—'}</td>
       <td class="r2">${s.current_month_r2 != null ? '$' + s.current_month_r2.toFixed(2) : '—'}</td>
       <td class="r2">${s.future_month_r2  != null ? '$' + s.future_month_r2.toFixed(2)  : '—'}</td>
