@@ -1,1 +1,1 @@
-window.EXCLUDED_TICKERS = [];
+window.EXCLUDED_TICKERS = ["PM"];
