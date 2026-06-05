@@ -347,11 +347,11 @@ let excluded = new Set();
 function getPAT() {
   // config.js (local only, gitignored) injects GITHUB_PAT from .env
   if (typeof GITHUB_PAT !== 'undefined' && GITHUB_PAT) return GITHUB_PAT;
-  // Fallback for GitHub Pages: prompt once per session
-  let pat = sessionStorage.getItem('github_pat');
+  // Fallback: stored in localStorage so it's only entered once ever
+  let pat = localStorage.getItem('github_pat');
   if (!pat) {
-    pat = prompt('Enter your GitHub PAT to save exclusion changes:');
-    if (pat) sessionStorage.setItem('github_pat', pat.trim());
+    pat = prompt('Enter your GitHub PAT (saved in browser, only asked once):');
+    if (pat) localStorage.setItem('github_pat', pat.trim());
   }
   return pat ? pat.trim() : null;
 }
