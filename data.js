@@ -1,6 +1,6 @@
 window.WATCHLIST_DATA = {
-  "generated_at": "2026-06-05T00:32:57.069862+00:00",
-  "count": 74,
+  "generated_at": "2026-06-05T02:24:51.347473+00:00",
+  "count": 138,
   "stocks": [
     {
       "ticker": "DELL",
@@ -22,6 +22,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-08",
         "days_crossed": 6,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 214.4417,
+        "first_cross_date": "2026-04-22",
+        "days_crossed": 4,
+        "period": "two_months_ago"
       },
       "streak": 4,
       "history": [
@@ -45,7 +52,7 @@ window.WATCHLIST_DATA = {
         },
         {
           "month": "2026-02",
-          "r2": 147.8988,
+          "r2": 147.8987,
           "first_cross_date": "2026-02-27",
           "days_crossed": 1
         }
@@ -71,6 +78,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-12",
         "days_crossed": 12,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 320.1515,
+        "first_cross_date": "2026-04-29",
+        "days_crossed": 2,
+        "period": "two_months_ago"
       },
       "streak": 3,
       "history": [
@@ -120,6 +134,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 10,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 28.9819,
+        "first_cross_date": "2026-04-21",
+        "days_crossed": 2,
+        "period": "two_months_ago"
+      },
       "streak": 3,
       "history": [
         {
@@ -163,6 +184,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 14,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 236.8625,
+        "first_cross_date": "2026-04-09",
+        "days_crossed": 16,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -199,6 +227,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-22",
         "days_crossed": 5,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 332.0942,
+        "first_cross_date": "2026-04-22",
+        "days_crossed": 4,
+        "period": "two_months_ago"
       },
       "streak": 2,
       "history": [
@@ -237,6 +272,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 14,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 86.4325,
+        "first_cross_date": "2026-04-20",
+        "days_crossed": 9,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -273,6 +315,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-15",
         "days_crossed": 5,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 99.3797,
+        "first_cross_date": "2026-04-14",
+        "days_crossed": 13,
+        "period": "two_months_ago"
       },
       "streak": 2,
       "history": [
@@ -311,6 +360,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 2,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 930.1386,
+        "first_cross_date": "2026-04-20",
+        "days_crossed": 6,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -347,6 +403,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-26",
         "days_crossed": 4,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 20.8527,
+        "first_cross_date": "2026-04-14",
+        "days_crossed": 12,
+        "period": "two_months_ago"
       },
       "streak": 2,
       "history": [
@@ -385,6 +448,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 14,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 237.2004,
+        "first_cross_date": "2026-04-29",
+        "days_crossed": 2,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -422,6 +492,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 10,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 53.3175,
+        "first_cross_date": "2026-04-08",
+        "days_crossed": 17,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -458,6 +535,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-22",
         "days_crossed": 5,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 265.3213,
+        "first_cross_date": "2026-04-10",
+        "days_crossed": 12,
+        "period": "two_months_ago"
       },
       "streak": 2,
       "history": [
@@ -501,6 +585,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 40.3442,
+        "first_cross_date": "2026-04-21",
+        "days_crossed": 4,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -537,6 +628,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-14",
         "days_crossed": 7,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 112.2558,
+        "first_cross_date": "2026-04-21",
+        "days_crossed": 2,
+        "period": "two_months_ago"
       },
       "streak": 2,
       "history": [
@@ -575,6 +673,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 4,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 72.6892,
+        "first_cross_date": "2026-04-16",
+        "days_crossed": 11,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -611,6 +716,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-12",
         "days_crossed": 5,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 137.0252,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 10,
+        "period": "two_months_ago"
       },
       "streak": 2,
       "history": [
@@ -649,6 +761,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 10,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 167.7937,
+        "first_cross_date": "2026-04-30",
+        "days_crossed": 1,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -685,6 +804,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-05",
         "days_crossed": 16,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 936.4419,
+        "first_cross_date": "2026-04-13",
+        "days_crossed": 12,
+        "period": "two_months_ago"
       },
       "streak": 2,
       "history": [
@@ -723,6 +849,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 3,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 221.6424,
+        "first_cross_date": "2026-04-21",
+        "days_crossed": 8,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -759,6 +892,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-26",
         "days_crossed": 4,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 488.0453,
+        "first_cross_date": "2026-04-08",
+        "days_crossed": 17,
+        "period": "two_months_ago"
       },
       "streak": 2,
       "history": [
@@ -797,6 +937,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 5,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 64.5322,
+        "first_cross_date": "2026-04-30",
+        "days_crossed": 1,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -833,6 +980,13 @@ window.WATCHLIST_DATA = {
         "first_cross_date": "2026-05-18",
         "days_crossed": 7,
         "period": "previous_month"
+      },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 268.6337,
+        "first_cross_date": "2026-04-06",
+        "days_crossed": 19,
+        "period": "two_months_ago"
       },
       "streak": 2,
       "history": [
@@ -871,6 +1025,13 @@ window.WATCHLIST_DATA = {
         "days_crossed": 3,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 365.8248,
+        "first_cross_date": "2026-04-14",
+        "days_crossed": 12,
+        "period": "two_months_ago"
+      },
       "streak": 2,
       "history": [
         {
@@ -908,6 +1069,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 2,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -939,6 +1101,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 16,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -970,6 +1133,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 8,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1001,6 +1165,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 7,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1032,6 +1197,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 15,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1063,6 +1229,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1094,6 +1261,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1125,6 +1293,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 3,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1156,6 +1325,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 2,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1187,6 +1357,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 20,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1218,6 +1389,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 3,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1249,6 +1421,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 15,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1280,6 +1453,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 15,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1311,6 +1485,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 9,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1342,6 +1517,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 3,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1373,6 +1549,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 8,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1404,6 +1581,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 16,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1435,6 +1613,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 17,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1466,6 +1645,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 17,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1497,6 +1677,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 10,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1528,6 +1709,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 11,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1559,6 +1741,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 14,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1590,6 +1773,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 16,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1621,6 +1805,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 8,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1652,6 +1837,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 3,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1683,6 +1869,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 16,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1714,6 +1901,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 5,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1745,6 +1933,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 6,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1776,6 +1965,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1807,6 +1997,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 5,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1838,6 +2029,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 2,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1869,6 +2061,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 4,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1900,6 +2093,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 15,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1931,6 +2125,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 18,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1962,6 +2157,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -1993,6 +2189,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 15,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -2024,6 +2221,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 12,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -2055,6 +2253,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 13,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -2086,6 +2285,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 10,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -2117,6 +2317,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 4,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -2148,6 +2349,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 9,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -2179,6 +2381,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 7,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -2210,6 +2413,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 2,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -2241,6 +2445,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 16,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -2272,6 +2477,7 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1,
         "period": "previous_month"
       },
+      "crossed_two_months_ago": null,
       "streak": 1,
       "history": [
         {
@@ -2281,6 +2487,156 @@ window.WATCHLIST_DATA = {
           "days_crossed": 1
         }
       ]
+    },
+    {
+      "ticker": "ABNB",
+      "name": "Airbnb Inc A",
+      "last_close": 133.72,
+      "last_high": 137.235,
+      "last_date": "2026-06-04",
+      "day_pct": 0.1,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 156.31,
+      "future_month_r2": 139.1938,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 146.7967,
+        "first_cross_date": "2026-04-22",
+        "days_crossed": 1,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "ADI",
+      "name": "Analog Devices Inc",
+      "last_close": 428.76,
+      "last_high": 432.27,
+      "last_date": "2026-06-04",
+      "day_pct": -2.04,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 489.9169,
+      "future_month_r2": 438.8453,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 382.406,
+        "first_cross_date": "2026-04-20",
+        "days_crossed": 9,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "ALB",
+      "name": "Albemarle Corp",
+      "last_close": 165.65,
+      "last_high": 168.2399,
+      "last_date": "2026-06-04",
+      "day_pct": -1.6,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 247.6408,
+      "future_month_r2": 173.9308,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 203.5408,
+        "first_cross_date": "2026-04-16",
+        "days_crossed": 2,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Matls Inc",
+      "last_close": 501.7,
+      "last_high": 510.75,
+      "last_date": "2026-06-04",
+      "day_pct": 0.19,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 522.1896,
+      "future_month_r2": 526.3315,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 419.2654,
+        "first_cross_date": "2026-04-24",
+        "days_crossed": 1,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.Com Inc",
+      "last_close": 253.79,
+      "last_high": 255.8299,
+      "last_date": "2026-06-04",
+      "day_pct": 1.51,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 308.3017,
+      "future_month_r2": 259.0658,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 241.1519,
+        "first_cross_date": "2026-04-14",
+        "days_crossed": 13,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "ANET",
+      "name": "Arista Networks Inc",
+      "last_close": 166.01,
+      "last_high": 167.79,
+      "last_date": "2026-06-04",
+      "day_pct": -4.79,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 202.6042,
+      "future_month_r2": 178.2221,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 154.5483,
+        "first_cross_date": "2026-04-14",
+        "days_crossed": 13,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
     },
     {
       "ticker": "APTV",
@@ -2302,6 +2658,32 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1
       },
       "crossed_previous_month": null,
+      "crossed_two_months_ago": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom Inc",
+      "last_close": 418.91,
+      "last_high": 426.48,
+      "last_date": "2026-06-04",
+      "day_pct": -12.59,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 511.2461,
+      "future_month_r2": 504.6474,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 381.9097,
+        "first_cross_date": "2026-04-14",
+        "days_crossed": 13,
+        "period": "two_months_ago"
+      },
       "streak": 0,
       "history": []
     },
@@ -2325,6 +2707,232 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1
       },
       "crossed_previous_month": null,
+      "crossed_two_months_ago": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "BEN",
+      "name": "Franklin Res Inc",
+      "last_close": 31.97,
+      "last_high": 32.45,
+      "last_date": "2026-06-04",
+      "day_pct": 5.27,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 36.3294,
+      "future_month_r2": 33.365,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 29.3757,
+        "first_cross_date": "2026-04-28",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "C",
+      "name": "Citigroup Inc",
+      "last_close": 135.15,
+      "last_high": 135.66,
+      "last_date": "2026-06-04",
+      "day_pct": 4.02,
+      "sma3_direction": "up",
+      "sma3_days": 4,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 139.671,
+      "future_month_r2": 139.2856,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 122.7369,
+        "first_cross_date": "2026-04-08",
+        "days_crossed": 17,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar Inc",
+      "last_close": 940.48,
+      "last_high": 946.83,
+      "last_date": "2026-06-04",
+      "day_pct": 1.54,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 1043.3807,
+      "future_month_r2": 971.23,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 811.7032,
+        "first_cross_date": "2026-04-21",
+        "days_crossed": 8,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "CDW",
+      "name": "Cdw Corp",
+      "last_close": 139.45,
+      "last_high": 140.77,
+      "last_date": "2026-06-04",
+      "day_pct": 1.57,
+      "sma3_direction": "up",
+      "sma3_days": 14,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 161.0244,
+      "future_month_r2": 143.1881,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 141.5803,
+        "first_cross_date": "2026-04-22",
+        "days_crossed": 2,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "CFG",
+      "name": "Citizens Finl Group",
+      "last_close": 63.9,
+      "last_high": 63.935,
+      "last_date": "2026-06-04",
+      "day_pct": 3.85,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 69.2329,
+      "future_month_r2": 65.2586,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 64.0798,
+        "first_cross_date": "2026-04-09",
+        "days_crossed": 16,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "CHTR",
+      "name": "Charter Communicatio A",
+      "last_close": 129.05,
+      "last_high": 132.94,
+      "last_date": "2026-06-04",
+      "day_pct": 0.03,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 239.8004,
+      "future_month_r2": 143.2225,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 250.9358,
+        "first_cross_date": "2026-04-23",
+        "days_crossed": 1,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "CMI",
+      "name": "Cummins Inc",
+      "last_close": 678.1,
+      "last_high": 686.85,
+      "last_date": "2026-06-04",
+      "day_pct": -0.62,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 792.3659,
+      "future_month_r2": 697.5875,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 619.1421,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 10,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "CNC",
+      "name": "Centene Corp Del",
+      "last_close": 62.7,
+      "last_high": 63.5,
+      "last_date": "2026-06-04",
+      "day_pct": 5.29,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 72.1636,
+      "future_month_r2": 65.2852,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 51.9967,
+        "first_cross_date": "2026-04-29",
+        "days_crossed": 2,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "COHR",
+      "name": "Coherent Corp",
+      "last_close": 421.9,
+      "last_high": 432.505,
+      "last_date": "2026-06-04",
+      "day_pct": 1.07,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 493.8598,
+      "future_month_r2": 459.3154,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 350.5252,
+        "first_cross_date": "2026-04-21",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
       "streak": 0,
       "history": []
     },
@@ -2348,6 +2956,207 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1
       },
       "crossed_previous_month": null,
+      "crossed_two_months_ago": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "CSX",
+      "name": "Csx Corp",
+      "last_close": 46.23,
+      "last_high": 47.248,
+      "last_date": "2026-06-04",
+      "day_pct": -0.45,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 50.2613,
+      "future_month_r2": 47.9728,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 46.151,
+        "first_cross_date": "2026-04-23",
+        "days_crossed": 2,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "DLR",
+      "name": "Digital Rlty Tr Inc Reit",
+      "last_close": 188.7,
+      "last_high": 189.22,
+      "last_date": "2026-06-04",
+      "day_pct": 2.83,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 212.4819,
+      "future_month_r2": 193.0792,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 191.8212,
+        "first_cross_date": "2026-04-13",
+        "days_crossed": 14,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "EG",
+      "name": "Everest Reinsurance",
+      "last_close": 319.5,
+      "last_high": 327.0677,
+      "last_date": "2026-06-04",
+      "day_pct": 0.43,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 380.87,
+      "future_month_r2": 330.8121,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 353.7075,
+        "first_cross_date": "2026-04-20",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "ELV",
+      "name": "Elevance Health Inc",
+      "last_close": 409.44,
+      "last_high": 411.799,
+      "last_date": "2026-06-04",
+      "day_pct": 4.64,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 455.6714,
+      "future_month_r2": 421.6417,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 362.5374,
+        "first_cross_date": "2026-04-28",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "EME",
+      "name": "Emcor Group Inc",
+      "last_close": 845.43,
+      "last_high": 847.8,
+      "last_date": "2026-06-04",
+      "day_pct": 0.7,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 1050.4101,
+      "future_month_r2": 859.6858,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 820.3173,
+        "first_cross_date": "2026-04-14",
+        "days_crossed": 10,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "EQIX",
+      "name": "Equinix Inc Reit",
+      "last_close": 1089.15,
+      "last_high": 1091.97,
+      "last_date": "2026-06-04",
+      "day_pct": 1.13,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 1168.2422,
+      "future_month_r2": 1108.6021,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 1080.9128,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 9,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "ETN",
+      "name": "Eaton Corp Plc",
+      "last_close": 418.61,
+      "last_high": 421.57,
+      "last_date": "2026-06-04",
+      "day_pct": -0.62,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 470.7349,
+      "future_month_r2": 428.3918,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 399.9285,
+        "first_cross_date": "2026-04-09",
+        "days_crossed": 15,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "EXPE",
+      "name": "Expedia Group Inc",
+      "last_close": 227.18,
+      "last_high": 234.45,
+      "last_date": "2026-06-04",
+      "day_pct": 0.79,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 283.2994,
+      "future_month_r2": 238.6342,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 274.2257,
+        "first_cross_date": "2026-04-21",
+        "days_crossed": 2,
+        "period": "two_months_ago"
+      },
       "streak": 0,
       "history": []
     },
@@ -2371,6 +3180,332 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1
       },
       "crossed_previous_month": null,
+      "crossed_two_months_ago": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "FIX",
+      "name": "Comfort Sys Usa Inc",
+      "last_close": 1914.65,
+      "last_high": 1932.6,
+      "last_date": "2026-06-04",
+      "day_pct": 3.49,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 2433.7901,
+      "future_month_r2": 2001.0791,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 1694.7342,
+        "first_cross_date": "2026-04-21",
+        "days_crossed": 8,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "GEV",
+      "name": "Ge Vernova Inc",
+      "last_close": 963.33,
+      "last_high": 968.75,
+      "last_date": "2026-06-04",
+      "day_pct": 0.41,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 1244.7329,
+      "future_month_r2": 992.59,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 1067.4305,
+        "first_cross_date": "2026-04-22",
+        "days_crossed": 7,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "GNRC",
+      "name": "Generac Hldgs Inc",
+      "last_close": 278.14,
+      "last_high": 282.2099,
+      "last_date": "2026-06-04",
+      "day_pct": -2.51,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 331.6117,
+      "future_month_r2": 286.629,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 257.991,
+        "first_cross_date": "2026-04-30",
+        "days_crossed": 1,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc Class C",
+      "last_close": 369.27,
+      "last_high": 369.845,
+      "last_date": "2026-06-04",
+      "day_pct": 3.82,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 453.7137,
+      "future_month_r2": 377.3763,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 338.2134,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 8,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc Class A",
+      "last_close": 372.19,
+      "last_high": 373.2499,
+      "last_date": "2026-06-04",
+      "day_pct": 3.68,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 459.7746,
+      "future_month_r2": 380.7349,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 337.4679,
+        "first_cross_date": "2026-04-15",
+        "days_crossed": 12,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "HLT",
+      "name": "Hilton Worldwide Hld",
+      "last_close": 338.15,
+      "last_high": 339.78,
+      "last_date": "2026-06-04",
+      "day_pct": 2.05,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 353.8138,
+      "future_month_r2": 345.009,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 319.8588,
+        "first_cross_date": "2026-04-09",
+        "days_crossed": 16,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "HUBB",
+      "name": "Hubbell Inc",
+      "last_close": 485.27,
+      "last_high": 485.515,
+      "last_date": "2026-06-04",
+      "day_pct": 0.07,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 558.4659,
+      "future_month_r2": 491.6221,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 554.3848,
+        "first_cross_date": "2026-04-22",
+        "days_crossed": 4,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "IBKR",
+      "name": "Interactive Brokers A",
+      "last_close": 87.06,
+      "last_high": 87.43,
+      "last_date": "2026-06-04",
+      "day_pct": -0.1,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 97.8254,
+      "future_month_r2": 90.4422,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 78.4713,
+        "first_cross_date": "2026-04-15",
+        "days_crossed": 7,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "INVH",
+      "name": "Invitation Homes Inc",
+      "last_close": 29.48,
+      "last_high": 29.515,
+      "last_date": "2026-06-04",
+      "day_pct": 1.73,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 31.5757,
+      "future_month_r2": 29.8075,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 27.9264,
+        "first_cross_date": "2026-04-28",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "IRM",
+      "name": "Iron Mtn Inc New Reit",
+      "last_close": 130.25,
+      "last_high": 130.25,
+      "last_date": "2026-06-04",
+      "day_pct": 1.8,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 150.6089,
+      "future_month_r2": 132.8792,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 118.4638,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 5,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "JBL",
+      "name": "Jabil Inc",
+      "last_close": 373.82,
+      "last_high": 378.74,
+      "last_date": "2026-06-04",
+      "day_pct": -1.38,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 441.7769,
+      "future_month_r2": 388.6833,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 308.4912,
+        "first_cross_date": "2026-04-14",
+        "days_crossed": 12,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "KEY",
+      "name": "Keycorp New",
+      "last_close": 21.67,
+      "last_high": 21.67,
+      "last_date": "2026-06-04",
+      "day_pct": 3.78,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 23.1154,
+      "future_month_r2": 22.0742,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 21.8795,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 8,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "KLAC",
+      "name": "Kla Corp",
+      "last_close": 2131.1001,
+      "last_high": 2156.6899,
+      "last_date": "2026-06-04",
+      "day_pct": 0.28,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 2336.9945,
+      "future_month_r2": 2226.9116,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 1714.6382,
+        "first_cross_date": "2026-04-09",
+        "days_crossed": 16,
+        "period": "two_months_ago"
+      },
       "streak": 0,
       "history": []
     },
@@ -2394,6 +3529,257 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1
       },
       "crossed_previous_month": null,
+      "crossed_two_months_ago": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "MAR",
+      "name": "Marriott Intl Inc Ne A",
+      "last_close": 385.3,
+      "last_high": 385.98,
+      "last_date": "2026-06-04",
+      "day_pct": 2.27,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 415.3308,
+      "future_month_r2": 392.9617,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 354.2034,
+        "first_cross_date": "2026-04-10",
+        "days_crossed": 15,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "MCHP",
+      "name": "Microchip Technology",
+      "last_close": 96.3,
+      "last_high": 99.6,
+      "last_date": "2026-06-04",
+      "day_pct": -0.26,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 123.2755,
+      "future_month_r2": 101.9197,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 82.2845,
+        "first_cross_date": "2026-04-22",
+        "days_crossed": 7,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "MO",
+      "name": "Altria Group Inc",
+      "last_close": 70.6,
+      "last_high": 71.18,
+      "last_date": "2026-06-04",
+      "day_pct": 0.43,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 79.0385,
+      "future_month_r2": 72.0756,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 72.4812,
+        "first_cross_date": "2026-04-30",
+        "days_crossed": 1,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "MPWR",
+      "name": "Monolithic Pwr Sys I",
+      "last_close": 1652.6,
+      "last_high": 1666.6899,
+      "last_date": "2026-06-04",
+      "day_pct": -2.21,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 1995.0076,
+      "future_month_r2": 1705.9007,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 1226.1842,
+        "first_cross_date": "2026-04-08",
+        "days_crossed": 17,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "last_close": 218.27,
+      "last_high": 219.16,
+      "last_date": "2026-06-04",
+      "day_pct": 3.87,
+      "sma3_direction": "up",
+      "sma3_days": 11,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 228.4361,
+      "future_month_r2": 223.251,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 183.9612,
+        "first_cross_date": "2026-04-15",
+        "days_crossed": 12,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "MSCI",
+      "name": "Msci Inc",
+      "last_close": 618.87,
+      "last_high": 627.44,
+      "last_date": "2026-06-04",
+      "day_pct": 0.86,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 683.4576,
+      "future_month_r2": 632.3137,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 606.6633,
+        "first_cross_date": "2026-04-22",
+        "days_crossed": 2,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix Inc",
+      "last_close": 81.56,
+      "last_high": 83.7,
+      "last_date": "2026-06-04",
+      "day_pct": 0.05,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 100.9436,
+      "future_month_r2": 84.86,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 104.9842,
+        "first_cross_date": "2026-04-14",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "NUE",
+      "name": "Nucor Corp",
+      "last_close": 262.28,
+      "last_high": 264.6688,
+      "last_date": "2026-06-04",
+      "day_pct": 1.77,
+      "sma3_direction": "up",
+      "sma3_days": 10,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 291.3254,
+      "future_month_r2": 269.4498,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 193.8306,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 10,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "NVDA",
+      "name": "Nvidia Corp",
+      "last_close": 218.66,
+      "last_high": 221.6,
+      "last_date": "2026-06-04",
+      "day_pct": 1.82,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 261.9985,
+      "future_month_r2": 226.9146,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 200.8625,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 10,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "NXPI",
+      "name": "Nxp Semiconductors N",
+      "last_close": 322.22,
+      "last_high": 328.2,
+      "last_date": "2026-06-04",
+      "day_pct": 0.11,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 403.8219,
+      "future_month_r2": 334.8554,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 245.064,
+        "first_cross_date": "2026-04-24",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
       "streak": 0,
       "history": []
     },
@@ -2417,6 +3803,432 @@ window.WATCHLIST_DATA = {
         "days_crossed": 1
       },
       "crossed_previous_month": null,
+      "crossed_two_months_ago": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "PWR",
+      "name": "Quanta Svcs Inc",
+      "last_close": 719.17,
+      "last_high": 722.39,
+      "last_date": "2026-06-04",
+      "day_pct": 0.49,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 910.5171,
+      "future_month_r2": 737.1917,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 643.3892,
+        "first_cross_date": "2026-04-30",
+        "days_crossed": 1,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "RL",
+      "name": "Ralph Lauren Corp A",
+      "last_close": 366.72,
+      "last_high": 366.825,
+      "last_date": "2026-06-04",
+      "day_pct": 2.03,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 430.8308,
+      "future_month_r2": 373.1684,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 389.2535,
+        "first_cross_date": "2026-04-20",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "SATS",
+      "name": "Echostar Corp A",
+      "last_close": 124.64,
+      "last_high": 126.57,
+      "last_date": "2026-06-04",
+      "day_pct": 3.08,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 161.665,
+      "future_month_r2": 130.965,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 135.3075,
+        "first_cross_date": "2026-04-15",
+        "days_crossed": 4,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "SNPS",
+      "name": "Synopsys Inc",
+      "last_close": 494.48,
+      "last_high": 500.35,
+      "last_date": "2026-06-04",
+      "day_pct": -0.71,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 591.9095,
+      "future_month_r2": 508.8108,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 490.8185,
+        "first_cross_date": "2026-04-24",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "STT",
+      "name": "State Str Corp",
+      "last_close": 162.75,
+      "last_high": 163.95,
+      "last_date": "2026-06-04",
+      "day_pct": 3.08,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 175.6151,
+      "future_month_r2": 166.76,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 136.7049,
+        "first_cross_date": "2026-04-09",
+        "days_crossed": 16,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "STZ",
+      "name": "Constellation Brands A",
+      "last_close": 137.78,
+      "last_high": 138.005,
+      "last_date": "2026-06-04",
+      "day_pct": 1.76,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 169.2283,
+      "future_month_r2": 139.0304,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 165.3268,
+        "first_cross_date": "2026-04-10",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "SYF",
+      "name": "Synchrony Finl",
+      "last_close": 70.78,
+      "last_high": 71.38,
+      "last_date": "2026-06-04",
+      "day_pct": 3.0,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 80.8378,
+      "future_month_r2": 72.3312,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 79.1731,
+        "first_cross_date": "2026-04-21",
+        "days_crossed": 1,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "TEL",
+      "name": "Te Connectivity Plc",
+      "last_close": 220.75,
+      "last_high": 223.76,
+      "last_date": "2026-06-04",
+      "day_pct": 1.08,
+      "sma3_direction": "up",
+      "sma3_days": 9,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 231.902,
+      "future_month_r2": 227.965,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 245.0637,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "TER",
+      "name": "Teradyne Inc",
+      "last_close": 406.86,
+      "last_high": 413.87,
+      "last_date": "2026-06-04",
+      "day_pct": -0.69,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 458.1024,
+      "future_month_r2": 426.9925,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 374.6603,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 8,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "TT",
+      "name": "Trane Technologies P",
+      "last_close": 463.76,
+      "last_high": 465.61,
+      "last_date": "2026-06-04",
+      "day_pct": -0.45,
+      "sma3_direction": "up",
+      "sma3_days": 3,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 529.8208,
+      "future_month_r2": 470.3716,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 499.5201,
+        "first_cross_date": "2026-04-30",
+        "days_crossed": 1,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "TXN",
+      "name": "Texas Instrs Inc",
+      "last_close": 305.37,
+      "last_high": 310.59,
+      "last_date": "2026-06-04",
+      "day_pct": -1.04,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 393.173,
+      "future_month_r2": 313.9858,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 224.3492,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 10,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "UNH",
+      "name": "Unitedhealth Group I",
+      "last_close": 396.47,
+      "last_high": 401.375,
+      "last_date": "2026-06-04",
+      "day_pct": 5.16,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 461.7801,
+      "future_month_r2": 414.0104,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 323.4824,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 10,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "URI",
+      "name": "United Rentals Inc",
+      "last_close": 1084.62,
+      "last_high": 1091.23,
+      "last_date": "2026-06-04",
+      "day_pct": 2.65,
+      "sma3_direction": "up",
+      "sma3_days": 9,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 1109.9288,
+      "future_month_r2": 1137.0585,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 933.2374,
+        "first_cross_date": "2026-04-23",
+        "days_crossed": 6,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "USB",
+      "name": "Us Bancorp Del",
+      "last_close": 55.46,
+      "last_high": 55.55,
+      "last_date": "2026-06-04",
+      "day_pct": 4.37,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 59.59,
+      "future_month_r2": 56.4508,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 57.1606,
+        "first_cross_date": "2026-04-17",
+        "days_crossed": 5,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "VRT",
+      "name": "Vertiv Hldgs Co A",
+      "last_close": 323.92,
+      "last_high": 326.85,
+      "last_date": "2026-06-04",
+      "day_pct": -2.27,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 445.8613,
+      "future_month_r2": 344.9075,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 329.8531,
+        "first_cross_date": "2026-04-24",
+        "days_crossed": 2,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "WST",
+      "name": "West Pharmaceutical",
+      "last_close": 317.32,
+      "last_high": 321.495,
+      "last_date": "2026-06-04",
+      "day_pct": 0.32,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 369.1311,
+      "future_month_r2": 324.7479,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 269.0905,
+        "first_cross_date": "2026-04-15",
+        "days_crossed": 12,
+        "period": "two_months_ago"
+      },
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "XYZ",
+      "name": "Block Inc A A",
+      "last_close": 70.89,
+      "last_high": 72.525,
+      "last_date": "2026-06-04",
+      "day_pct": 1.56,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 84.5587,
+      "future_month_r2": 74.9147,
+      "crossed_current_month": null,
+      "crossed_previous_month": null,
+      "crossed_two_months_ago": {
+        "month": "2026-04",
+        "r2": 73.3958,
+        "first_cross_date": "2026-04-20",
+        "days_crossed": 3,
+        "period": "two_months_ago"
+      },
       "streak": 0,
       "history": []
     }
