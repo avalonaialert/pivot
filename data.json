@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T20:17:12.297318+00:00",
+  "generated_at": "2026-06-05T20:32:05.818306+00:00",
   "count": 75,
   "stocks": [
     {
@@ -45,7 +45,7 @@
         },
         {
           "month": "2026-02",
-          "r2": 147.8987,
+          "r2": 147.8988,
           "first_cross_date": "2026-02-27",
           "days_crossed": 1
         }
@@ -302,7 +302,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 1104.4062,
-      "future_month_r2": 1129.5395,
+      "future_month_r2": 1129.382,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -321,7 +321,7 @@
         },
         {
           "month": "2026-04",
-          "r2": 930.1386,
+          "r2": 930.1387,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -339,7 +339,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 25.7957,
-      "future_month_r2": 25.3199,
+      "future_month_r2": 25.3224,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -413,7 +413,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 175.0884,
-      "future_month_r2": 116.4106,
+      "future_month_r2": 116.4048,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -862,7 +862,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 692.6636,
-      "future_month_r2": 597.5523,
+      "future_month_r2": 597.4265,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1170,7 +1170,7 @@
       "ticker": "CBOE",
       "name": "Cboe Global Mkts Inc",
       "last_close": 281.91,
-      "last_high": 288.01,
+      "last_high": 288.0,
       "last_date": "2026-06-05",
       "day_pct": -1.44,
       "sma3_direction": "down",
@@ -1178,7 +1178,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 414.7208,
-      "future_month_r2": 293.2442,
+      "future_month_r2": 293.2433,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1457,7 +1457,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 231.6721,
-      "future_month_r2": 198.5511,
+      "future_month_r2": 198.5496,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1479,16 +1479,16 @@
     {
       "ticker": "F",
       "name": "Ford Mtr Co Del",
-      "last_close": 14.905,
+      "last_close": 14.9,
       "last_high": 15.26,
       "last_date": "2026-06-05",
-      "day_pct": -2.84,
+      "day_pct": -2.87,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 20.7007,
-      "future_month_r2": 16.4939,
+      "future_month_r2": 16.4934,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2232,7 +2232,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 19.2629,
-      "future_month_r2": 16.3781,
+      "future_month_r2": 16.3798,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
