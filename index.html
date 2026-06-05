@@ -426,7 +426,8 @@ function renderExcludedPanel() {
 }
 
 async function loadData() {
-  await loadScript('excluded.js').catch(() => {});
+  const EXCLUDED_URL = 'https://raw.githubusercontent.com/avalonaialert/pivot/main/excluded.js';
+  await loadScript(EXCLUDED_URL).catch(() => {});
   await loadScript('data.js').catch(() => {});
 
   if (typeof WATCHLIST_DATA === 'undefined') {
