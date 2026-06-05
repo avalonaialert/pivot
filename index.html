@@ -439,13 +439,19 @@ async function loadData() {
     }
   } catch(e) {}
 
-  await loadScript('data.js').catch(() => {});
+  // Fetch data.json with no-store to always bypass CDN cache
+  let dataPayload = null;
+  try {
+    const dataRes = await fetch('data.json?v=' + Date.now(), { cache: 'no-store' });
+    if (dataRes.ok) dataPayload = await dataRes.json();
+  } catch(e) {}
 
-  if (typeof WATCHLIST_DATA === 'undefined') {
+  if (!dataPayload) {
     document.getElementById('loading').innerHTML =
-      '<p style="color:#f85149">data.js not found — run scan.py first.</p>';
+      '<p style="color:#f85149">data.json not found — run scan.py first.</p>';
     return;
   }
+  window.WATCHLIST_DATA = dataPayload;
 
   const data = WATCHLIST_DATA;
 
