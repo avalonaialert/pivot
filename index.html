@@ -6,6 +6,7 @@
   <title>S&P 500 — Monthly R2 Pivot Watchlist</title>
   <script src="data.js"></script>
   <script src="excluded.js"></script>
+  <script src="config.js" onerror="void(0)"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -335,6 +336,9 @@ const EXCLUDED_FILE = 'excluded.js';
 let excluded = new Set(typeof EXCLUDED_TICKERS !== 'undefined' ? EXCLUDED_TICKERS : []);
 
 function getPAT() {
+  // config.js (local only, gitignored) injects GITHUB_PAT from .env
+  if (typeof GITHUB_PAT !== 'undefined' && GITHUB_PAT) return GITHUB_PAT;
+  // Fallback for GitHub Pages: prompt once per session
   let pat = sessionStorage.getItem('github_pat');
   if (!pat) {
     pat = prompt('Enter your GitHub PAT to save exclusion changes:');
