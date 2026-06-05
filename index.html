@@ -293,9 +293,8 @@
 <div class="filter-bar">
   <button class="filter-btn active" data-filter="all">All</button>
   <button class="filter-btn" data-filter="current_month">Current Month</button>
-  <button class="filter-btn" data-filter="previous_month">Prev Month</button>
-  <button class="filter-btn" data-filter="two_months_ago">2 Months Ago</button>
-  <button class="filter-btn" data-filter="both">Current + Prev</button>
+  <button class="filter-btn" data-filter="previous_month">Previous Month</button>
+  <button class="filter-btn" data-filter="both">Both Months</button>
   <input class="search-input" id="search" placeholder="Search ticker…" />
 </div>
 
@@ -466,13 +465,11 @@ async function loadData() {
     sma3_days:               s.sma3_days           ?? 0,
     sma3_proj_direction:     s.sma3_proj_direction ?? null,
     sma3_proj_days:          s.sma3_proj_days      ?? 0,
-    prev2_month_r2:          s.crossed_two_months_ago?.r2  ?? null,
     prev_month_r2:           s.crossed_previous_month?.r2  ?? null,
     current_month_r2:        s.current_month_r2           ?? null,
     future_month_r2:         s.future_month_r2            ?? null,
     crossed_current_month:   s.crossed_current_month      ?? null,
     crossed_previous_month:  s.crossed_previous_month     ?? null,
-    crossed_two_months_ago:  s.crossed_two_months_ago     ?? null,
   }));
 
   render();
@@ -490,7 +487,6 @@ function filtered() {
     if (excluded.has(s.ticker)) return false;
     if (activeFilter === 'current_month'  && !s.crossed_current_month)  return false;
     if (activeFilter === 'previous_month' && !s.crossed_previous_month) return false;
-    if (activeFilter === 'two_months_ago' && !s.crossed_two_months_ago) return false;
     if (activeFilter === 'both'           && !(s.crossed_current_month && s.crossed_previous_month)) return false;
     if (searchQuery && !s.ticker.toLowerCase().includes(searchQuery)) return false;
     return true;
