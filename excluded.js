@@ -1,0 +1,1 @@
+const EXCLUDED_TICKERS = [];

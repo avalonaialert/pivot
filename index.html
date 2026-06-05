@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>S&P 500 — Monthly R2 Pivot Watchlist</title>
   <script src="data.js"></script>
+  <script src="excluded.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -192,6 +193,79 @@
     }
 
     @keyframes spin { to { transform: rotate(360deg); } }
+
+    .exclude-btn {
+      background: none;
+      border: 1px solid #30363d;
+      border-radius: 4px;
+      color: #8b949e;
+      cursor: pointer;
+      font-size: 0.75rem;
+      padding: 2px 6px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .exclude-btn:hover { border-color: #f85149; color: #f85149; }
+
+    .excluded-panel {
+      max-width: 1100px;
+      margin: 24px auto 0;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      background: #161b22;
+    }
+    .excluded-panel summary {
+      padding: 12px 16px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: #8b949e;
+      user-select: none;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .excluded-panel summary:hover { color: #e6edf3; }
+    .excluded-panel summary::before { content: '▶'; font-size: 0.65rem; transition: transform 0.2s; }
+    .excluded-panel[open] summary::before { transform: rotate(90deg); }
+    .excluded-chips {
+      padding: 0 16px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .excluded-chip {
+      background: #21262d;
+      border: 1px solid #30363d;
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #e6edf3;
+    }
+    .restore-btn {
+      background: none;
+      border: none;
+      color: #3fb950;
+      cursor: pointer;
+      font-size: 0.8rem;
+      padding: 0;
+    }
+    .restore-btn:hover { color: #58a6ff; }
+    .saving-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 0.82rem;
+      color: #8b949e;
+      transition: opacity 0.4s;
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
@@ -229,7 +303,7 @@
         <th data-col="future_month_r2">Future R2 <span class="sort-icon">↕</span></th>
         <th data-col="sma3_days">SMA 3D <span class="sort-icon">↕</span></th>
         <th data-col="sma3_proj_days">SMA 3D Proj <span class="sort-icon">↕</span></th>
-
+        <th></th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -240,12 +314,103 @@
   <p>No stocks match the current filter.</p>
 </div>
 
+<details class="excluded-panel" id="excluded-panel" style="display:none">
+  <summary>Excluded Tickers <span id="excluded-count"></span></summary>
+  <div class="excluded-chips" id="excluded-chips"></div>
+</details>
+
+<div class="saving-toast" id="toast" style="display:none"></div>
+
 <script>
 let allStocks = [];
 let activeFilter = 'all';
 let sortCol = 'streak';
 let sortAsc = false;
 let searchQuery = '';
+
+// --- Exclusion list (loaded from excluded.js, persisted to GitHub) ---
+const GITHUB_OWNER = 'avalonaialert';
+const GITHUB_REPO  = 'pivot';
+const EXCLUDED_FILE = 'excluded.js';
+let excluded = new Set(typeof EXCLUDED_TICKERS !== 'undefined' ? EXCLUDED_TICKERS : []);
+
+function getPAT() {
+  let pat = sessionStorage.getItem('github_pat');
+  if (!pat) {
+    pat = prompt('Enter your GitHub PAT to save exclusion changes:');
+    if (pat) sessionStorage.setItem('github_pat', pat.trim());
+  }
+  return pat ? pat.trim() : null;
+}
+
+function showToast(msg, duration = 2500) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.display = 'block';
+  t.style.opacity = '1';
+  setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.style.display = 'none', 400); }, duration);
+}
+
+async function saveExcluded() {
+  const pat = getPAT();
+  if (!pat) return;
+  showToast('Saving…');
+
+  const content = `const EXCLUDED_TICKERS = ${JSON.stringify([...excluded])};\n`;
+  const b64 = btoa(content);
+
+  // Get current file SHA
+  const meta = await fetch(
+    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${EXCLUDED_FILE}`,
+    { headers: { Authorization: `token ${pat}` } }
+  ).then(r => r.json());
+
+  const res = await fetch(
+    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${EXCLUDED_FILE}`,
+    {
+      method: 'PUT',
+      headers: { Authorization: `token ${pat}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: `chore: update excluded tickers`,
+        content: b64,
+        sha: meta.sha,
+      }),
+    }
+  );
+
+  if (res.ok) showToast(`Saved — ${excluded.size} excluded`);
+  else showToast('Save failed — check PAT');
+}
+
+function excludeTicker(ticker) {
+  excluded.add(ticker);
+  renderExcludedPanel();
+  render();
+  saveExcluded();
+}
+
+function restoreTicker(ticker) {
+  excluded.delete(ticker);
+  renderExcludedPanel();
+  render();
+  saveExcluded();
+}
+
+function renderExcludedPanel() {
+  const panel = document.getElementById('excluded-panel');
+  const chips = document.getElementById('excluded-chips');
+  const count = document.getElementById('excluded-count');
+
+  if (excluded.size === 0) { panel.style.display = 'none'; return; }
+  panel.style.display = 'block';
+  count.textContent = `(${excluded.size})`;
+  chips.innerHTML = [...excluded].sort().map(t =>
+    `<span class="excluded-chip">
+      ${t}
+      <button class="restore-btn" onclick="restoreTicker('${t}')" title="Restore">↩</button>
+    </span>`
+  ).join('');
+}
 
 async function loadData() {
   if (typeof WATCHLIST_DATA === 'undefined') {
@@ -290,6 +455,7 @@ function currentMonthBadge(s) {
 
 function filtered() {
   return allStocks.filter(s => {
+    if (excluded.has(s.ticker)) return false;
     if (activeFilter === 'current_month'  && !s.crossed_current_month)  return false;
     if (activeFilter === 'previous_month' && !s.crossed_previous_month) return false;
     if (activeFilter === 'both'           && !(s.crossed_current_month && s.crossed_previous_month)) return false;
@@ -351,6 +517,7 @@ function render() {
         const days = s.sma3_proj_days > 0 ? ` ${s.sma3_proj_days}d` : '';
         return `<span style="color:${color};font-weight:600;opacity:0.8">${up ? '▲' : '▼'}~${days}</span>`;
       })()}</td>
+      <td><button class="exclude-btn" onclick="excludeTicker('${s.ticker}')">✕</button></td>
     </tr>`;
   }).join('');
 }
@@ -387,6 +554,7 @@ document.querySelectorAll('thead th[data-col]').forEach(th => {
 loadData().then(() => {
   const defaultTh = document.querySelector('thead th[data-col="streak"]');
   if (defaultTh) defaultTh.classList.add('sorted');
+  renderExcludedPanel();
 });
 </script>
 </body>
