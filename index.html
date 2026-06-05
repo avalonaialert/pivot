@@ -303,11 +303,11 @@
   <table>
     <thead>
       <tr>
-        <th data-col="streak">Streak (mo) <span class="sort-icon">↓</span></th>
+        <th data-col="streak">Streak (mo) <span class="sort-icon">↕</span></th>
         <th data-col="ticker">Ticker <span class="sort-icon">↕</span></th>
         <th data-col="name">Company <span class="sort-icon">↕</span></th>
         <th data-col="last_close">Last Close <span class="sort-icon">↕</span></th>
-        <th data-col="day_pct">Day % <span class="sort-icon">↕</span></th>
+        <th data-col="day_pct">Day % <span class="sort-icon">↓</span></th>
         <th data-col="current_month_r2">Current R2 <span class="sort-icon">↕</span></th>
         <th data-col="future_month_r2">Future R2 <span class="sort-icon">↕</span></th>
         <th data-col="sma3_days">SMA 3D <span class="sort-icon">↕</span></th>
@@ -333,7 +333,7 @@
 <script>
 let allStocks = [];
 let activeFilter = 'all';
-let sortCol = 'streak';
+let sortCol = 'day_pct';
 let sortAsc = false;
 let searchQuery = '';
 
@@ -587,7 +587,7 @@ document.querySelectorAll('thead th[data-col]').forEach(th => {
 });
 
 loadData().then(() => {
-  const defaultTh = document.querySelector('thead th[data-col="streak"]');
+  const defaultTh = document.querySelector('thead th[data-col="day_pct"]');
   if (defaultTh) defaultTh.classList.add('sorted');
   renderExcludedPanel();
 });
