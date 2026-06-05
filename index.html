@@ -439,10 +439,11 @@ async function loadData() {
     }
   } catch(e) {}
 
-  // Fetch data.json with no-store to always bypass CDN cache
+  // Fetch data.json directly from GitHub raw — bypasses Pages CDN cache
+  const DATA_URL = 'https://raw.githubusercontent.com/avalonaialert/pivot/main/data.json';
   let dataPayload = null;
   try {
-    const dataRes = await fetch('data.json?v=' + Date.now(), { cache: 'no-store' });
+    const dataRes = await fetch(DATA_URL + '?v=' + Date.now(), { cache: 'no-store' });
     if (dataRes.ok) dataPayload = await dataRes.json();
   } catch(e) {}
 
