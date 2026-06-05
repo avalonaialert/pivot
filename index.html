@@ -426,8 +426,20 @@ function renderExcludedPanel() {
 }
 
 async function loadData() {
-  const EXCLUDED_URL = 'https://raw.githubusercontent.com/avalonaialert/pivot/main/excluded.js';
-  await loadScript(EXCLUDED_URL).catch(() => {});
+  // Load excluded list fresh from GitHub (works locally and on Pages)
+  try {
+    const excRes = await fetch(
+      'https://raw.githubusercontent.com/avalonaialert/pivot/main/excluded.js?v=' + Date.now(),
+      { cache: 'no-store' }
+    );
+    if (excRes.ok) {
+      const text = await excRes.text();
+      const match = text.match(/\[([^\]]*)\]/);
+      const tickers = match ? JSON.parse('[' + match[1] + ']') : [];
+      excluded = new Set(tickers);
+    }
+  } catch(e) {}
+
   await loadScript('data.js').catch(() => {});
 
   if (typeof WATCHLIST_DATA === 'undefined') {
@@ -435,9 +447,6 @@ async function loadData() {
       '<p style="color:#f85149">data.js not found — run scan.py first.</p>';
     return;
   }
-
-  // Refresh excluded set from freshly loaded script
-  excluded = new Set(typeof EXCLUDED_TICKERS !== 'undefined' ? EXCLUDED_TICKERS : []);
 
   const data = WATCHLIST_DATA;
 
