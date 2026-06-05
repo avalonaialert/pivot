@@ -1,6 +1,6 @@
-const WATCHLIST_DATA = {
-  "generated_at": "2026-06-05T00:05:11.571860+00:00",
-  "count": 71,
+window.WATCHLIST_DATA = {
+  "generated_at": "2026-06-05T00:32:57.069862+00:00",
+  "count": 74,
   "stocks": [
     {
       "ticker": "DELL",
@@ -287,6 +287,43 @@ const WATCHLIST_DATA = {
           "r2": 99.3797,
           "first_cross_date": "2026-04-14",
           "days_crossed": 13
+        }
+      ]
+    },
+    {
+      "ticker": "GS",
+      "name": "Goldman Sachs Group",
+      "last_close": 1092.61,
+      "last_high": 1095.9,
+      "last_date": "2026-06-04",
+      "day_pct": 4.96,
+      "sma3_direction": "up",
+      "sma3_days": 5,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 1104.4062,
+      "future_month_r2": 1123.1169,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 1008.1312,
+        "first_cross_date": "2026-05-26",
+        "days_crossed": 2,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 1008.1312,
+          "first_cross_date": "2026-05-26",
+          "days_crossed": 2
+        },
+        {
+          "month": "2026-04",
+          "r2": 930.1386,
+          "first_cross_date": "2026-04-20",
+          "days_crossed": 6
         }
       ]
     },
@@ -2215,6 +2252,37 @@ const WATCHLIST_DATA = {
       ]
     },
     {
+      "ticker": "WAT",
+      "name": "Waters Corp",
+      "last_close": 376.47,
+      "last_high": 384.95,
+      "last_date": "2026-06-04",
+      "day_pct": -0.87,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 429.3275,
+      "future_month_r2": 389.6065,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 374.6742,
+        "first_cross_date": "2026-05-29",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 374.6742,
+          "first_cross_date": "2026-05-29",
+          "days_crossed": 1
+        }
+      ]
+    },
+    {
       "ticker": "APTV",
       "name": "Aptiv Plc New",
       "last_close": 72.92,
@@ -2277,6 +2345,29 @@ const WATCHLIST_DATA = {
         "month": "2026-06",
         "r2": 210.28,
         "first_cross_date": "2026-06-01",
+        "days_crossed": 1
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "FAST",
+      "name": "Fastenal Co",
+      "last_close": 47.16,
+      "last_high": 47.74,
+      "last_date": "2026-06-04",
+      "day_pct": 1.51,
+      "sma3_direction": "up",
+      "sma3_days": 2,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 47.0592,
+      "future_month_r2": 49.5148,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 47.0592,
+        "first_cross_date": "2026-06-04",
         "days_crossed": 1
       },
       "crossed_previous_month": null,
