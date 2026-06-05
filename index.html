@@ -309,8 +309,6 @@
         <th data-col="name">Company <span class="sort-icon">↕</span></th>
         <th data-col="last_close">Last Close <span class="sort-icon">↕</span></th>
         <th data-col="day_pct">Day % <span class="sort-icon">↕</span></th>
-        <th data-col="prev2_month_r2">2mo Ago R2 <span class="sort-icon">↕</span></th>
-        <th data-col="prev_month_r2">Prev R2 <span class="sort-icon">↕</span></th>
         <th data-col="current_month_r2">Current R2 <span class="sort-icon">↕</span></th>
         <th data-col="future_month_r2">Future R2 <span class="sort-icon">↕</span></th>
         <th data-col="sma3_days">SMA 3D <span class="sort-icon">↕</span></th>
@@ -535,8 +533,6 @@ function render() {
       <td style="color:#e6edf3;font-size:0.82rem">${s.name || '—'}</td>
       <td class="price">$${s.last_close.toFixed(2)}</td>
       <td style="font-weight:600;color:${s.day_pct == null ? '#8b949e' : s.day_pct >= 0 ? '#3fb950' : '#f85149'}">${s.day_pct == null ? '—' : (s.day_pct >= 0 ? '+' : '') + s.day_pct.toFixed(2) + '%'}</td>
-      <td class="r2">${s.prev2_month_r2   != null ? '$' + s.prev2_month_r2.toFixed(2)   : '—'}</td>
-      <td class="r2">${s.prev_month_r2    != null ? '$' + s.prev_month_r2.toFixed(2)    : '—'}</td>
       <td class="r2">${s.current_month_r2 != null ? '$' + s.current_month_r2.toFixed(2) : '—'}</td>
       <td class="r2">${s.future_month_r2  != null ? '$' + s.future_month_r2.toFixed(2)  : '—'}</td>
       <td>${(() => {
