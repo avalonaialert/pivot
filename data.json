@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-08T20:17:24.354910+00:00",
-  "count": 72,
+  "generated_at": "2026-06-08T20:31:49.100623+00:00",
+  "count": 77,
   "stocks": [
     {
       "ticker": "DELL",
@@ -45,7 +45,7 @@
         },
         {
           "month": "2026-02",
-          "r2": 147.8987,
+          "r2": 147.8988,
           "first_cross_date": "2026-02-27",
           "days_crossed": 1
         }
@@ -63,7 +63,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 456.9852,
-      "future_month_r2": 409.4525,
+      "future_month_r2": 409.5925,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -91,6 +91,91 @@
           "r2": 301.3033,
           "first_cross_date": "2026-03-26",
           "days_crossed": 1
+        }
+      ]
+    },
+    {
+      "ticker": "HPE",
+      "name": "Hewlett Packard Ente",
+      "last_close": 49.87,
+      "last_high": 50.866,
+      "last_date": "2026-06-08",
+      "day_pct": 1.36,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 55.1719,
+      "future_month_r2": 53.5221,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 55.1719,
+        "first_cross_date": "2026-06-02",
+        "days_crossed": 2
+      },
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 33.3672,
+        "first_cross_date": "2026-05-14",
+        "days_crossed": 10,
+        "period": "previous_month"
+      },
+      "streak": 3,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 33.3672,
+          "first_cross_date": "2026-05-14",
+          "days_crossed": 10
+        },
+        {
+          "month": "2026-04",
+          "r2": 28.9819,
+          "first_cross_date": "2026-04-21",
+          "days_crossed": 2
+        },
+        {
+          "month": "2026-03",
+          "r2": 26.3683,
+          "first_cross_date": "2026-03-25",
+          "days_crossed": 1
+        }
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devic",
+      "last_close": 490.33,
+      "last_high": 494.97,
+      "last_date": "2026-06-08",
+      "day_pct": 5.14,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 683.9578,
+      "future_month_r2": 512.9664,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 432.6717,
+        "first_cross_date": "2026-05-08",
+        "days_crossed": 14,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 432.6717,
+          "first_cross_date": "2026-05-08",
+          "days_crossed": 14
+        },
+        {
+          "month": "2026-04",
+          "r2": 236.8625,
+          "first_cross_date": "2026-04-09",
+          "days_crossed": 16
         }
       ]
     },
@@ -236,7 +321,7 @@
         },
         {
           "month": "2026-04",
-          "r2": 930.1386,
+          "r2": 930.1387,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -629,7 +714,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 303.5131,
-      "future_month_r2": 274.254,
+      "future_month_r2": 274.224,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1000,7 +1085,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 200.4308,
-      "future_month_r2": 195.7467,
+      "future_month_r2": 195.7496,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1062,7 +1147,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 90.2083,
-      "future_month_r2": 76.6346,
+      "future_month_r2": 76.6229,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1109,6 +1194,37 @@
           "r2": 324.0259,
           "first_cross_date": "2026-05-01",
           "days_crossed": 20
+        }
+      ]
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco Whsl Corp New",
+      "last_close": 974.75,
+      "last_high": 978.98,
+      "last_date": "2026-06-08",
+      "day_pct": 0.3,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 1164.4812,
+      "future_month_r2": 987.8209,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 1069.8226,
+        "first_cross_date": "2026-05-18",
+        "days_crossed": 3,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 1069.8226,
+          "first_cross_date": "2026-05-18",
+          "days_crossed": 3
         }
       ]
     },
@@ -1209,7 +1325,7 @@
       "ticker": "DAL",
       "name": "Delta Air Lines Inc",
       "last_close": 78.21,
-      "last_high": 80.01,
+      "last_high": 80.0,
       "last_date": "2026-06-08",
       "day_pct": -1.52,
       "sma3_direction": "down",
@@ -1217,7 +1333,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 92.1607,
-      "future_month_r2": 80.8692,
+      "future_month_r2": 80.8608,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1578,10 +1694,41 @@
       ]
     },
     {
+      "ticker": "HPQ",
+      "name": "Hp Inc",
+      "last_close": 25.38,
+      "last_high": 25.475,
+      "last_date": "2026-06-08",
+      "day_pct": -0.78,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 32.4152,
+      "future_month_r2": 26.9618,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 23.1075,
+        "first_cross_date": "2026-05-22",
+        "days_crossed": 5,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 23.1075,
+          "first_cross_date": "2026-05-22",
+          "days_crossed": 5
+        }
+      ]
+    },
+    {
       "ticker": "HWM",
       "name": "Howmet Aerospace Inc",
       "last_close": 246.55,
-      "last_high": 254.54,
+      "last_high": 253.72,
       "last_date": "2026-06-08",
       "day_pct": -2.12,
       "sma3_direction": "down",
@@ -1589,7 +1736,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 301.0822,
-      "future_month_r2": 259.3217,
+      "future_month_r2": 258.1542,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2208,7 +2355,7 @@
       "ticker": "CRM",
       "name": "Salesforce Inc",
       "last_close": 182.55,
-      "last_high": 185.02,
+      "last_high": 185.0,
       "last_date": "2026-06-08",
       "day_pct": -1.68,
       "sma3_direction": "down",
@@ -2216,7 +2363,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 210.28,
-      "future_month_r2": 195.4692,
+      "future_month_r2": 195.4675,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 210.28,
@@ -2239,12 +2386,35 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 47.0592,
-      "future_month_r2": 47.3142,
+      "future_month_r2": 47.3092,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 47.0592,
         "first_cross_date": "2026-06-04",
         "days_crossed": 2
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "MAA",
+      "name": "Mid-Amer Apt Cmntys Reit",
+      "last_close": 137.15,
+      "last_high": 137.83,
+      "last_date": "2026-06-08",
+      "day_pct": -0.28,
+      "sma3_direction": "up",
+      "sma3_days": 4,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 136.4558,
+      "future_month_r2": 139.5968,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 136.4558,
+        "first_cross_date": "2026-06-04",
+        "days_crossed": 3
       },
       "crossed_previous_month": null,
       "streak": 0,
@@ -2300,7 +2470,7 @@
       "ticker": "SOLV",
       "name": "Solventum Corp",
       "last_close": 78.76,
-      "last_high": 81.25,
+      "last_high": 81.0,
       "last_date": "2026-06-08",
       "day_pct": -2.78,
       "sma3_direction": "down",
@@ -2308,7 +2478,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 83.4175,
-      "future_month_r2": 82.9967,
+      "future_month_r2": 82.6425,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 83.4175,
