@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-09T20:16:47.191862+00:00",
-  "count": 80,
+  "generated_at": "2026-06-09T20:32:31.634915+00:00",
+  "count": 75,
   "stocks": [
     {
       "ticker": "DELL",
@@ -63,7 +63,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 456.9852,
-      "future_month_r2": 414.6092,
+      "future_month_r2": 414.7446,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -139,43 +139,6 @@
           "r2": 26.3683,
           "first_cross_date": "2026-03-25",
           "days_crossed": 1
-        }
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devic",
-      "last_close": 475.505,
-      "last_high": 504.56,
-      "last_date": "2026-06-09",
-      "day_pct": -3.02,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 683.9578,
-      "future_month_r2": 541.2637,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 432.6717,
-        "first_cross_date": "2026-05-08",
-        "days_crossed": 14,
-        "period": "previous_month"
-      },
-      "streak": 2,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 432.6717,
-          "first_cross_date": "2026-05-08",
-          "days_crossed": 14
-        },
-        {
-          "month": "2026-04",
-          "r2": 236.8625,
-          "first_cross_date": "2026-04-09",
-          "days_crossed": 16
         }
       ]
     },
@@ -321,7 +284,7 @@
         },
         {
           "month": "2026-04",
-          "r2": 930.1387,
+          "r2": 930.1386,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -339,7 +302,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 25.7957,
-      "future_month_r2": 25.1296,
+      "future_month_r2": 25.1079,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -594,16 +557,16 @@
     {
       "ticker": "Q",
       "name": "Qnity Electronics In",
-      "last_close": 144.79,
+      "last_close": 144.7,
       "last_high": 150.96,
       "last_date": "2026-06-09",
-      "day_pct": 0.24,
+      "day_pct": 0.17,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 186.8214,
-      "future_month_r2": 159.3067,
+      "future_month_r2": 159.2992,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -714,7 +677,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 303.5131,
-      "future_month_r2": 279.775,
+      "future_month_r2": 279.61,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1077,7 +1040,7 @@
       "ticker": "AMT",
       "name": "American Tower Corp Reit",
       "last_close": 190.83,
-      "last_high": 193.93,
+      "last_high": 193.87,
       "last_date": "2026-06-09",
       "day_pct": 0.91,
       "sma3_direction": "down",
@@ -1085,7 +1048,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 200.4308,
-      "future_month_r2": 196.3075,
+      "future_month_r2": 196.2225,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1353,37 +1316,6 @@
       ]
     },
     {
-      "ticker": "DD",
-      "name": "Dupont De Nemours In",
-      "last_close": 47.06,
-      "last_high": 47.9,
-      "last_date": "2026-06-09",
-      "day_pct": 0.15,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 54.6357,
-      "future_month_r2": 48.9817,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 49.8198,
-        "first_cross_date": "2026-05-05",
-        "days_crossed": 8,
-        "period": "previous_month"
-      },
-      "streak": 1,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 49.8198,
-          "first_cross_date": "2026-05-05",
-          "days_crossed": 8
-        }
-      ]
-    },
-    {
       "ticker": "DDOG",
       "name": "Datadog Inc A",
       "last_close": 227.34,
@@ -1440,37 +1372,6 @@
         {
           "month": "2026-05",
           "r2": 18.0444,
-          "first_cross_date": "2026-05-06",
-          "days_crossed": 17
-        }
-      ]
-    },
-    {
-      "ticker": "DVA",
-      "name": "Davita Inc",
-      "last_close": 198.19,
-      "last_high": 198.26,
-      "last_date": "2026-06-09",
-      "day_pct": 3.18,
-      "sma3_direction": "up",
-      "sma3_days": 1,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 231.6721,
-      "future_month_r2": 201.1798,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 166.1842,
-        "first_cross_date": "2026-05-06",
-        "days_crossed": 17,
-        "period": "previous_month"
-      },
-      "streak": 1,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 166.1842,
           "first_cross_date": "2026-05-06",
           "days_crossed": 17
         }
@@ -1612,7 +1513,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 29.1811,
-      "future_month_r2": 27.2148,
+      "future_month_r2": 27.2248,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1634,7 +1535,7 @@
     {
       "ticker": "GLW",
       "name": "Corning Inc",
-      "last_close": 173.95,
+      "last_close": 173.94,
       "last_high": 190.41,
       "last_date": "2026-06-09",
       "day_pct": -7.25,
@@ -1643,7 +1544,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 247.8434,
-      "future_month_r2": 203.2775,
+      "future_month_r2": 203.2767,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1690,37 +1591,6 @@
           "r2": 1236.97,
           "first_cross_date": "2026-05-07",
           "days_crossed": 16
-        }
-      ]
-    },
-    {
-      "ticker": "HPQ",
-      "name": "Hp Inc",
-      "last_close": 24.94,
-      "last_high": 25.545,
-      "last_date": "2026-06-09",
-      "day_pct": -1.73,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 32.4152,
-      "future_month_r2": 26.5578,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 23.1075,
-        "first_cross_date": "2026-05-22",
-        "days_crossed": 5,
-        "period": "previous_month"
-      },
-      "streak": 1,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 23.1075,
-          "first_cross_date": "2026-05-22",
-          "days_crossed": 5
         }
       ]
     },
@@ -1829,7 +1699,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 25.6002,
-      "future_month_r2": 24.2738,
+      "future_month_r2": 24.273,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2159,37 +2029,6 @@
       ]
     },
     {
-      "ticker": "TTWO",
-      "name": "Take-Two Interactive",
-      "last_close": 212.05,
-      "last_high": 213.3199,
-      "last_date": "2026-06-09",
-      "day_pct": -0.24,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 263.2689,
-      "future_month_r2": 218.5012,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 234.6642,
-        "first_cross_date": "2026-05-14",
-        "days_crossed": 7,
-        "period": "previous_month"
-      },
-      "streak": 1,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 234.6642,
-          "first_cross_date": "2026-05-14",
-          "days_crossed": 7
-        }
-      ]
-    },
-    {
       "ticker": "UAL",
       "name": "United Airlines Hldg",
       "last_close": 109.63,
@@ -2263,7 +2102,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 429.3275,
-      "future_month_r2": 381.8692,
+      "future_month_r2": 380.8833,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2308,16 +2147,16 @@
     {
       "ticker": "APTV",
       "name": "Aptiv Plc New",
-      "last_close": 68.485,
+      "last_close": 68.48,
       "last_high": 70.83,
       "last_date": "2026-06-09",
-      "day_pct": -1.16,
+      "day_pct": -1.17,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 77.1275,
-      "future_month_r2": 73.2429,
+      "future_month_r2": 73.2425,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 77.1275,
@@ -2455,7 +2294,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 136.4558,
-      "future_month_r2": 141.5276,
+      "future_month_r2": 141.5301,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 136.4558,
@@ -2524,7 +2363,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 108.6375,
-      "future_month_r2": 122.0369,
+      "future_month_r2": 122.0368,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 108.6375,
