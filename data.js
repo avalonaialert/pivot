@@ -1,6 +1,6 @@
 window.WATCHLIST_DATA = {
-  "generated_at": "2026-06-09T20:32:31.634915+00:00",
-  "count": 75,
+  "generated_at": "2026-06-09T20:46:51.730195+00:00",
+  "count": 80,
   "stocks": [
     {
       "ticker": "DELL",
@@ -45,7 +45,7 @@ window.WATCHLIST_DATA = {
         },
         {
           "month": "2026-02",
-          "r2": 147.8988,
+          "r2": 147.8987,
           "first_cross_date": "2026-02-27",
           "days_crossed": 1
         }
@@ -139,6 +139,43 @@ window.WATCHLIST_DATA = {
           "r2": 26.3683,
           "first_cross_date": "2026-03-25",
           "days_crossed": 1
+        }
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devic",
+      "last_close": 475.505,
+      "last_high": 504.56,
+      "last_date": "2026-06-09",
+      "day_pct": -3.02,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 683.9578,
+      "future_month_r2": 541.2637,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 432.6717,
+        "first_cross_date": "2026-05-08",
+        "days_crossed": 14,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 432.6717,
+          "first_cross_date": "2026-05-08",
+          "days_crossed": 14
+        },
+        {
+          "month": "2026-04",
+          "r2": 236.8625,
+          "first_cross_date": "2026-04-09",
+          "days_crossed": 16
         }
       ]
     },
@@ -1316,6 +1353,37 @@ window.WATCHLIST_DATA = {
       ]
     },
     {
+      "ticker": "DD",
+      "name": "Dupont De Nemours In",
+      "last_close": 47.06,
+      "last_high": 47.9,
+      "last_date": "2026-06-09",
+      "day_pct": 0.15,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 54.6357,
+      "future_month_r2": 48.9817,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 49.8198,
+        "first_cross_date": "2026-05-05",
+        "days_crossed": 8,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 49.8198,
+          "first_cross_date": "2026-05-05",
+          "days_crossed": 8
+        }
+      ]
+    },
+    {
       "ticker": "DDOG",
       "name": "Datadog Inc A",
       "last_close": 227.34,
@@ -1372,6 +1440,37 @@ window.WATCHLIST_DATA = {
         {
           "month": "2026-05",
           "r2": 18.0444,
+          "first_cross_date": "2026-05-06",
+          "days_crossed": 17
+        }
+      ]
+    },
+    {
+      "ticker": "DVA",
+      "name": "Davita Inc",
+      "last_close": 198.19,
+      "last_high": 198.25,
+      "last_date": "2026-06-09",
+      "day_pct": 3.18,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 231.6721,
+      "future_month_r2": 201.1907,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 166.1842,
+        "first_cross_date": "2026-05-06",
+        "days_crossed": 17,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 166.1842,
           "first_cross_date": "2026-05-06",
           "days_crossed": 17
         }
@@ -1591,6 +1690,37 @@ window.WATCHLIST_DATA = {
           "r2": 1236.97,
           "first_cross_date": "2026-05-07",
           "days_crossed": 16
+        }
+      ]
+    },
+    {
+      "ticker": "HPQ",
+      "name": "Hp Inc",
+      "last_close": 24.94,
+      "last_high": 25.545,
+      "last_date": "2026-06-09",
+      "day_pct": -1.73,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 32.4152,
+      "future_month_r2": 26.5578,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 23.1075,
+        "first_cross_date": "2026-05-22",
+        "days_crossed": 5,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 23.1075,
+          "first_cross_date": "2026-05-22",
+          "days_crossed": 5
         }
       ]
     },
@@ -2025,6 +2155,37 @@ window.WATCHLIST_DATA = {
           "r2": 67.0716,
           "first_cross_date": "2026-05-04",
           "days_crossed": 9
+        }
+      ]
+    },
+    {
+      "ticker": "TTWO",
+      "name": "Take-Two Interactive",
+      "last_close": 212.05,
+      "last_high": 213.3199,
+      "last_date": "2026-06-09",
+      "day_pct": -0.24,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 263.2689,
+      "future_month_r2": 218.5012,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 234.6642,
+        "first_cross_date": "2026-05-14",
+        "days_crossed": 7,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 234.6642,
+          "first_cross_date": "2026-05-14",
+          "days_crossed": 7
         }
       ]
     },
