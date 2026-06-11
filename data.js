@@ -1,6 +1,6 @@
 window.WATCHLIST_DATA = {
-  "generated_at": "2026-06-11T20:31:51.916965+00:00",
-  "count": 92,
+  "generated_at": "2026-06-11T20:47:18.171156+00:00",
+  "count": 90,
   "stocks": [
     {
       "ticker": "DELL",
@@ -321,7 +321,7 @@ window.WATCHLIST_DATA = {
         },
         {
           "month": "2026-04",
-          "r2": 930.1386,
+          "r2": 930.1387,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -472,48 +472,6 @@ window.WATCHLIST_DATA = {
           "r2": 265.3213,
           "first_cross_date": "2026-04-10",
           "days_crossed": 12
-        }
-      ]
-    },
-    {
-      "ticker": "MGM",
-      "name": "Mgm Resorts Intl",
-      "last_close": 47.22,
-      "last_high": 47.285,
-      "last_date": "2026-06-11",
-      "day_pct": 0.66,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 48.9925,
-      "future_month_r2": 47.7092,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 48.9925,
-        "first_cross_date": "2026-06-01",
-        "days_crossed": 2
-      },
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 43.7608,
-        "first_cross_date": "2026-05-29",
-        "days_crossed": 1,
-        "period": "previous_month"
-      },
-      "streak": 2,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 43.7608,
-          "first_cross_date": "2026-05-29",
-          "days_crossed": 1
-        },
-        {
-          "month": "2026-04",
-          "r2": 40.3442,
-          "first_cross_date": "2026-04-21",
-          "days_crossed": 4
         }
       ]
     },
@@ -1318,37 +1276,6 @@ window.WATCHLIST_DATA = {
           "r2": 66.8506,
           "first_cross_date": "2026-05-18",
           "days_crossed": 9
-        }
-      ]
-    },
-    {
-      "ticker": "DAL",
-      "name": "Delta Air Lines Inc",
-      "last_close": 81.83,
-      "last_high": 81.98,
-      "last_date": "2026-06-11",
-      "day_pct": 7.01,
-      "sma3_direction": "up",
-      "sma3_days": 1,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 92.1607,
-      "future_month_r2": 84.7608,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 79.8839,
-        "first_cross_date": "2026-05-27",
-        "days_crossed": 3,
-        "period": "previous_month"
-      },
-      "streak": 1,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 79.8839,
-          "first_cross_date": "2026-05-27",
-          "days_crossed": 3
         }
       ]
     },
