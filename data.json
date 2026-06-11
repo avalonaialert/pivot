@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T20:16:51.894728+00:00",
+  "generated_at": "2026-06-11T20:31:51.916965+00:00",
   "count": 92,
   "stocks": [
     {
@@ -413,7 +413,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 175.0884,
-      "future_month_r2": 125.6633,
+      "future_month_r2": 125.6583,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -594,16 +594,16 @@
     {
       "ticker": "Q",
       "name": "Qnity Electronics In",
-      "last_close": 149.07,
+      "last_close": 149.12,
       "last_high": 150.12,
       "last_date": "2026-06-11",
-      "day_pct": 6.68,
+      "day_pct": 6.71,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 186.8214,
-      "future_month_r2": 154.3317,
+      "future_month_r2": 154.1492,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1448,8 +1448,8 @@
     {
       "ticker": "DVA",
       "name": "Davita Inc",
-      "last_close": 203.82,
-      "last_high": 205.42,
+      "last_close": 203.83,
+      "last_high": 205.39,
       "last_date": "2026-06-11",
       "day_pct": 2.66,
       "sma3_direction": "up",
@@ -1457,7 +1457,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 231.6721,
-      "future_month_r2": 210.2102,
+      "future_month_r2": 210.1685,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1612,7 +1612,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 29.1811,
-      "future_month_r2": 25.7866,
+      "future_month_r2": 25.7925,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2131,7 +2131,7 @@
       "ticker": "TSN",
       "name": "Tyson Foods Inc A",
       "last_close": 55.64,
-      "last_high": 56.52,
+      "last_high": 56.5164,
       "last_date": "2026-06-11",
       "day_pct": -0.87,
       "sma3_direction": "down",
@@ -2139,7 +2139,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 72.7584,
-      "future_month_r2": 57.4914,
+      "future_month_r2": 57.4882,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2263,7 +2263,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 429.3275,
-      "future_month_r2": 376.8349,
+      "future_month_r2": 376.7708,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2515,16 +2515,16 @@
     {
       "ticker": "JNJ",
       "name": "Johnson & Johnson",
-      "last_close": 238.36,
+      "last_close": 238.33,
       "last_high": 241.6,
       "last_date": "2026-06-11",
-      "day_pct": -0.05,
+      "day_pct": -0.07,
       "sma3_direction": "up",
       "sma3_days": 6,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 241.5525,
-      "future_month_r2": 244.8895,
+      "future_month_r2": 244.887,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 241.5525,
@@ -2547,7 +2547,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 32.0621,
-      "future_month_r2": 31.892,
+      "future_month_r2": 31.8985,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 32.0621,
@@ -2700,7 +2700,7 @@
       "ticker": "PSA",
       "name": "Public Storage Reit",
       "last_close": 324.71,
-      "last_high": 327.67,
+      "last_high": 327.62,
       "last_date": "2026-06-11",
       "day_pct": 0.26,
       "sma3_direction": "up",
@@ -2708,7 +2708,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 327.97,
-      "future_month_r2": 332.3837,
+      "future_month_r2": 332.3129,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 327.97,
