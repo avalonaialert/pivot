@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-12T20:33:02.857156+00:00",
-  "count": 88,
+  "generated_at": "2026-06-12T20:47:25.595990+00:00",
+  "count": 95,
   "stocks": [
     {
       "ticker": "DELL",
@@ -45,7 +45,7 @@
         },
         {
           "month": "2026-02",
-          "r2": 147.8988,
+          "r2": 147.8987,
           "first_cross_date": "2026-02-27",
           "days_crossed": 1
         }
@@ -481,6 +481,48 @@
       ]
     },
     {
+      "ticker": "MGM",
+      "name": "Mgm Resorts Intl",
+      "last_close": 48.97,
+      "last_high": 49.36,
+      "last_date": "2026-06-12",
+      "day_pct": 3.71,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 48.9925,
+      "future_month_r2": 50.6362,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 48.9925,
+        "first_cross_date": "2026-06-01",
+        "days_crossed": 3
+      },
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 43.7608,
+        "first_cross_date": "2026-05-29",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 43.7608,
+          "first_cross_date": "2026-05-29",
+          "days_crossed": 1
+        },
+        {
+          "month": "2026-04",
+          "r2": 40.3442,
+          "first_cross_date": "2026-04-21",
+          "days_crossed": 4
+        }
+      ]
+    },
+    {
       "ticker": "NTAP",
       "name": "Netapp Inc",
       "last_close": 161.61,
@@ -588,6 +630,43 @@
           "r2": 137.0252,
           "first_cross_date": "2026-04-17",
           "days_crossed": 10
+        }
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm Inc",
+      "last_close": 211.72,
+      "last_high": 215.01,
+      "last_date": "2026-06-12",
+      "day_pct": 4.32,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 317.2724,
+      "future_month_r2": 222.3367,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 218.4249,
+        "first_cross_date": "2026-05-07",
+        "days_crossed": 10,
+        "period": "previous_month"
+      },
+      "streak": 2,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 218.4249,
+          "first_cross_date": "2026-05-07",
+          "days_crossed": 10
+        },
+        {
+          "month": "2026-04",
+          "r2": 167.1763,
+          "first_cross_date": "2026-04-30",
+          "days_crossed": 1
         }
       ]
     },
@@ -965,6 +1044,68 @@
           "r2": 134.03,
           "first_cross_date": "2026-05-08",
           "days_crossed": 15
+        }
+      ]
+    },
+    {
+      "ticker": "ALL",
+      "name": "Allstate Corp",
+      "last_close": 221.63,
+      "last_high": 221.9399,
+      "last_date": "2026-06-12",
+      "day_pct": 0.94,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 237.1474,
+      "future_month_r2": 223.8099,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 226.3517,
+        "first_cross_date": "2026-05-19",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 226.3517,
+          "first_cross_date": "2026-05-19",
+          "days_crossed": 1
+        }
+      ]
+    },
+    {
+      "ticker": "AMT",
+      "name": "American Tower Corp Reit",
+      "last_close": 187.18,
+      "last_high": 190.14,
+      "last_date": "2026-06-12",
+      "day_pct": -1.13,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 200.4308,
+      "future_month_r2": 192.6684,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 188.5461,
+        "first_cross_date": "2026-05-27",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 188.5461,
+          "first_cross_date": "2026-05-27",
+          "days_crossed": 1
         }
       ]
     },
@@ -1430,6 +1571,37 @@
           "r2": 227.9096,
           "first_cross_date": "2026-05-11",
           "days_crossed": 14
+        }
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet Inc",
+      "last_close": 146.3,
+      "last_high": 146.38,
+      "last_date": "2026-06-12",
+      "day_pct": 0.85,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 166.9719,
+      "future_month_r2": 148.8427,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 93.6575,
+        "first_cross_date": "2026-05-07",
+        "days_crossed": 16,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 93.6575,
+          "first_cross_date": "2026-05-07",
+          "days_crossed": 16
         }
       ]
     },
@@ -2369,6 +2541,29 @@
       "history": []
     },
     {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "last_close": 240.87,
+      "last_high": 240.91,
+      "last_date": "2026-06-12",
+      "day_pct": 1.07,
+      "sma3_direction": "up",
+      "sma3_days": 7,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 241.5525,
+      "future_month_r2": 242.8083,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 241.5525,
+        "first_cross_date": "2026-06-11",
+        "days_crossed": 1
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
       "ticker": "KDP",
       "name": "Keurig Dr Pepper Inc",
       "last_close": 31.71,
@@ -2593,6 +2788,29 @@
         "r2": 327.97,
         "first_cross_date": "2026-06-10",
         "days_crossed": 2
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "SJM",
+      "name": "Smucker J M Co",
+      "last_close": 116.49,
+      "last_high": 116.83,
+      "last_date": "2026-06-12",
+      "day_pct": -0.29,
+      "sma3_direction": "up",
+      "sma3_days": 7,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 108.6375,
+      "future_month_r2": 118.8589,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 108.6375,
+        "first_cross_date": "2026-06-09",
+        "days_crossed": 4
       },
       "crossed_previous_month": null,
       "streak": 0,
