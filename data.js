@@ -1,6 +1,6 @@
 window.WATCHLIST_DATA = {
-  "generated_at": "2026-06-16T20:31:38.597501+00:00",
-  "count": 104,
+  "generated_at": "2026-06-16T20:46:10.859752+00:00",
+  "count": 108,
   "stocks": [
     {
       "ticker": "DELL",
@@ -1957,6 +1957,37 @@ window.WATCHLIST_DATA = {
       ]
     },
     {
+      "ticker": "ORCL",
+      "name": "Oracle Corp",
+      "last_close": 188.33,
+      "last_high": 195.3,
+      "last_date": "2026-06-16",
+      "day_pct": -2.24,
+      "sma3_direction": "up",
+      "sma3_days": 1,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 259.9136,
+      "future_month_r2": 198.7292,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 214.6295,
+        "first_cross_date": "2026-05-29",
+        "days_crossed": 1,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 214.6295,
+          "first_cross_date": "2026-05-29",
+          "days_crossed": 1
+        }
+      ]
+    },
+    {
       "ticker": "PANW",
       "name": "Palo Alto Networks I",
       "last_close": 279.9,
@@ -2543,6 +2574,29 @@ window.WATCHLIST_DATA = {
       "history": []
     },
     {
+      "ticker": "FAST",
+      "name": "Fastenal Co",
+      "last_close": 46.05,
+      "last_high": 46.71,
+      "last_date": "2026-06-16",
+      "day_pct": -0.11,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 47.0592,
+      "future_month_r2": 47.1904,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 47.0592,
+        "first_cross_date": "2026-06-04",
+        "days_crossed": 4
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
       "ticker": "FITB",
       "name": "Fifth Third Bancorp",
       "last_close": 53.44,
@@ -2581,6 +2635,29 @@ window.WATCHLIST_DATA = {
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 364.1633,
+        "first_cross_date": "2026-06-16",
+        "days_crossed": 1
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "GE",
+      "name": "Ge Aerospace",
+      "last_close": 351.73,
+      "last_high": 352.88,
+      "last_date": "2026-06-16",
+      "day_pct": 2.77,
+      "sma3_direction": "up",
+      "sma3_days": 4,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 349.7984,
+      "future_month_r2": 361.9229,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 349.7984,
         "first_cross_date": "2026-06-16",
         "days_crossed": 1
       },
@@ -2836,6 +2913,29 @@ window.WATCHLIST_DATA = {
         "r2": 136.4558,
         "first_cross_date": "2026-06-04",
         "days_crossed": 9
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "MTB",
+      "name": "M&T Bk Corp",
+      "last_close": 228.35,
+      "last_high": 229.59,
+      "last_date": "2026-06-16",
+      "day_pct": 1.07,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 227.2127,
+      "future_month_r2": 231.0367,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 227.2127,
+        "first_cross_date": "2026-06-10",
+        "days_crossed": 5
       },
       "crossed_previous_month": null,
       "streak": 0,
