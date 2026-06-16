@@ -1,6 +1,6 @@
 window.WATCHLIST_DATA = {
-  "generated_at": "2026-06-16T20:16:10.325742+00:00",
-  "count": 108,
+  "generated_at": "2026-06-16T20:31:38.597501+00:00",
+  "count": 104,
   "stocks": [
     {
       "ticker": "DELL",
@@ -321,7 +321,7 @@ window.WATCHLIST_DATA = {
         },
         {
           "month": "2026-04",
-          "r2": 930.1386,
+          "r2": 930.1387,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -339,7 +339,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 25.7957,
-      "future_month_r2": 25.1917,
+      "future_month_r2": 25.1883,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -998,7 +998,7 @@ window.WATCHLIST_DATA = {
     {
       "ticker": "AES",
       "name": "Aes Corp",
-      "last_close": 14.63,
+      "last_close": 14.64,
       "last_high": 14.68,
       "last_date": "2026-06-16",
       "day_pct": NaN,
@@ -1007,7 +1007,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 14.8082,
-      "future_month_r2": 14.7033,
+      "future_month_r2": 14.7042,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1193,7 +1193,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 414.7208,
-      "future_month_r2": 310.5858,
+      "future_month_r2": 310.5683,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1742,16 +1742,16 @@ window.WATCHLIST_DATA = {
     {
       "ticker": "HWM",
       "name": "Howmet Aerospace Inc",
-      "last_close": 277.46,
+      "last_close": 277.42,
       "last_high": 280.71,
       "last_date": "2026-06-16",
-      "day_pct": 2.6,
+      "day_pct": 2.58,
       "sma3_direction": "up",
       "sma3_days": 6,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 301.0822,
-      "future_month_r2": 289.2957,
+      "future_month_r2": 289.2924,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1906,7 +1906,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 97.5542,
-      "future_month_r2": 94.7901,
+      "future_month_r2": 94.7968,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1953,37 +1953,6 @@ window.WATCHLIST_DATA = {
           "r2": 632.3475,
           "first_cross_date": "2026-05-05",
           "days_crossed": 18
-        }
-      ]
-    },
-    {
-      "ticker": "ORCL",
-      "name": "Oracle Corp",
-      "last_close": 188.33,
-      "last_high": 195.3,
-      "last_date": "2026-06-16",
-      "day_pct": -2.24,
-      "sma3_direction": "up",
-      "sma3_days": 1,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 259.9136,
-      "future_month_r2": 198.7292,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 214.6295,
-        "first_cross_date": "2026-05-29",
-        "days_crossed": 1,
-        "period": "previous_month"
-      },
-      "streak": 1,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 214.6295,
-          "first_cross_date": "2026-05-29",
-          "days_crossed": 1
         }
       ]
     },
@@ -2092,7 +2061,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 58.9458,
-      "future_month_r2": 33.0752,
+      "future_month_r2": 33.0769,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2461,7 +2430,7 @@ window.WATCHLIST_DATA = {
     {
       "ticker": "CAH",
       "name": "Cardinal Health Inc",
-      "last_close": 227.88,
+      "last_close": 227.72,
       "last_high": 229.78,
       "last_date": "2026-06-16",
       "day_pct": NaN,
@@ -2470,7 +2439,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 222.142,
-      "future_month_r2": 231.9642,
+      "future_month_r2": 231.9508,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 222.142,
@@ -2574,29 +2543,6 @@ window.WATCHLIST_DATA = {
       "history": []
     },
     {
-      "ticker": "FAST",
-      "name": "Fastenal Co",
-      "last_close": 46.05,
-      "last_high": 46.71,
-      "last_date": "2026-06-16",
-      "day_pct": -0.11,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 47.0592,
-      "future_month_r2": 47.1904,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 47.0592,
-        "first_cross_date": "2026-06-04",
-        "days_crossed": 4
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
       "ticker": "FITB",
       "name": "Fifth Third Bancorp",
       "last_close": 53.44,
@@ -2643,29 +2589,6 @@ window.WATCHLIST_DATA = {
       "history": []
     },
     {
-      "ticker": "GE",
-      "name": "Ge Aerospace",
-      "last_close": 351.73,
-      "last_high": 352.88,
-      "last_date": "2026-06-16",
-      "day_pct": 2.77,
-      "sma3_direction": "up",
-      "sma3_days": 4,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 349.7984,
-      "future_month_r2": 361.9229,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 349.7984,
-        "first_cross_date": "2026-06-16",
-        "days_crossed": 1
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
       "ticker": "HBAN",
       "name": "Huntington Bancshare",
       "last_close": 17.32,
@@ -2700,7 +2623,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 107.0392,
-      "future_month_r2": 108.4483,
+      "future_month_r2": 108.45,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 107.0392,
@@ -2919,29 +2842,6 @@ window.WATCHLIST_DATA = {
       "history": []
     },
     {
-      "ticker": "MTB",
-      "name": "M&T Bk Corp",
-      "last_close": 228.35,
-      "last_high": 229.59,
-      "last_date": "2026-06-16",
-      "day_pct": 1.07,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 227.2127,
-      "future_month_r2": 231.0367,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 227.2127,
-        "first_cross_date": "2026-06-10",
-        "days_crossed": 5
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
       "ticker": "ODFL",
       "name": "Old Dominion Freight",
       "last_close": 231.62,
@@ -2990,16 +2890,16 @@ window.WATCHLIST_DATA = {
     {
       "ticker": "PPG",
       "name": "Ppg Inds Inc",
-      "last_close": 120.675,
+      "last_close": 120.65,
       "last_high": 123.37,
       "last_date": "2026-06-16",
-      "day_pct": -0.7,
+      "day_pct": -0.72,
       "sma3_direction": "up",
       "sma3_days": 7,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 121.4051,
-      "future_month_r2": 125.026,
+      "future_month_r2": 125.0239,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 121.4051,
@@ -3013,16 +2913,16 @@ window.WATCHLIST_DATA = {
     {
       "ticker": "PRU",
       "name": "Prudential Finl Inc",
-      "last_close": 109.195,
+      "last_close": 109.16,
       "last_high": 110.89,
       "last_date": "2026-06-16",
-      "day_pct": 0.46,
+      "day_pct": 0.43,
       "sma3_direction": "up",
       "sma3_days": 5,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 107.1735,
-      "future_month_r2": 112.6087,
+      "future_month_r2": 112.6058,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 107.1735,
@@ -3151,7 +3051,7 @@ window.WATCHLIST_DATA = {
     {
       "ticker": "SWK",
       "name": "Stanley Black & Deck",
-      "last_close": 84.625,
+      "last_close": 84.62,
       "last_high": 86.64,
       "last_date": "2026-06-16",
       "day_pct": -0.21,
@@ -3160,7 +3060,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 86.836,
-      "future_month_r2": 88.1914,
+      "future_month_r2": 88.191,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 86.836,
