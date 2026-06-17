@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T20:16:11.738361+00:00",
+  "generated_at": "2026-06-17T20:31:08.148882+00:00",
   "count": 112,
   "stocks": [
     {
@@ -326,7 +326,7 @@
         },
         {
           "month": "2026-04",
-          "r2": 930.1387,
+          "r2": 930.1386,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -344,7 +344,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 25.7957,
-      "future_month_r2": 25.4925,
+      "future_month_r2": 25.5067,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -372,16 +372,16 @@
     {
       "ticker": "HUM",
       "name": "Humana Inc",
-      "last_close": 362.13,
+      "last_close": 362.0,
       "last_high": 368.29,
       "last_date": "2026-06-17",
-      "day_pct": -1.99,
+      "day_pct": -2.03,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 377.2538,
-      "future_month_r2": 379.5585,
+      "future_month_r2": 379.5477,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 377.2538,
@@ -729,7 +729,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 303.5131,
-      "future_month_r2": 282.6856,
+      "future_month_r2": 282.6831,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1190,7 +1190,7 @@
       "ticker": "CBOE",
       "name": "Cboe Global Mkts Inc",
       "last_close": 254.69,
-      "last_high": 265.13,
+      "last_high": 264.93,
       "last_date": "2026-06-17",
       "day_pct": -3.98,
       "sma3_direction": "down",
@@ -1198,7 +1198,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 414.7208,
-      "future_month_r2": 302.5506,
+      "future_month_r2": 302.5339,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2274,16 +2274,16 @@
     {
       "ticker": "WAT",
       "name": "Waters Corp",
-      "last_close": 357.07,
+      "last_close": 357.0,
       "last_high": 365.97,
       "last_date": "2026-06-17",
-      "day_pct": -0.96,
+      "day_pct": -0.98,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 429.3275,
-      "future_month_r2": 373.3975,
+      "future_month_r2": 373.3917,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2613,7 +2613,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 47.0592,
-      "future_month_r2": 47.1188,
+      "future_month_r2": 47.1305,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 47.0592,
@@ -2705,7 +2705,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 17.7108,
-      "future_month_r2": 17.635,
+      "future_month_r2": 17.6292,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 17.7108,
@@ -2751,7 +2751,7 @@
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 105.1213,
-      "future_month_r2": 117.7658,
+      "future_month_r2": 117.762,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 105.1213,
@@ -2949,16 +2949,16 @@
     {
       "ticker": "LUV",
       "name": "Southwest Airls Co",
-      "last_close": 46.67,
+      "last_close": 46.66,
       "last_high": 48.505,
       "last_date": "2026-06-17",
-      "day_pct": -1.6,
+      "day_pct": -1.62,
       "sma3_direction": "up",
       "sma3_days": 7,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 47.7764,
-      "future_month_r2": 49.6016,
+      "future_month_r2": 49.6008,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 47.7764,
@@ -3018,16 +3018,16 @@
     {
       "ticker": "MTB",
       "name": "M&T Bk Corp",
-      "last_close": 225.835,
+      "last_close": 225.85,
       "last_high": 230.2025,
       "last_date": "2026-06-17",
-      "day_pct": -1.1,
+      "day_pct": -1.09,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 227.2127,
-      "future_month_r2": 233.2583,
+      "future_month_r2": 233.2596,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 227.2127,
@@ -3087,16 +3087,16 @@
     {
       "ticker": "PPG",
       "name": "Ppg Inds Inc",
-      "last_close": 117.13,
+      "last_close": 117.14,
       "last_high": 121.77,
       "last_date": "2026-06-17",
-      "day_pct": -2.92,
+      "day_pct": -2.91,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 121.4051,
-      "future_month_r2": 124.1958,
+      "future_month_r2": 124.1967,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 121.4051,
