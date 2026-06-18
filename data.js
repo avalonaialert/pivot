@@ -1,5 +1,5 @@
 window.WATCHLIST_DATA = {
-  "generated_at": "2026-06-18T20:31:15.020476+00:00",
+  "generated_at": "2026-06-18T20:46:15.062537+00:00",
   "count": 115,
   "stocks": [
     {
@@ -14,7 +14,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 566.3583,
-      "future_month_r2": 449.685,
+      "future_month_r2": 449.3817,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -45,7 +45,7 @@ window.WATCHLIST_DATA = {
         },
         {
           "month": "2026-02",
-          "r2": 147.8988,
+          "r2": 147.8987,
           "first_cross_date": "2026-02-27",
           "days_crossed": 1
         }
@@ -326,7 +326,7 @@ window.WATCHLIST_DATA = {
         },
         {
           "month": "2026-04",
-          "r2": 930.1386,
+          "r2": 930.1387,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -2881,7 +2881,7 @@ window.WATCHLIST_DATA = {
       "ticker": "KIM",
       "name": "Kimco Rlty Corp Reit",
       "last_close": 24.38,
-      "last_high": 24.7,
+      "last_high": 24.67,
       "last_date": "2026-06-18",
       "day_pct": -0.45,
       "sma3_direction": "down",
@@ -2889,7 +2889,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 25.4652,
-      "future_month_r2": 25.436,
+      "future_month_r2": 25.4335,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 25.4652,
