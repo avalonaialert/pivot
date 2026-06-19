@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-19T13:46:47.230488+00:00",
-  "count": 115,
+  "generated_at": "2026-06-19T14:01:54.835015+00:00",
+  "count": 114,
   "stocks": [
     {
       "ticker": "DELL",
@@ -60,7 +60,7 @@
       "day_pct": 0.16,
       "sma3_direction": "down",
       "sma3_days": 0,
-      "sma3_proj_direction": "down",
+      "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 456.9852,
       "future_month_r2": 401.205,
@@ -1274,37 +1274,6 @@
         {
           "month": "2026-05",
           "r2": 520.53,
-          "first_cross_date": "2026-05-08",
-          "days_crossed": 15
-        }
-      ]
-    },
-    {
-      "ticker": "CVS",
-      "name": "Cvs Health Corp",
-      "last_close": 98.32,
-      "last_high": 99.22,
-      "last_date": "2026-06-18",
-      "day_pct": -0.85,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": "down",
-      "sma3_proj_days": 0,
-      "current_month_r2": 109.7909,
-      "future_month_r2": 100.9061,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 89.169,
-        "first_cross_date": "2026-05-08",
-        "days_crossed": 15,
-        "period": "previous_month"
-      },
-      "streak": 1,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 89.169,
           "first_cross_date": "2026-05-08",
           "days_crossed": 15
         }
