@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-19T15:46:49.608728+00:00",
-  "count": 115,
+  "generated_at": "2026-06-19T16:02:26.415577+00:00",
+  "count": 112,
   "stocks": [
     {
       "ticker": "DELL",
@@ -326,7 +326,7 @@
         },
         {
           "month": "2026-04",
-          "r2": 930.1387,
+          "r2": 930.1386,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -445,48 +445,6 @@
           "r2": 53.3175,
           "first_cross_date": "2026-04-08",
           "days_crossed": 17
-        }
-      ]
-    },
-    {
-      "ticker": "LRCX",
-      "name": "Lam Resh Corp",
-      "last_close": 389.04,
-      "last_high": 401.0,
-      "last_date": "2026-06-18",
-      "day_pct": 3.97,
-      "sma3_direction": "up",
-      "sma3_days": 7,
-      "sma3_proj_direction": "up",
-      "sma3_proj_days": 6,
-      "current_month_r2": 389.782,
-      "future_month_r2": 413.9455,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 389.782,
-        "first_cross_date": "2026-06-15",
-        "days_crossed": 4
-      },
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 308.1987,
-        "first_cross_date": "2026-05-22",
-        "days_crossed": 5,
-        "period": "previous_month"
-      },
-      "streak": 2,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 308.1987,
-          "first_cross_date": "2026-05-22",
-          "days_crossed": 5
-        },
-        {
-          "month": "2026-04",
-          "r2": 265.1345,
-          "first_cross_date": "2026-04-10",
-          "days_crossed": 12
         }
       ]
     },
@@ -1028,37 +986,6 @@
           "r2": 14.6733,
           "first_cross_date": "2026-05-20",
           "days_crossed": 7
-        }
-      ]
-    },
-    {
-      "ticker": "AKAM",
-      "name": "Akamai Technologies",
-      "last_close": 124.91,
-      "last_high": 130.0,
-      "last_date": "2026-06-18",
-      "day_pct": -2.31,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": "down",
-      "sma3_proj_days": 0,
-      "current_month_r2": 196.1467,
-      "future_month_r2": 136.7326,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 134.03,
-        "first_cross_date": "2026-05-08",
-        "days_crossed": 15,
-        "period": "previous_month"
-      },
-      "streak": 1,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 134.03,
-          "first_cross_date": "2026-05-08",
-          "days_crossed": 15
         }
       ]
     },
@@ -3332,29 +3259,6 @@
         "r2": 86.836,
         "first_cross_date": "2026-06-15",
         "days_crossed": 3
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
-      "ticker": "SYY",
-      "name": "Sysco Corp",
-      "last_close": 78.7,
-      "last_high": 80.37,
-      "last_date": "2026-06-18",
-      "day_pct": -0.38,
-      "sma3_direction": "up",
-      "sma3_days": 1,
-      "sma3_proj_direction": "down",
-      "sma3_proj_days": 0,
-      "current_month_r2": 80.0417,
-      "future_month_r2": 81.3683,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 80.0417,
-        "first_cross_date": "2026-06-11",
-        "days_crossed": 4
       },
       "crossed_previous_month": null,
       "streak": 0,
