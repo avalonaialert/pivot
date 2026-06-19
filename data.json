@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-19T13:01:56.615865+00:00",
-  "count": 110,
+  "generated_at": "2026-06-19T13:16:12.993101+00:00",
+  "count": 115,
   "stocks": [
     {
       "ticker": "DELL",
@@ -326,7 +326,7 @@
         },
         {
           "month": "2026-04",
-          "r2": 930.1387,
+          "r2": 930.1386,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -935,6 +935,37 @@
           "r2": 131.71,
           "first_cross_date": "2026-05-28",
           "days_crossed": 2
+        }
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc",
+      "last_close": 298.01,
+      "last_high": 300.57,
+      "last_date": "2026-06-18",
+      "day_pct": 0.7,
+      "sma3_direction": "up",
+      "sma3_days": 4,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 343.8034,
+      "future_month_r2": 303.0392,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 291.1926,
+        "first_cross_date": "2026-05-07",
+        "days_crossed": 16,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 291.1926,
+          "first_cross_date": "2026-05-07",
+          "days_crossed": 16
         }
       ]
     },
@@ -1993,6 +2024,37 @@
       ]
     },
     {
+      "ticker": "PM",
+      "name": "Philip Morris Intl I",
+      "last_close": 178.4,
+      "last_high": 180.47,
+      "last_date": "2026-06-18",
+      "day_pct": -0.58,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 205.5533,
+      "future_month_r2": 183.9459,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 182.9616,
+        "first_cross_date": "2026-05-12",
+        "days_crossed": 12,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 182.9616,
+          "first_cross_date": "2026-05-12",
+          "days_crossed": 12
+        }
+      ]
+    },
+    {
       "ticker": "ROK",
       "name": "Rockwell Automation",
       "last_close": 473.79,
@@ -2020,6 +2082,37 @@
           "r2": 451.2929,
           "first_cross_date": "2026-05-05",
           "days_crossed": 13
+        }
+      ]
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "last_close": 30.66,
+      "last_high": 30.91,
+      "last_date": "2026-06-18",
+      "day_pct": 10.37,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 58.9458,
+      "future_month_r2": 32.2175,
+      "crossed_current_month": null,
+      "crossed_previous_month": {
+        "month": "2026-05",
+        "r2": 33.8933,
+        "first_cross_date": "2026-05-06",
+        "days_crossed": 10,
+        "period": "previous_month"
+      },
+      "streak": 1,
+      "history": [
+        {
+          "month": "2026-05",
+          "r2": 33.8933,
+          "first_cross_date": "2026-05-06",
+          "days_crossed": 10
         }
       ]
     },
@@ -2785,6 +2878,29 @@
       "history": []
     },
     {
+      "ticker": "KIM",
+      "name": "Kimco Rlty Corp Reit",
+      "last_close": 24.38,
+      "last_high": 24.7,
+      "last_date": "2026-06-18",
+      "day_pct": -0.45,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 25.4652,
+      "future_month_r2": 25.436,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 25.4652,
+        "first_cross_date": "2026-06-10",
+        "days_crossed": 5
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
       "ticker": "KLAC",
       "name": "Kla Corp",
       "last_close": 259.56,
@@ -3032,6 +3148,29 @@
         "r2": 102.4218,
         "first_cross_date": "2026-06-01",
         "days_crossed": 3
+      },
+      "crossed_previous_month": null,
+      "streak": 0,
+      "history": []
+    },
+    {
+      "ticker": "PPG",
+      "name": "Ppg Inds Inc",
+      "last_close": 118.25,
+      "last_high": 120.16,
+      "last_date": "2026-06-18",
+      "day_pct": 0.95,
+      "sma3_direction": "down",
+      "sma3_days": 0,
+      "sma3_proj_direction": null,
+      "sma3_proj_days": 0,
+      "current_month_r2": 121.4051,
+      "future_month_r2": 121.3642,
+      "crossed_current_month": {
+        "month": "2026-06",
+        "r2": 121.4051,
+        "first_cross_date": "2026-06-12",
+        "days_crossed": 4
       },
       "crossed_previous_month": null,
       "streak": 0,
