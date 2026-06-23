@@ -1,5 +1,5 @@
 window.WATCHLIST_DATA = {
-  "generated_at": "2026-06-23T20:16:21.920376+00:00",
+  "generated_at": "2026-06-23T20:31:25.185891+00:00",
   "count": 120,
   "stocks": [
     {
@@ -326,7 +326,7 @@ window.WATCHLIST_DATA = {
         },
         {
           "month": "2026-04",
-          "r2": 930.1387,
+          "r2": 930.1386,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -344,7 +344,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 25.7957,
-      "future_month_r2": 25.5533,
+      "future_month_r2": 25.565,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1203,7 +1203,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 414.7208,
-      "future_month_r2": 269.2633,
+      "future_month_r2": 269.1438,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1659,16 +1659,16 @@ window.WATCHLIST_DATA = {
     {
       "ticker": "GLW",
       "name": "Corning Inc",
-      "last_close": 194.0,
+      "last_close": 194.07,
       "last_high": 194.805,
       "last_date": "2026-06-23",
-      "day_pct": -7.54,
+      "day_pct": -7.51,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 247.8434,
-      "future_month_r2": 199.3279,
+      "future_month_r2": 199.3337,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -1974,16 +1974,16 @@ window.WATCHLIST_DATA = {
     {
       "ticker": "ORCL",
       "name": "Oracle Corp",
-      "last_close": 165.23,
+      "last_close": 165.16,
       "last_high": 174.33,
       "last_date": "2026-06-23",
-      "day_pct": -5.62,
+      "day_pct": -5.66,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 259.9136,
-      "future_month_r2": 189.5483,
+      "future_month_r2": 189.5425,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2262,7 +2262,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 19.2629,
-      "future_month_r2": 16.0913,
+      "future_month_r2": 16.0922,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
@@ -2784,7 +2784,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 105.1213,
-      "future_month_r2": 108.2729,
+      "future_month_r2": 108.2733,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 105.1213,
@@ -2807,7 +2807,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 97.8254,
-      "future_month_r2": 98.5933,
+      "future_month_r2": 98.6167,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 97.8254,
@@ -3120,16 +3120,16 @@ window.WATCHLIST_DATA = {
     {
       "ticker": "MS",
       "name": "Morgan Stanley",
-      "last_close": 226.19,
+      "last_close": 226.03,
       "last_high": 227.95,
       "last_date": "2026-06-23",
-      "day_pct": -0.4,
+      "day_pct": -0.47,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 228.4361,
-      "future_month_r2": 230.7508,
+      "future_month_r2": 230.7375,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 228.4361,
@@ -3304,16 +3304,16 @@ window.WATCHLIST_DATA = {
     {
       "ticker": "RCL",
       "name": "Royal Caribbean Grou",
-      "last_close": 309.55,
+      "last_close": 309.53,
       "last_high": 310.91,
       "last_date": "2026-06-23",
-      "day_pct": 0.06,
+      "day_pct": 0.05,
       "sma3_direction": "down",
       "sma3_days": 0,
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 318.0443,
-      "future_month_r2": 327.7,
+      "future_month_r2": 327.6983,
       "crossed_current_month": {
         "month": "2026-06",
         "r2": 318.0443,
