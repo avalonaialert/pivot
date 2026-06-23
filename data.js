@@ -1,5 +1,5 @@
 window.WATCHLIST_DATA = {
-  "generated_at": "2026-06-23T20:31:25.185891+00:00",
+  "generated_at": "2026-06-23T20:46:32.521052+00:00",
   "count": 120,
   "stocks": [
     {
