@@ -1,5 +1,5 @@
 window.WATCHLIST_DATA = {
-  "generated_at": "2026-06-24T13:01:14.593359+00:00",
+  "generated_at": "2026-06-24T13:16:15.937634+00:00",
   "count": 120,
   "stocks": [
     {
@@ -326,7 +326,7 @@ window.WATCHLIST_DATA = {
         },
         {
           "month": "2026-04",
-          "r2": 930.1386,
+          "r2": 930.1387,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
