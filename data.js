@@ -1,5 +1,5 @@
 window.WATCHLIST_DATA = {
-  "generated_at": "2026-06-24T20:31:19.792855+00:00",
+  "generated_at": "2026-06-24T20:46:12.423523+00:00",
   "count": 131,
   "stocks": [
     {
@@ -45,7 +45,7 @@ window.WATCHLIST_DATA = {
         },
         {
           "month": "2026-02",
-          "r2": 147.8988,
+          "r2": 147.8987,
           "first_cross_date": "2026-02-27",
           "days_crossed": 1
         }
@@ -326,7 +326,7 @@ window.WATCHLIST_DATA = {
         },
         {
           "month": "2026-04",
-          "r2": 930.1386,
+          "r2": 930.1387,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -1505,7 +1505,7 @@ window.WATCHLIST_DATA = {
       "ticker": "F",
       "name": "Ford Mtr Co Del",
       "last_close": 13.84,
-      "last_high": 14.15,
+      "last_high": 14.11,
       "last_date": "2026-06-24",
       "day_pct": -1.14,
       "sma3_direction": "down",
@@ -1513,7 +1513,7 @@ window.WATCHLIST_DATA = {
       "sma3_proj_direction": null,
       "sma3_proj_days": 0,
       "current_month_r2": 20.7007,
-      "future_month_r2": 14.3708,
+      "future_month_r2": 14.2908,
       "crossed_current_month": null,
       "crossed_previous_month": {
         "month": "2026-05",
