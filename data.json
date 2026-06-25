@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-25T13:01:12.782516+00:00",
-  "count": 131,
+  "generated_at": "2026-06-25T13:16:55.919155+00:00",
+  "count": 123,
   "stocks": [
     {
       "ticker": "DELL",
@@ -326,7 +326,7 @@
         },
         {
           "month": "2026-04",
-          "r2": 930.1387,
+          "r2": 930.1386,
           "first_cross_date": "2026-04-20",
           "days_crossed": 6
         }
@@ -366,48 +366,6 @@
           "r2": 20.8527,
           "first_cross_date": "2026-04-14",
           "days_crossed": 12
-        }
-      ]
-    },
-    {
-      "ticker": "HUM",
-      "name": "Humana Inc",
-      "last_close": 361.64,
-      "last_high": 365.63,
-      "last_date": "2026-06-24",
-      "day_pct": 0.7,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 377.2538,
-      "future_month_r2": 372.3217,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 377.2538,
-        "first_cross_date": "2026-06-12",
-        "days_crossed": 3
-      },
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 283.4692,
-        "first_cross_date": "2026-05-11",
-        "days_crossed": 14,
-        "period": "previous_month"
-      },
-      "streak": 2,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 283.4692,
-          "first_cross_date": "2026-05-11",
-          "days_crossed": 14
-        },
-        {
-          "month": "2026-04",
-          "r2": 237.2004,
-          "first_cross_date": "2026-04-29",
-          "days_crossed": 2
         }
       ]
     },
@@ -1380,37 +1338,6 @@
           "r2": 66.8506,
           "first_cross_date": "2026-05-18",
           "days_crossed": 9
-        }
-      ]
-    },
-    {
-      "ticker": "DAL",
-      "name": "Delta Air Lines Inc",
-      "last_close": 90.65,
-      "last_high": 90.71,
-      "last_date": "2026-06-24",
-      "day_pct": 4.53,
-      "sma3_direction": "up",
-      "sma3_days": 3,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 92.1607,
-      "future_month_r2": 94.014,
-      "crossed_current_month": null,
-      "crossed_previous_month": {
-        "month": "2026-05",
-        "r2": 79.8839,
-        "first_cross_date": "2026-05-27",
-        "days_crossed": 3,
-        "period": "previous_month"
-      },
-      "streak": 1,
-      "history": [
-        {
-          "month": "2026-05",
-          "r2": 79.8839,
-          "first_cross_date": "2026-05-27",
-          "days_crossed": 3
         }
       ]
     },
@@ -2618,29 +2545,6 @@
       "history": []
     },
     {
-      "ticker": "CRM",
-      "name": "Salesforce Inc",
-      "last_close": 152.76,
-      "last_high": 157.06,
-      "last_date": "2026-06-24",
-      "day_pct": -0.43,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 209.7387,
-      "future_month_r2": 160.1492,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 209.7387,
-        "first_cross_date": "2026-06-01",
-        "days_crossed": 1
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
       "ticker": "DGX",
       "name": "Quest Diagnostics In",
       "last_close": 203.11,
@@ -2934,52 +2838,6 @@
         "r2": 107.0392,
         "first_cross_date": "2026-06-10",
         "days_crossed": 5
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
-      "ticker": "JNJ",
-      "name": "Johnson & Johnson",
-      "last_close": 241.0,
-      "last_high": 243.04,
-      "last_date": "2026-06-24",
-      "day_pct": 0.8,
-      "sma3_direction": "up",
-      "sma3_days": 2,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 241.5525,
-      "future_month_r2": 248.1493,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 241.5525,
-        "first_cross_date": "2026-06-11",
-        "days_crossed": 2
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
-      "ticker": "JPM",
-      "name": "Jpmorgan Chase & Co",
-      "last_close": 333.45,
-      "last_high": 334.53,
-      "last_date": "2026-06-24",
-      "day_pct": -0.21,
-      "sma3_direction": "up",
-      "sma3_days": 1,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 327.8891,
-      "future_month_r2": 337.095,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 327.8891,
-        "first_cross_date": "2026-06-16",
-        "days_crossed": 6
       },
       "crossed_previous_month": null,
       "streak": 0,
@@ -3377,52 +3235,6 @@
       "history": []
     },
     {
-      "ticker": "PPG",
-      "name": "Ppg Inds Inc",
-      "last_close": 120.98,
-      "last_high": 122.05,
-      "last_date": "2026-06-24",
-      "day_pct": 2.79,
-      "sma3_direction": "up",
-      "sma3_days": 1,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 121.4051,
-      "future_month_r2": 124.1583,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 121.4051,
-        "first_cross_date": "2026-06-12",
-        "days_crossed": 5
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
-      "ticker": "PRU",
-      "name": "Prudential Finl Inc",
-      "last_close": 106.26,
-      "last_high": 109.12,
-      "last_date": "2026-06-24",
-      "day_pct": -2.05,
-      "sma3_direction": "down",
-      "sma3_days": 0,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 107.1735,
-      "future_month_r2": 111.1642,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 107.1735,
-        "first_cross_date": "2026-06-12",
-        "days_crossed": 8
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
       "ticker": "PSA",
       "name": "Public Storage Reit",
       "last_close": 317.92,
@@ -3463,29 +3275,6 @@
         "r2": 318.0443,
         "first_cross_date": "2026-06-16",
         "days_crossed": 2
-      },
-      "crossed_previous_month": null,
-      "streak": 0,
-      "history": []
-    },
-    {
-      "ticker": "RF",
-      "name": "Regions Finl Corp Ne",
-      "last_close": 29.49,
-      "last_high": 29.69,
-      "last_date": "2026-06-24",
-      "day_pct": 0.68,
-      "sma3_direction": "up",
-      "sma3_days": 2,
-      "sma3_proj_direction": null,
-      "sma3_proj_days": 0,
-      "current_month_r2": 29.6269,
-      "future_month_r2": 30.1172,
-      "crossed_current_month": {
-        "month": "2026-06",
-        "r2": 29.6269,
-        "first_cross_date": "2026-06-24",
-        "days_crossed": 1
       },
       "crossed_previous_month": null,
       "streak": 0,
